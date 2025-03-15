@@ -223,3 +223,16 @@ seo:
   </div>
   
 </section>
+
+
+<!-- Testimonials -->
+<section class="">
+  <div class="testimonial-container">
+
+    {% for item in page.testimonials %}
+    <div class="testimonial-item">
+      <p class="text-center"><em>"{{item.testimonial_html}}"</em></p>
+    </div>
+    {% endfor %}
+  </div>
+</section>
