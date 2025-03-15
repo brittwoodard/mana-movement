@@ -159,7 +159,7 @@ seo:
       <div>
         {{ page.about.second-description_html }}
       </div>
-      <a href="{{ page.about.button.url }}" class="button mt-4">
+      <a href="{{ page.about.button.url }}" class="button">
         {{ page.about.button.text }}
       </a>
     </div>
@@ -170,10 +170,10 @@ seo:
 
 
 <!-- Banner -->
-<section class="bg-image-style" style="background-image: url({{ page.banner.background-image.image_path }}); background-position: {{ page.banner.background-image.image_focus }};">
+<section class="bg-image-style section-padding" style="background-image: url({{ page.banner.background-image.image_path }}); background-position: {{ page.banner.background-image.image_focus }};">
 
   <div>
-    <div>
+    <div class="font-serif text-light text-4xl w-[65%]">
       {{ page.banner.description_html }}
     </div>
     <a href="{{ page.banner.button.url }}" class="button">
@@ -184,29 +184,32 @@ seo:
 
 
 <!-- Offerings -->
-<section>
+<section class="section-padding">
   <div>
-    <h2>
+    <h2 class="font-serif text-feature capitalize text-3xl text-center mb-4">
       {{ page.offerings.heading }}
     </h2>
-    <p>
+    <div class="w-[80%] mx-auto text-center mb-4">
       {{ page.offerings.description_html }}
-    </p>
+    </div>
   </div>
 
-  <div class="grid grid-cols-3">
+  <div class="grid grid-cols-3 gap-8">
     {% for item in page.offerings.offering %}
     <div>
       <div class="bg-image-style aspect-square" style="background-image: url({{ item.image.image_path }});"></div>
-      <h3>
+      <h3 class="font-serif text-feature uppercase text-xl text-center mt-8 mb-4 tracking-wide">
         {{ item.title }}
       </h3>
-      <p>
+      <p class="text-center">
         {{ item.description }}
       </p>
-      <a href="{{ item.button.url }}" class="link">
-        {{ item.button.text }}
-      </a>
+      <div class="flex justify-center">
+        <a href="{{ item.button.url }}" class="link">
+          {{ item.button.text }}
+        </a>
+      </div>
+      
     </div>
     {% endfor %}
   </div>
