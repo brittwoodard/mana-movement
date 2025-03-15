@@ -1,0 +1,24 @@
+---
+layout: default
+title: Page Not Found
+permalink: /404.html
+heading: Page Not Found
+description_html: Oops! You’ve wandered off the beaten path...</p><p>It seems the link you followed is broken or the page has been moved. Here are a few options
+links: 
+  link_1: 
+    title: Home
+    url: /index.html
+  link_2: 
+    title: Contact
+    url: /contact.html
+---
+
+<section class="flex justify-center justify-items-center text-center items-center h-screen">
+
+    <div>
+        <h1 class="text-2xl mb-8">{{page.heading}}</h1>
+        <p>{{page.description_html}}</p>
+        <a href="{{page.links.link_1.url}}" class="link">{{page.links.link_1.title}}</a>
+        <a href="{{page.links.link_2.url}}" class="link">{{page.links.link_2.title}}</a>
+    </div>
+</section>

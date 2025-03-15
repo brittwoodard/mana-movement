@@ -1,0 +1,28 @@
+general:
+  site-name: 
+  form-email: 
+  logo_path: 
+  logo-max-width: 
+  logo-text: 
+seo:
+  site_name:
+  title:
+  type: website
+  description:
+  keywords:
+  social_image:
+social:
+  instagram_username: 
+  facebook_username:
+  pinterest_username:
+  linkedin_username: 
+  twitter_username:
+  tiktok_username:
+  youtube_username:
+brand:
+  primary_logo_path: 
+  secondary_logo_path:
+  submark_logo_path:
+technical:
+  google-analytics_tag:
+  instagram_widget_embed:
