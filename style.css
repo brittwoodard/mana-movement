@@ -48,7 +48,11 @@
 
     /* Buttons */
     .button {
-        @apply bg-main text-lighter font-serif py-2 px-4 capitalize text-[1.2rem] tracking-wide inline-block mt-4 hover:transition hover:duration-500 hover:shadow-xl
+        @apply bg-main text-lighter font-serif py-2 px-4 capitalize text-[1.2rem] tracking-wide inline-block mt-4 hover:transition hover:duration-500 hover:shadow-lg
+    }
+
+    .button-light {
+        @apply bg-lighter text-main font-serif py-2 px-4 capitalize text-[1.2rem] tracking-wide inline-block mt-4 hover:transition hover:duration-500 hover:shadow-lg
     }
 
     .link {

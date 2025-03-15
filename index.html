@@ -4,8 +4,6 @@ hero-banner:
   heading: Mana Movement
   subtitle: This is a subtitle
   button: 
-    show: true
-    type: youtube
     text: Watch the video
     url: https://www.youtube.com/embed/5sEVM981_X0?si=_M_2yAQ24qp7b6Tc
   background-image: 
@@ -20,7 +18,7 @@ about:
     <p>Returning to these innate movement patterns with the intention of softening and opening will awaken the natural flow of Life Force Energy through the body, supporting you to feel a deep sense of clarity, peace, expansion, and a renewed sense of inspiration.</p>
     <p>Mana Movement is designed to suit all women, all bodies, at every stage of life and Feminine Rite of Passage.</p>
   image: 
-    image_path: /uploads/images/manamovement-2.JPG
+    image_path: /uploads/images/manamovement-9.JPG
     image_focus: 
   button: 
     text: Bring Mana Movement to festivals
@@ -32,7 +30,7 @@ banner:
     text: Bring Mana Movement to festivals
     url: 
   background-image: 
-    image_path: /uploads/images/manamovement-2.JPG
+    image_path: /uploads/images/manamovement-11.JPG
     image_focus: 
 offerings: 
   heading: Ways to bring Mana Movement into your daily wellness routine
@@ -45,7 +43,7 @@ offerings:
        text: 
        url: 
      image: 
-       image_path: /uploads/images/manamovement-2.JPG
+       image_path: /uploads/images/manamovement-13.JPG
        image_focus: 
    - title: Mana Mei’s YouTube Channel
      description: Try Mana Movement out today through one of Mana Mei’s short YouTube Practices. Subscribe to stay up-to-date as new practices are launched.
@@ -53,7 +51,7 @@ offerings:
        text: Take me there
        url: https://www.youtube.com/@ManaMei
      image: 
-       image_path: /uploads/images/manamovement-2.JPG
+       image_path: /uploads/images/manamovement-14.JPG
        image_focus: 
    - title: In-Person Experiences
      description: Be the first to know when Mana Mei’ is offering in-person Mana Movement classes and workshops by signing up for the Email Newsletter. Check the calendar for an up-to-date listing of all scheduled classes, workshops, and retreats.
@@ -61,7 +59,7 @@ offerings:
        text: Sign up for the newsletter
        url: 
      image: 
-       image_path: /uploads/images/manamovement-2.JPG
+       image_path: /uploads/images/manamovement-5.JPEG
        image_focus: 
 testimonials: 
   - testimonial_html: |
@@ -85,19 +83,19 @@ testimonials:
   - testimonial_html: |
       <p>I clearly see and feel the changes in my life and in my body. I see more fluidity in every parts of the every day life, professional, personal…It’s really amazing and magical !!! I feel more present, more grounded, more feminine, more aware, more confident, more a lot of things!!! I also have more creativity.</p>
 gallery: 
+ - image_path: /uploads/images/manamovement-9.JPG
+ - image_path: /uploads/images/manamovement-11.JPG
+ - image_path: /uploads/images/manamovement-10.JPG
  - image_path: /uploads/images/manamovement-2.JPG
- - image_path: /uploads/images/manamovement-2.JPG
- - image_path: /uploads/images/manamovement-2.JPG
- - image_path: /uploads/images/manamovement-2.JPG
- - image_path: /uploads/images/manamovement-2.JPG
- - image_path: /uploads/images/manamovement-2.JPG
- - image_path: /uploads/images/manamovement-2.JPG
- - image_path: /uploads/images/manamovement-2.JPG
- - image_path: /uploads/images/manamovement-2.JPG
- - image_path: /uploads/images/manamovement-2.JPG
- - image_path: /uploads/images/manamovement-2.JPG
- - image_path: /uploads/images/manamovement-2.JPG
- - image_path: /uploads/images/manamovement-2.JPG
+ - image_path: /uploads/images/manamovement-8.JPG
+ - image_path: /uploads/images/manamovement-7.JPG
+ - image_path: /uploads/images/manamovement-16.JPG
+ - image_path: /uploads/images/manamovement-22.JPG
+ - image_path: /uploads/images/manamovement-4.JPEG
+ - image_path: /uploads/images/manamovement-12.JPG
+ - image_path: /uploads/images/manamovement-15.JPG
+ - image_path: /uploads/images/manamovement-5.JPEG
+ - image_path: /uploads/images/manamovement-13.JPG
 sample: 
   heading: Try it for free
   description_html: |
@@ -119,8 +117,8 @@ seo:
     class="p-10p bg-image-style bg-overlay min-h-[90vh] flex align-middle items-center text-center justify-center {{page.hero-banner.overlay_style}}"
     style="background-image: url('{{page.hero-banner.background_image}}'); background-position: {{page.hero-banner.image_focus}};">
     <div>
-        <h2 class="">{{ page.hero-banner.title }}</h2>
-        <h3 class="">{{ page.hero-banner.subtitle }}</h3>
+        <h1 class="">{{ page.hero-banner.heading }}</h1>
+        <p class="">{{ page.hero-banner.subtitle }}</p>
 
         <!-- Video Button -->
         <button id="openModalBtnBanner" class="button cursor-pointer">{{page.hero-banner.button.text}}</button>
@@ -152,7 +150,7 @@ seo:
   <div class="grid grid-cols-3 gap-20 mb-10p mx-20">
 
     <!-- Left Column / Image -->
-    <div class="bg-image-style" style="background-image: url({{ page.about.image.image_path }}); background-position: {{ page.about.image.image_focus }};"></div>
+    <div class="bg-image-style border border-main" style="background-image: url({{ page.about.image.image_path }}); background-position: {{ page.about.image.image_focus }};"></div>
 
     <!-- Right Column / Text -->
     <div class="col-span-2 my-20">
@@ -234,7 +232,7 @@ seo:
 <section class="columns-3 section-padding">
   {% for item in page.gallery %}
   <div class="break-inside-avoid block mb-4">
-      <div class="bg-cover {% cycle 'aspect-square', 'aspect-portrait', 'aspect-landscape' %} relative">
+      <div class="bg-cover {% cycle 'aspect-square', 'aspect-landscape', 'aspect-portrait' %} relative">
           <img src="{{ item.image_path }}" alt="{{ item.seo }}" class="absolute inset-0 w-full h-full object-cover border border-main">
       </div>
   </div>
@@ -243,19 +241,21 @@ seo:
 
 
 <!-- Sample Section -->
-<section class="grid grid-cols-2">
+<section class="grid grid-cols-2 gap-16 section-padding bg-main text-lighter">
 
   <!-- Left Column / Text -->
-  <div>
-    <h2>
-      {{ page.sample.heading }}
-    </h2>
+  <div class="flex items-center">
     <div>
-      {{ page.sample.description_html }}
+      <h2 class="font-serif text-3xl capitalize tracking-wide mb-4">
+        {{ page.sample.heading }}
+      </h2>
+      <div>
+        {{ page.sample.description_html }}
+      </div>
+      <a href="{{ page.sample.button.url }}" class="button-light">
+        {{ page.sample.button.text }}
+      </a>
     </div>
-    <a href="{{ page.sample.button.url }}" class="button-light">
-      {{ page.sample.button.text }}
-    </a>
   </div>
 
   <!-- Right Column / Video -->
