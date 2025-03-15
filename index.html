@@ -31,6 +31,9 @@ banner:
   button: 
     text: Bring Mana Movement to festivals
     url: 
+  background-image: 
+    image_path: /uploads/images/manamovement-2.JPG
+    image_focus: 
 offerings: 
   heading: Ways to bring Mana Movement into your daily wellness routine
   description_html: |
@@ -171,7 +174,21 @@ seo:
         {{ page.about.button.text }}
       </a>
     </div>
-    
+
   </div>
 
+</section>
+
+
+<!-- Banner -->
+<section class="bg-image-style" style="background-image: url({{ page.banner.background-image.image_path }}); background-position: {{ page.banner.background-image.image_focus }};">
+
+  <div>
+    <div>
+      {{ page.banner.description_html }}
+    </div>
+    <a href="{{ page.banner.button.url }}" class="button">
+      {{ page.banner.button.text }}
+    </a>
+  </div>
 </section>
