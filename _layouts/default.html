@@ -17,16 +17,89 @@
 
 </body>
 
+<!-- Alpine -->
+<script src="//unpkg.com/alpinejs" defer></script>
+
 <!-- jQuery -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.7/jquery.min.js"
-    integrity="sha512-Pqx0ZVocHCSzTLK4pm0GhccHtOT6fmZz+tqfYHV/llI60gB9sr9jkiqrqSEwFJIrzpcZEHPJjsq4GcC731UNXg=="
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"
+    integrity="sha512-AFwxAkWdvxRd9qhYYp1qbeRZj6/iTNmJ2GFwcxsMOzwwTaRwz2a/2TX225Ebcj3whXte1WGQb38cXE5j7ZQw3g=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.js"
-    integrity="sha512-WNZwVebQjhSxEzwbettGuQgWxbpYdoLf7mH+25A7sfQbbxKeS5SQ9QBf97zOY4nOlwtksgDA/czSTmfj4DUEiQ=="
+<!-- Slick -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"
+    integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 <!-- Javascript  -->
-<script src="/main.js"></script>
+<script src="/main.js" defer></script>
+
+<!-- Click to pop up video scripts -->
+<script>
+    {% if page.video %}
+    // Click to pop up video
+    $(document).ready(function () {
+        // Open modal on button click
+        $("#openModalBtnVideo").click(function () {
+            $("#videoModalVideo").css("display", "block");
+        });
+
+        // Close modal on close button click or outside click
+        $(".close, .modal").click(function () {
+            $("#videoModalVideo").css("display", "none");
+            // Stop video playback by resetting the src
+            $("#videoModalVideo iframe").attr("src", $("#videoModalVideo iframe").attr("src"));
+        });
+
+        // Prevent modal from closing when clicking inside the modal content
+        $(".modal-content").click(function (event) {
+            event.stopPropagation();
+        });
+    });
+    {% endif %}
+
+    {% if page.hero-banner.button.show == true %}
+    // Click to pop up video
+    $(document).ready(function () {
+        // Open modal on button click
+        $("#openModalBtnBanner").click(function () {
+            $("#videoModalBanner").css("display", "block");
+        });
+
+        // Close modal on close button click or outside click
+        $(".close, .modal").click(function () {
+            $("#videoModalBanner").css("display", "none");
+            // Stop video playback by resetting the src
+            $("#videoModalBanner iframe").attr("src", $("#videoModalBanner iframe").attr("src"));
+        });
+
+        // Prevent modal from closing when clicking inside the modal content
+        $(".modal-content").click(function (event) {
+            event.stopPropagation();
+        });
+    });
+    {% endif %}
+
+    {% if page.about %}
+    // Read More
+    document.addEventListener('DOMContentLoaded', function () {
+        var descriptionContainer = document.getElementById('aboutDescription');
+        var readMoreBtn = document.getElementById('readMoreBtn');
+
+        if (descriptionContainer.scrollHeight > descriptionContainer.clientHeight) {
+            readMoreBtn.style.display = 'block';
+        }
+
+        readMoreBtn.addEventListener('click', function () {
+            if (descriptionContainer.style.maxHeight) {
+                descriptionContainer.style.maxHeight = null;
+                readMoreBtn.textContent = 'Read More';
+            } else {
+                descriptionContainer.style.maxHeight = descriptionContainer.scrollHeight + 'px';
+                readMoreBtn.textContent = 'Read Less';
+            }
+        });
+    });
+    {% endif %}
+</script>
 
 </html>

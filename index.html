@@ -1,11 +1,54 @@
 ---
 layout: default
+hero-banner: 
+  heading: Mana Movement
+  subtitle: This is a subtitle
+  button: 
+    show: true
+    type: youtube
+    text: Watch the video
+    url: https://www.youtube.com/embed/5sEVM981_X0?si=_M_2yAQ24qp7b6Tc
+  background-image: 
+    image_path: 
+    image_focus: 
 seo:
   title: This should appear in the browser tab
   description:
   keywords:
   social_image:
-  hide-from-google: false
+  hide-from-google: true
 ---
 
-<p class="bg-yellow-400"> This is some text on the homepage...and a test </p>
+<!-- Hero Banner -->
+<section
+    class="p-10p bg-image-style bg-overlay min-h-[90vh] flex align-middle items-center text-center justify-center {{page.hero-banner.overlay_style}}"
+    style="background-image: url('{{page.hero-banner.background_image}}'); background-position: {{page.hero-banner.image_focus}};">
+    <div>
+        <h2 class="">{{page.hero-banner.title}}</h2>
+        <h3 class="">{{page.hero-banner.subtitle}}</h3>
+
+        <!-- Video Button -->
+        {% if page.hero-banner.button.show == true %}
+
+        <button id="openModalBtnBanner" class="button cursor-pointer">{{page.hero-banner.button.text}}</button>
+
+        <div id="videoModalBanner" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                {% if page.hero-banner.button.type == 'youtube' %}
+                <!-- YouTube iframe -->
+                <iframe class="w-[360px] h-[202.5px] md:w-[700px] md:h-[394px]" src="{{page.hero-banner.button.url}}" frameborder="0"
+                    allowfullscreen></iframe>
+                {% else %}
+                <!-- Fallback for other video types -->
+                <video controls>
+                    <source src="{{page.hero-banner.button.url}}" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                {% endif %}
+            </div>
+        </div>
+
+        {% endif %}
+    </div>
+</section>
