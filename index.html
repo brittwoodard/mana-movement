@@ -192,3 +192,34 @@ seo:
     </a>
   </div>
 </section>
+
+
+<!-- Offerings -->
+<section>
+  <div>
+    <h2>
+      {{ page.offerings.heading }}
+    </h2>
+    <p>
+      {{ page.offerings.description_html }}
+    </p>
+  </div>
+
+  <div class="grid grid-cols-3">
+    {% for item in page.offerings.offering %}
+    <div>
+      <div class="bg-image-style aspect-square" style="background-image: url({{ item.image.image_path }});"></div>
+      <h3>
+        {{ item.title }}
+      </h3>
+      <p>
+        {{ item.description }}
+      </p>
+      <a href="{{ item.button.url }}" class="link">
+        {{ item.button.text }}
+      </a>
+    </div>
+    {% endfor %}
+  </div>
+  
+</section>

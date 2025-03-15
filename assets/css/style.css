@@ -547,6 +547,9 @@ video {
 .hidden {
   display: none;
 }
+.aspect-square {
+  aspect-ratio: 1 / 1;
+}
 .h-\[202\.5px\] {
   height: 202.5px;
 }
