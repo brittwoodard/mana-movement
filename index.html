@@ -119,32 +119,21 @@ seo:
     class="p-10p bg-image-style bg-overlay min-h-[90vh] flex align-middle items-center text-center justify-center {{page.hero-banner.overlay_style}}"
     style="background-image: url('{{page.hero-banner.background_image}}'); background-position: {{page.hero-banner.image_focus}};">
     <div>
-        <h2 class="">{{page.hero-banner.title}}</h2>
-        <h3 class="">{{page.hero-banner.subtitle}}</h3>
+        <h2 class="">{{ page.hero-banner.title }}</h2>
+        <h3 class="">{{ page.hero-banner.subtitle }}</h3>
 
         <!-- Video Button -->
-        {% if page.hero-banner.button.show == true %}
-
         <button id="openModalBtnBanner" class="button cursor-pointer">{{page.hero-banner.button.text}}</button>
 
         <div id="videoModalBanner" class="modal">
             <div class="modal-content">
                 <span class="close">&times;</span>
-                {% if page.hero-banner.button.type == 'youtube' %}
+
                 <!-- YouTube iframe -->
                 <iframe class="w-[360px] h-[202.5px] md:w-[700px] md:h-[394px]" src="{{page.hero-banner.button.url}}" frameborder="0"
-                    allowfullscreen></iframe>
-                {% else %}
-                <!-- Fallback for other video types -->
-                <video controls>
-                    <source src="{{page.hero-banner.button.url}}" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-                {% endif %}
+                    allowfullscreen></iframe>  
             </div>
         </div>
-
-        {% endif %}
     </div>
 </section>
 
@@ -235,4 +224,16 @@ seo:
     </div>
     {% endfor %}
   </div>
+</section>
+
+
+<!-- Gallery -->
+<section class="columns-3 gap-4">
+  {% for item in page.gallery %}
+  <div class="p-2 break-inside-avoid block mb-4">
+      <div class="bg-cover {% cycle 'aspect-square', 'aspect-portrait', 'aspect-landscape' %} relative">
+          <img src="{{ item.image_path }}" alt="{{ item.seo }}" class="absolute inset-0 w-full h-full object-cover">
+      </div>
+  </div>
+  {% endfor %}
 </section>
