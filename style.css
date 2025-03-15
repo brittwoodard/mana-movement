@@ -152,4 +152,10 @@
         @apply w-full max-h-[20vh] md:max-h-[32vh] lg:h-[60vh] mx-auto top-[50%] lg:top-[35%]
     }
 
+    /* Slick */
+    .slick-dots li button:before {
+        color:white;
+      }
+      
+
 }

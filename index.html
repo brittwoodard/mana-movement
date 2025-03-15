@@ -218,12 +218,12 @@ seo:
 
 
 <!-- Testimonials -->
-<section class="">
+<section class="section-padding bg-main">
   <div class="testimonial-container">
 
     {% for item in page.testimonials %}
-    <div class="testimonial-item">
-      <p class="text-center"><em>"{{item.testimonial_html}}"</em></p>
+    <div class="testimonial-item text-center text-lighter font-serif italic text-lg">
+      <p class=""><em>{{item.testimonial_html}}</em></p>
     </div>
     {% endfor %}
   </div>
@@ -231,11 +231,11 @@ seo:
 
 
 <!-- Gallery -->
-<section class="columns-3 gap-4">
+<section class="columns-3 section-padding">
   {% for item in page.gallery %}
-  <div class="p-2 break-inside-avoid block mb-4">
+  <div class="break-inside-avoid block mb-4">
       <div class="bg-cover {% cycle 'aspect-square', 'aspect-portrait', 'aspect-landscape' %} relative">
-          <img src="{{ item.image_path }}" alt="{{ item.seo }}" class="absolute inset-0 w-full h-full object-cover">
+          <img src="{{ item.image_path }}" alt="{{ item.seo }}" class="absolute inset-0 w-full h-full object-cover border border-main">
       </div>
   </div>
   {% endfor %}
