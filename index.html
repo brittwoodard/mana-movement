@@ -139,7 +139,7 @@ seo:
 <section>
 
   <!-- First Section -->
-  <div class="section-padding w-[70%] mx-auto">
+  <div class="section-padding lg:w-[70%] mx-auto">
     <img src="/uploads/icons/manamovement-2.png" class="h-16 mb-8 mx-auto">
     <div class="text-center">
       {{ page.about.first-description_html }}
@@ -147,19 +147,21 @@ seo:
   </div>
 
   <!-- Second Section -->
-  <div class="grid grid-cols-3 gap-20 mb-10p mx-20">
+  <div class="md:grid md:grid-cols-3 md:gap-8 lg:gap-20 mb-20 lg:mb-10p mx-8 lg:mx-20">
 
     <!-- Left Column / Image -->
-    <div class="bg-image-style border border-main" style="background-image: url({{ page.about.image.image_path }}); background-position: {{ page.about.image.image_focus }};"></div>
+    <div class="bg-image-style border border-main min-h-[60vh]" style="background-image: url({{ page.about.image.image_path }}); background-position: {{ page.about.image.image_focus }};"></div>
 
     <!-- Right Column / Text -->
-    <div class="col-span-2 my-20">
+    <div class="col-span-2 lg:my-20 flex items-center">
       <div>
-        {{ page.about.second-description_html }}
+        <div>
+          {{ page.about.second-description_html }}
+        </div>
+        <a href="{{ page.about.button.url }}" class="button">
+          {{ page.about.button.text }}
+        </a>
       </div>
-      <a href="{{ page.about.button.url }}" class="button">
-        {{ page.about.button.text }}
-      </a>
     </div>
 
   </div>
@@ -171,7 +173,7 @@ seo:
 <section class="bg-image-style section-padding" style="background-image: url({{ page.banner.background-image.image_path }}); background-position: {{ page.banner.background-image.image_focus }};">
 
   <div>
-    <div class="font-serif text-light text-4xl w-[65%]">
+    <div class="font-serif text-light text-3xl lg:text-4xl lg:w-[65%]">
       {{ page.banner.description_html }}
     </div>
     <a href="{{ page.banner.button.url }}" class="button">
@@ -184,17 +186,17 @@ seo:
 <!-- Offerings -->
 <section class="section-padding">
   <div>
-    <h2 class="font-serif text-feature capitalize text-3xl text-center mb-4">
+    <h2 class="font-serif text-feature capitalize text-2xl lg:text-3xl text-center mb-4">
       {{ page.offerings.heading }}
     </h2>
-    <div class="w-[80%] mx-auto text-center mb-4">
+    <div class="lg:w-[80%] mx-auto text-center mb-4">
       {{ page.offerings.description_html }}
     </div>
   </div>
 
-  <div class="grid grid-cols-3 gap-8">
+  <div class="md:grid md:grid-cols-3 md:gap-8">
     {% for item in page.offerings.offering %}
-    <div>
+    <div class="mt-12 md:mt-0">
       <div class="bg-image-style aspect-square" style="background-image: url({{ item.image.image_path }});"></div>
       <h3 class="font-serif text-feature uppercase text-xl text-center mt-8 mb-4 tracking-wide">
         {{ item.title }}
@@ -229,7 +231,7 @@ seo:
 
 
 <!-- Gallery -->
-<section class="columns-3 section-padding">
+<section class="md:columns-3 section-padding">
   {% for item in page.gallery %}
   <div class="break-inside-avoid block mb-4">
       <div class="bg-cover {% cycle 'aspect-square', 'aspect-landscape', 'aspect-portrait' %} relative">
@@ -241,10 +243,10 @@ seo:
 
 
 <!-- Sample Section -->
-<section class="grid grid-cols-2 gap-16 section-padding bg-main text-lighter">
+<section class="md:grid md:grid-cols-2 md:gap-16 section-padding bg-main text-lighter">
 
   <!-- Left Column / Text -->
-  <div class="flex items-center">
+  <div class="flex items-center mb-8 md:mb-0">
     <div>
       <h2 class="font-serif text-3xl capitalize tracking-wide mb-4">
         {{ page.sample.heading }}
