@@ -8,8 +8,8 @@ module.exports = {
     ],
     theme: {
       fontFamily: {
-        sans: ['Montserrat', 'sans-serif'],
-        serif: ['Italiana', 'serif'],
+        sans: ['josefin-sans', 'sans-serif'],
+        serif: ['ltc-bodoni-175', 'serif'],
       },
       extend: {
         spacing: {

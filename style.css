@@ -3,12 +3,18 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Fonts */
+/* josefin-sans: 100, 300, 400, 600 */
+/* ltc-bodoni-175: 400 */
+
 :root {
     --dark: #423634;
     --light: #F6EADB;
     --lighter: #F9F8F6;
     --main: #D5AAAA;
     --feature: #9E6365;
+    --sans: "josefin-sans", sans-serif;
+    --serif: "ltc-bodoni-175", serif;
 }
 
 
@@ -21,7 +27,7 @@
     }
 
     body {
-        @apply font-sans font-light text-dark bg-light antialiased
+        @apply font-sans font-[400] text-dark bg-lighter antialiased
     }
 
 }

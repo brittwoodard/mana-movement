@@ -32,7 +32,7 @@ html,
   -moz-tab-size: 4; /* 3 */
   -o-tab-size: 4;
      tab-size: 4; /* 3 */
-  font-family: Montserrat, sans-serif; /* 4 */
+  font-family: josefin-sans, sans-serif; /* 4 */
   font-feature-settings: normal; /* 5 */
   font-variation-settings: normal; /* 6 */
   -webkit-tap-highlight-color: transparent; /* 7 */
@@ -331,9 +331,9 @@ html {
 }
 body {
   --tw-bg-opacity: 1;
-  background-color: rgb(246 234 219 / var(--tw-bg-opacity));
-  font-family: Montserrat, sans-serif;
-  font-weight: 300;
+  background-color: rgb(249 248 246 / var(--tw-bg-opacity));
+  font-family: josefin-sans, sans-serif;
+  font-weight: 400;
   --tw-text-opacity: 1;
   color: rgb(66 54 52 / var(--tw-text-opacity));
   -webkit-font-smoothing: antialiased;
@@ -618,12 +618,18 @@ video {
   line-height: 1.75rem;
 }
 
+/* Fonts */
+/* josefin-sans: 100, 300, 400, 600 */
+/* ltc-bodoni-175: 400 */
+
 :root {
     --dark: #423634;
     --light: #F6EADB;
     --lighter: #F9F8F6;
     --main: #D5AAAA;
     --feature: #9E6365;
+    --sans: "josefin-sans", sans-serif;
+    --serif: "ltc-bodoni-175", serif;
 }
 
 
