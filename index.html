@@ -9,7 +9,7 @@ hero-banner:
     text: Watch the video
     url: https://www.youtube.com/embed/5sEVM981_X0?si=_M_2yAQ24qp7b6Tc
   background-image: 
-    image_path: 
+    image_path: /uploads/images/manamovement-2.JPG
     image_focus: 
 about: 
   first-description_html: |
@@ -20,7 +20,7 @@ about:
     <p>Returning to these innate movement patterns with the intention of softening and opening will awaken the natural flow of Life Force Energy through the body, supporting you to feel a deep sense of clarity, peace, expansion, and a renewed sense of inspiration.</p>
     <p>Mana Movement is designed to suit all women, all bodies, at every stage of life and Feminine Rite of Passage.</p>
   image: 
-    image_path: 
+    image_path: /uploads/images/manamovement-2.JPG
     image_focus: 
   button: 
     text: Bring Mana Movement to festivals
@@ -42,7 +42,7 @@ offerings:
        text: 
        url: 
      image: 
-       image_path: 
+       image_path: /uploads/images/manamovement-2.JPG
        image_focus: 
    - title: Mana Mei’s YouTube Channel
      description: Try Mana Movement out today through one of Mana Mei’s short YouTube Practices. Subscribe to stay up-to-date as new practices are launched.
@@ -50,7 +50,7 @@ offerings:
        text: Take me there
        url: https://www.youtube.com/@ManaMei
      image: 
-       image_path: 
+       image_path: /uploads/images/manamovement-2.JPG
        image_focus: 
    - title: In-Person Experiences
      description: Be the first to know when Mana Mei’ is offering in-person Mana Movement classes and workshops by signing up for the Email Newsletter. Check the calendar for an up-to-date listing of all scheduled classes, workshops, and retreats.
@@ -58,7 +58,7 @@ offerings:
        text: Sign up for the newsletter
        url: 
      image: 
-       image_path: 
+       image_path: /uploads/images/manamovement-2.JPG
        image_focus: 
 testimonials: 
   - testimonial_html: |
@@ -82,19 +82,19 @@ testimonials:
   - testimonial_html: |
       <p>I clearly see and feel the changes in my life and in my body. I see more fluidity in every parts of the every day life, professional, personal…It’s really amazing and magical !!! I feel more present, more grounded, more feminine, more aware, more confident, more a lot of things!!! I also have more creativity.</p>
 gallery: 
- - image_path: 
- - image_path: 
- - image_path: 
- - image_path: 
- - image_path: 
- - image_path: 
- - image_path: 
- - image_path: 
- - image_path: 
- - image_path: 
- - image_path: 
- - image_path: 
- - image_path: 
+ - image_path: /uploads/images/manamovement-2.JPG
+ - image_path: /uploads/images/manamovement-2.JPG
+ - image_path: /uploads/images/manamovement-2.JPG
+ - image_path: /uploads/images/manamovement-2.JPG
+ - image_path: /uploads/images/manamovement-2.JPG
+ - image_path: /uploads/images/manamovement-2.JPG
+ - image_path: /uploads/images/manamovement-2.JPG
+ - image_path: /uploads/images/manamovement-2.JPG
+ - image_path: /uploads/images/manamovement-2.JPG
+ - image_path: /uploads/images/manamovement-2.JPG
+ - image_path: /uploads/images/manamovement-2.JPG
+ - image_path: /uploads/images/manamovement-2.JPG
+ - image_path: /uploads/images/manamovement-2.JPG
 sample: 
   heading: Try it for free
   description_html: |
@@ -147,10 +147,31 @@ seo:
 
 <!-- About Section -->
 <section>
+
+  <!-- First Section -->
   <div>
-    <img src="#">
+    <img src="/uploads/icons/manamovement-2.png" class="h-20">
     <div>
-      {{ page.about.description_html }}
+      {{ page.about.first-description_html }}
     </div>
   </div>
+
+  <!-- Second Section -->
+  <div class="grid grid-cols-3">
+
+    <!-- Left Column / Image -->
+    <div class="bg-image-style" style="background-image: url({{ page.about.image.image_path }}); background-position: {{ page.about.image.image_focus }};"></div>
+
+    <!-- Right Column / Text -->
+    <div class="col-span-2">
+      <div>
+        {{ page.about.second-description_html }}
+      </div>
+      <a href="{{ page.about.button.url }}" class="button">
+        {{ page.about.button.text }}
+      </a>
+    </div>
+    
+  </div>
+
 </section>
