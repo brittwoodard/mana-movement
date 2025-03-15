@@ -3,6 +3,14 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+    --dark: #423634;
+    --light: #F6EADB;
+    --lighter: #F9F8F6;
+    --main: #D5AAAA;
+    --feature: #9E6365;
+}
+
 
 /* ----------- Default Styles to apply to the whole project  --------- */
 
