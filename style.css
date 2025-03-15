@@ -30,12 +30,26 @@
         @apply font-sans font-[400] text-dark bg-lighter antialiased
     }
 
+    p {
+        @apply mb-4 last:mb-0
+    }
+
 }
 
 
 /* ----------- ADDITIONAL COMPONENTS  --------- */
 
 @layer components {
+
+    /* Structure */
+    .section-padding {
+        @apply py-10p px-20
+    }
+
+    /* Buttons */
+    .button {
+        @apply bg-main text-lighter font-serif py-2 px-4 capitalize text-[1.2rem] tracking-wide inline-block hover:transition hover:duration-500 hover:shadow-xl
+    }
 
     /* Images */
     .bg-image-style {

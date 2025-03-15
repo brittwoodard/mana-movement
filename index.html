@@ -141,25 +141,25 @@ seo:
 <section>
 
   <!-- First Section -->
-  <div>
-    <img src="/uploads/icons/manamovement-2.png" class="h-20">
-    <div>
+  <div class="section-padding w-[70%] mx-auto">
+    <img src="/uploads/icons/manamovement-2.png" class="h-16 mb-8 mx-auto">
+    <div class="text-center">
       {{ page.about.first-description_html }}
     </div>
   </div>
 
   <!-- Second Section -->
-  <div class="grid grid-cols-3">
+  <div class="grid grid-cols-3 gap-20 mb-10p mx-20">
 
     <!-- Left Column / Image -->
     <div class="bg-image-style" style="background-image: url({{ page.about.image.image_path }}); background-position: {{ page.about.image.image_focus }};"></div>
 
     <!-- Right Column / Text -->
-    <div class="col-span-2">
+    <div class="col-span-2 my-20">
       <div>
         {{ page.about.second-description_html }}
       </div>
-      <a href="{{ page.about.button.url }}" class="button">
+      <a href="{{ page.about.button.url }}" class="button mt-4">
         {{ page.about.button.text }}
       </a>
     </div>
