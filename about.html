@@ -63,10 +63,12 @@ seo:
       <!-- Timeline Column -->
       <div class="col-span-1 flex flex-col items-center">
         <!-- Icon -->
-        <img src="/uploads/icons/Logo-feature.svg" class="h-[2rem] z-10 relative">
+        <img src="/uploads/icons/Logo-feature.svg" class="h-8 z-10 relative">
   
-        <!-- Vertical Line -->
-        <div class="border-r border-feature w-0 h-full grow"></div>
+        <!-- Line (hidden on last item) -->
+        {% unless forloop.last %}
+          <div class="border-r border-feature w-0 h-full grow"></div>
+        {% endunless %}
       </div>
   
       <!-- Story Column -->
