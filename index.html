@@ -113,27 +113,33 @@ seo:
 ---
 
 <!-- Hero Banner -->
-<section
-    class="p-10p bg-image-style bg-overlay min-h-[90vh] flex align-middle items-center text-center justify-center {{page.hero-banner.overlay_style}}"
-    style="background-image: url('{{page.hero-banner.background_image}}'); background-position: {{page.hero-banner.image_focus}};">
+
+<section class="section-video h-[95vh] flex items-center justify-center">
+  <video autoplay muted loop playsinline poster class="bg-video">
+    <source src="/uploads/video/manamovement-1.webm" type="video/webm">
+    <source src="/uploads/video/manamovement-1.mp4" type="video/mp4">
+    <p>Sorry, your browser doesn't support embedded videos</p> 
+  </video>
+  <div class="lex flex-col items-center justify-center text-center" data-aos="fade" data-aos-offset="0" data-aos-duration="3000">
+    <img src="/uploads/icons/manamovement-4.png" alt="Mana Movement" class="w-[50vw] mb-4">
     <div>
-        <h1 class="">{{ page.hero-banner.heading }}</h1>
-        <p class="">{{ page.hero-banner.subtitle }}</p>
 
-        <!-- Video Button -->
-        <button id="openModalBtnBanner" class="button cursor-pointer">{{page.hero-banner.button.text}}</button>
+      <!-- Video Button -->
+      <button id="openModalBtnBanner" class="button-accent cursor-pointer">{{page.hero-banner.button.text}}</button>
 
-        <div id="videoModalBanner" class="modal">
-            <div class="modal-content">
-                <span class="close">&times;</span>
+      <div id="videoModalBanner" class="modal">
+          <div class="modal-content">
+              <span class="close">&times;</span>
 
-                <!-- YouTube iframe -->
-                <iframe class="w-[360px] h-[202.5px] md:w-[700px] md:h-[394px]" src="{{page.hero-banner.button.url}}" frameborder="0"
-                    allowfullscreen></iframe>  
-            </div>
-        </div>
+              <!-- YouTube iframe -->
+              <iframe class="w-[360px] h-[202.5px] md:w-[700px] md:h-[394px]" src="{{page.hero-banner.button.url}}" frameborder="0"
+                  allowfullscreen></iframe>  
+          </div>
+      </div>
     </div>
+  </div>
 </section>
+
 
 <!-- About Section -->
 <section>
@@ -234,12 +240,24 @@ seo:
 <section class="md:columns-3 section-padding">
   {% for item in page.gallery %}
   <div class="break-inside-avoid block mb-4">
+    <a 
+      href="{{ item.image_path }}" 
+      data-fancybox="gallery" 
+      data-caption="{{ item.seo }}"
+      class="block"
+    >
       <div class="bg-cover {% cycle 'aspect-square', 'aspect-landscape', 'aspect-portrait' %} relative">
-          <img src="{{ item.image_path }}" alt="{{ item.seo }}" class="absolute inset-0 w-full h-full object-cover border border-main">
+        <img 
+          src="{{ item.image_path }}" 
+          alt="{{ item.seo }}" 
+          class="absolute inset-0 w-full h-full object-cover border border-main"
+        >
       </div>
+    </a>
   </div>
   {% endfor %}
 </section>
+
 
 
 <!-- Sample Section -->

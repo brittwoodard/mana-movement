@@ -36,6 +36,7 @@ module.exports = {
           'lighter': '#F9F8F6',
           'main': '#D5AAAA',
           'feature': '#9E6365',
+          'accent': '#cd913c',
           'transparent': 'transparent',
         },
       },

@@ -21,3 +21,23 @@ $('.text-container').slick({
     infinite: true,
     pauseOnHover: false,
 });
+
+// Popup Gallery
+document.addEventListener('DOMContentLoaded', function () {
+    if (typeof Fancybox !== 'undefined') {
+      Fancybox.bind('[data-fancybox="gallery"]', {
+        Toolbar: {
+          display: [
+            { id: "counter", position: "center" },
+            "close"
+          ]
+        },
+        Carousel: {
+          Navigation: true
+        }
+      });
+    } else {
+      console.warn("Fancybox is not loaded yet.");
+    }
+  });
+  
