@@ -137,3 +137,33 @@ seo:
 
 <!-- Banner -->
 <section class="bg-image-style min-h-[60vh]" style="background-image: url('{{ page.banner.image.image_path }}'); background-position: {{ page.banner.image.image_focus }};"></section>
+
+
+<!-- About Mana Movement Practice -->
+<section>
+  <div class="lg:w-[80%]">
+    <h2>
+      {{ page.about-practice.heading }}
+    </h2>
+    <div>
+      {{ page.about-practice.description_html }}
+    </div>
+  </div>
+
+  <div class="bg-contain bg-right bg-no-repeat">
+    <h3>
+      {{ page.about-practice.key-elements-heading }}
+    </h3>
+
+    {% for item in page.about-practice.key-elements %}
+    <div>
+      <h3>
+        {{ item.title }}
+      </h3>
+      <div>
+        {{ item.description_html }}
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</section>
