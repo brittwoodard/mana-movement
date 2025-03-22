@@ -661,6 +661,9 @@ video {
 .relative {
   position: relative;
 }
+.sticky {
+  position: sticky;
+}
 .inset-0 {
   inset: 0px;
 }
@@ -670,20 +673,23 @@ video {
 .left-0 {
   left: 0px;
 }
-.z-20 {
-  z-index: 20;
+.top-0 {
+  top: 0px;
 }
 .z-10 {
   z-index: 10;
 }
-.col-span-2 {
-  grid-column: span 2 / span 2;
+.z-20 {
+  z-index: 20;
+}
+.col-span-1 {
+  grid-column: span 1 / span 1;
 }
 .col-span-11 {
   grid-column: span 11 / span 11;
 }
-.col-span-1 {
-  grid-column: span 1 / span 1;
+.col-span-2 {
+  grid-column: span 2 / span 2;
 }
 .m-2 {
   margin: 0.5rem;
@@ -699,6 +705,9 @@ video {
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
+}
+.mb-12 {
+  margin-bottom: 3rem;
 }
 .mb-20 {
   margin-bottom: 5rem;
@@ -720,9 +729,6 @@ video {
 }
 .mt-8 {
   margin-top: 2rem;
-}
-.mb-12 {
-  margin-bottom: 3rem;
 }
 .block {
   display: block;
@@ -748,6 +754,9 @@ video {
 .h-16 {
   height: 4rem;
 }
+.h-8 {
+  height: 2rem;
+}
 .h-\[202\.5px\] {
   height: 202.5px;
 }
@@ -760,20 +769,17 @@ video {
 .h-screen {
   height: 100vh;
 }
-.h-12 {
-  height: 3rem;
-}
-.h-8 {
-  height: 2rem;
-}
-.h-\[2rem\] {
-  height: 2rem;
-}
 .min-h-\[60vh\] {
   min-height: 60vh;
 }
 .min-h-\[80vh\] {
   min-height: 80vh;
+}
+.min-h-screen {
+  min-height: 100vh;
+}
+.w-0 {
+  width: 0px;
 }
 .w-\[360px\] {
   width: 360px;
@@ -783,9 +789,6 @@ video {
 }
 .w-full {
   width: 100%;
-}
-.w-0 {
-  width: 0px;
 }
 .flex-grow {
   flex-grow: 1;
@@ -830,6 +833,9 @@ video {
 .gap-4 {
   gap: 1rem;
 }
+.overflow-y-auto {
+  overflow-y: auto;
+}
 .border {
   border-width: 1px;
 }
@@ -840,13 +846,13 @@ video {
   --tw-border-opacity: 1;
   border-color: rgb(66 54 52 / var(--tw-border-opacity));
 }
-.border-main {
-  --tw-border-opacity: 1;
-  border-color: rgb(213 170 170 / var(--tw-border-opacity));
-}
 .border-feature {
   --tw-border-opacity: 1;
   border-color: rgb(158 99 101 / var(--tw-border-opacity));
+}
+.border-main {
+  --tw-border-opacity: 1;
+  border-color: rgb(213 170 170 / var(--tw-border-opacity));
 }
 .bg-light {
   --tw-bg-opacity: 1;
@@ -858,15 +864,6 @@ video {
 }
 .bg-cover {
   background-size: cover;
-}
-.bg-contain {
-  background-size: contain;
-}
-.bg-center {
-  background-position: center;
-}
-.bg-no-repeat {
-  background-repeat: no-repeat;
 }
 .object-cover {
   -o-object-fit: cover;
@@ -996,9 +993,6 @@ video {
   }
   .lg\:mb-10p {
     margin-bottom: 10%;
-  }
-  .lg\:max-h-\[100vh\] {
-    max-height: 100vh;
   }
   .lg\:w-\[65\%\] {
     width: 65%;

@@ -48,13 +48,13 @@ seo:
 ---
 
 <!-- Hero Banner -->
-<section class="grid grid-cols-2">
+<section class="grid grid-cols-2 min-h-screen">
 
     <!-- Left Column / Fixed Image -->
-    <div class="bg-image-style min-h-[80vh]" style="background-image: url('{{ page.hero-banner.image.image_path }}'); background-position: {{ page.hero-banner.image.image_focus }};"></div>
+    <div class="sticky top-0 h-screen bg-image-style min-h-[80vh]" style="background-image: url('{{ page.hero-banner.image.image_path }}'); background-position: {{ page.hero-banner.image.image_focus }};"></div>
 
     <!-- Right Column / Scroll Text -->
-<div>
+<div class="overflow-y-auto">
     <h1>{{ page.hero-banner.heading }}</h1>
   
     {% for block in page.hero-banner.timeline %}
