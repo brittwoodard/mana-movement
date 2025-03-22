@@ -43,6 +43,17 @@ hero-banner:
       <p>And then the requests started flowing in for a Mana Movement Teacher Training as women because inspired and passionate to help spread this simple yet deeply profound practice to their own communities and in their own languages…</p>
     - |
       <p>And so here we arrive, and it is just the beginning. As the nature of mana, the double taurus never-ending cycle of energy flowing in and out and up and down, expanding into the next evolution…</p>
+about-mana: 
+  heading: Who is Mana Mei?
+  description_html: |
+    <p>Mana Mei is a professional dancer and an International Leader in the Art of Feminine Embodiment. She is a mother of 2 incredible children, a devoted artist and nature-lover. She is the founder of Liberation Through Movement- a global somatic healing and personal transformation modality for women based on embodied movement and somatic dance. LTM offers a range of pre-recorded and live online programs to women.</p>
+    <p>Mana Mei is also the creator of Mana Movement- a holistic healing embodied movement practice that has already supported thousands of women around the world in cultivating safety and freedom in their bodies through returning to the Feminine Way.</p>
+    <p>Mana Mei has been obsessed with dance her entire life, beginning her life-long journey at just 3 years old. Mana studied classical ballet, modern and contemporary dance, somatic dance, improvisation, as well as ecstatic dance, 5 rhythms, and intuitive free movement. Mana is devoted to personal development and has explored many lineages of spirituality, embodiment, and alternative culture.</p> 
+    <p>Mana Mei has dedicated her life to establishing a deep unwavering sense of inner safety and freedom for herself, and has extended this devotion to helping other women do the same through her work as a women’s embodiment mentor and facilitator.</p>
+    <p>Mana Mei currently resides in Nevada City, California.</p>
+  image: 
+    image_path: /uploads/images/manamovement-3.png
+    image_focus: 
 seo: 
   hide-from-google: true
 ---
@@ -80,4 +91,22 @@ seo:
     {% endfor %}
   </div>
   
+</section>
+
+
+<!-- About Mana Mei -->
+<section class="grid grid-cols-3">
+
+  <!-- Left Column / Text -->
+  <div class="col-span-2">
+    <h2>
+      {{ page.about-mana.heading }}
+    </h2>
+    <div>
+      {{ page.about-mana.description_html }}
+    </div>
+  </div>
+
+  <!-- Right Column / Image -->
+  <div class="bg-image-style" style="background-image: url('{{ page.about-mana.image.image_path }}'); background-position: {{ page.about-mana.image_focus }};"></div>
 </section>
