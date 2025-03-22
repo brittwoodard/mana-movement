@@ -40,10 +40,22 @@
 /* ----------- ADDITIONAL COMPONENTS  --------- */
 
 @layer components {
+    /* Typography */
+    .heading-md {
+        @apply font-serif capitalize text-2xl lg:text-3xl
+    }
+
+    .subheading {
+        @apply font-serif uppercase text-xl tracking-wide
+    }
 
     /* Structure */
     .section-padding {
         @apply py-20 lg:py-10p px-8 lg:px-20
+    }
+
+    .x-padding {
+        @apply px-8 lg:px-20
     }
 
     /* Buttons */

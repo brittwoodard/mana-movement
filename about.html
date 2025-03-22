@@ -57,7 +57,7 @@ about-mana:
 banner: 
   image: 
     image_path: /uploads/images/manamovement-18.jpg
-    image_focus: 
+    image_focus: 50% 85%
 about-practice: 
   heading: A Closer look into the Mana Movement Practice
   description_html: |
@@ -70,26 +70,29 @@ about-practice:
    - title: Mindfulness Meditation
      description_html: |
        <p>Give your mind something to focus on that will bring you into deep connection with your body. Practice sustained focus on the feeling body to soften the mind and quiet inner chatter. Arrive in the NOW moment to cultivate a sense of inner peace.</p>
+     section-width: 75%
    - title: Physical Activation
      description_html: |
        <p>Awaken all layer of the physical body from skin to muscles to bones.</p>
        <p>Get the blood flowing and loosen up the tension in your body. Increase mobility through the spine and hips and discover new ways to move the body in fluid freedom.</p>
+     section-width: 65%
    - title: Spiritual Liberation
      description_html: |
        <p>Connect to your unique authentic expression in the way you move and the way you dance your life force energy through you! Free your expression and find the true voice of your body. Activate your creativity and inspiration</p>
+     section-width: 80%
 seo: 
   hide-from-google: true
 ---
 
 <!-- Hero Banner -->
-<section class="grid grid-cols-2 min-h-screen">
+<section class="grid grid-cols-2 gap-8 min-h-screen">
 
     <!-- Left Column / Fixed Image -->
     <div class="sticky top-0 h-screen bg-image-style min-h-[80vh]" style="background-image: url('{{ page.hero-banner.image.image_path }}'); background-position: {{ page.hero-banner.image.image_focus }};"></div>
 
     <!-- Right Column / Scroll Text -->
-<div class="overflow-y-auto">
-    <h1>{{ page.hero-banner.heading }}</h1>
+<div class="overflow-y-auto my-20 pr-8 lg:pr-20">
+    <h1 class="heading-md text-feature mb-8">{{ page.hero-banner.heading }}</h1>
   
     {% for block in page.hero-banner.timeline %}
     <div class="grid grid-cols-12">
@@ -106,7 +109,7 @@ seo:
       </div>
   
       <!-- Story Column -->
-      <div class="col-span-11 mb-12">
+      <div class="col-span-11 mb-12 last:mb-0 pl-4">
         {{ block | markdownify }}
       </div>
   
@@ -118,31 +121,33 @@ seo:
 
 
 <!-- About Mana Mei -->
-<section class="grid grid-cols-3">
+<section class="grid grid-cols-3 gap-20 section-padding">
 
   <!-- Left Column / Text -->
-  <div class="col-span-2">
-    <h2>
-      {{ page.about-mana.heading }}
-    </h2>
+  <div class="col-span-2 flex items-center">
     <div>
-      {{ page.about-mana.description_html }}
+      <h2 class="heading-md text-feature mb-4">
+        {{ page.about-mana.heading }}
+      </h2>
+      <div>
+        {{ page.about-mana.description_html }}
+      </div>
     </div>
   </div>
 
   <!-- Right Column / Image -->
-  <div class="bg-image-style" style="background-image: url('{{ page.about-mana.image.image_path }}'); background-position: {{ page.about-mana.image_focus }};"></div>
+  <div class="bg-image-style min-h-[80vh]" style="background-image: url('{{ page.about-mana.image.image_path }}'); background-position: {{ page.about-mana.image_focus }};"></div>
 </section>
 
 
 <!-- Banner -->
-<section class="bg-image-style min-h-[60vh]" style="background-image: url('{{ page.banner.image.image_path }}'); background-position: {{ page.banner.image.image_focus }};"></section>
+<section class="bg-image-style min-h-[70vh]" style="background-image: url('{{ page.banner.image.image_path }}'); background-position: {{ page.banner.image.image_focus }};"></section>
 
 
 <!-- About Mana Movement Practice -->
-<section>
-  <div class="lg:w-[80%]">
-    <h2>
+<section class="section-padding">
+  <div class="lg:w-[80%] mb-20">
+    <h2 class="heading-md text-feature mb-4">
       {{ page.about-practice.heading }}
     </h2>
     <div>
@@ -150,17 +155,17 @@ seo:
     </div>
   </div>
 
-  <div class="bg-contain bg-right bg-no-repeat">
-    <h3>
+  <div class="bg-contain bg-right bg-no-repeat" style="background-image: url(/uploads/icons/Logo-light.svg); background-position: right;">
+    <h3 class="subheading text-feature">
       {{ page.about-practice.key-elements-heading }}
     </h3>
 
     {% for item in page.about-practice.key-elements %}
-    <div>
-      <h3>
+    <div class="mt-4">
+      <h3 class="uppercase">
         {{ item.title }}
       </h3>
-      <div>
+      <div class="w-[{{ item.section-width }}]">
         {{ item.description_html }}
       </div>
     </div>
