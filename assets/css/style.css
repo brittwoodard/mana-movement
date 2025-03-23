@@ -919,6 +919,12 @@ video {
   --tw-bg-opacity: 1;
   background-color: rgb(213 170 170 / var(--tw-bg-opacity));
 }
+.bg-\[\/uploads\/icons\/Logo-light\.svg\] {
+  background-color: /uploads/icons/Logo-light.svg;
+}
+.bg-\[url\(\/uploads\/icons\/Logo-light\.svg\)\] {
+  background-image: url(/uploads/icons/Logo-light.svg);
+}
 .bg-contain {
   background-size: contain;
 }
@@ -1064,6 +1070,15 @@ video {
   .md\:w-\[700px\] {
     width: 700px;
   }
+  .md\:w-\[65\%\] {
+    width: 65%;
+  }
+  .md\:w-\[75\%\] {
+    width: 75%;
+  }
+  .md\:w-\[80\%\] {
+    width: 80%;
+  }
   .md\:columns-3 {
     -moz-columns: 3;
          columns: 3;
@@ -1079,6 +1094,12 @@ video {
   }
   .md\:gap-8 {
     gap: 2rem;
+  }
+  .md\:bg-\[length\:50px_50px\] {
+    background-size: 50px 50px;
+  }
+  .md\:bg-\[length\:250px_250px\] {
+    background-size: 250px 250px;
   }
   .md\:py-10p {
     padding-top: 10%;
@@ -1130,6 +1151,9 @@ video {
   }
   .lg\:gap-20 {
     gap: 5rem;
+  }
+  .lg\:bg-contain {
+    background-size: contain;
   }
   .lg\:px-20 {
     padding-left: 5rem;
