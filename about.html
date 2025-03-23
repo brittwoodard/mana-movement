@@ -85,13 +85,13 @@ seo:
 ---
 
 <!-- Hero Banner -->
-<section class="grid grid-cols-2 gap-8 min-h-screen">
+<section class="md:grid md:grid-cols-2 md:gap-8 min-h-screen">
 
     <!-- Left Column / Fixed Image -->
-    <div class="sticky top-0 h-screen bg-image-style min-h-[80vh]" style="background-image: url('{{ page.hero-banner.image.image_path }}'); background-position: {{ page.hero-banner.image.image_focus }};"></div>
+    <div class="md:sticky md:top-0 md:h-screen bg-image-style h-[70vh] md:min-h-[80vh]" style="background-image: url('{{ page.hero-banner.image.image_path }}'); background-position: {{ page.hero-banner.image.image_focus }};"></div>
 
     <!-- Right Column / Scroll Text -->
-<div class="overflow-y-auto my-20 pr-8 lg:pr-20">
+  <div class="overflow-y-auto mt-20 mb-0 lg:my-20 pr-8 lg:pr-20 pl-8 lg:pl-0">
     <h1 class="heading-md text-feature mb-8">{{ page.hero-banner.heading }}</h1>
   
     {% for block in page.hero-banner.timeline %}
@@ -109,7 +109,7 @@ seo:
       </div>
   
       <!-- Story Column -->
-      <div class="col-span-11 mb-12 last:mb-0 pl-4">
+      <div class="col-span-11 mb-12 last:mb-0 pl-4 pb-12 md:pb-0">
         {{ block | markdownify }}
       </div>
   
@@ -121,7 +121,10 @@ seo:
 
 
 <!-- About Mana Mei -->
-<section class="grid grid-cols-3 gap-20 section-padding">
+<section class="lg:grid lg:grid-cols-3 lg:gap-20 pb-20 md:py-10p px-8 lg:px-20">
+
+  <!-- Mobile Image -->
+  <div class="md:hidden bg-image-style min-h-[80vh] mb-12" style="background-image: url('{{ page.about-mana.image.image_path }}'); background-position: {{ page.about-mana.image_focus }};"></div>
 
   <!-- Left Column / Text -->
   <div class="col-span-2 flex items-center">
@@ -136,7 +139,7 @@ seo:
   </div>
 
   <!-- Right Column / Image -->
-  <div class="bg-image-style min-h-[80vh]" style="background-image: url('{{ page.about-mana.image.image_path }}'); background-position: {{ page.about-mana.image_focus }};"></div>
+  <div class="hidden lg:block bg-image-style min-h-[80vh] mt-20 lg:mt-0" style="background-image: url('{{ page.about-mana.image.image_path }}'); background-position: {{ page.about-mana.image_focus }};"></div>
 </section>
 
 
