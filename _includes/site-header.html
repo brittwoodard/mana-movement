@@ -1,4 +1,4 @@
-<nav class="hidden md:block absolute top-0 right-0 w-full z-50">
+<nav class="hidden lg:block absolute top-0 right-0 w-full z-50">
     <div class="flex justify-end items-center gap-4 px-6 py-4 border-b border-{{ page.nav.color }}">
         {% for item in site.data.navigation.header %}
         <a href="{{ item.url }}" class="px-4 uppercase text-{{ page.nav.color }} hover:transition hover:duration-500 hover:text-{{ page.nav.color }}">{{ item.title }}</a>
@@ -9,7 +9,7 @@
     </div>
 </nav>
 
-<div class="md:hidden">
+<div class="lg:hidden">
     <div class="mobile-button">
         <span class="mobile-top"></span>
         <span class="mobile-middle"></span>
