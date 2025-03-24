@@ -40,4 +40,16 @@ document.addEventListener('DOMContentLoaded', function () {
       console.warn("Fancybox is not loaded yet.");
     }
   });
+
+  // Mobile Menu
+  // Mobile Menu
+// A $( document ).ready() block.
+$(document).ready(function () {
+  $(document).ready(function () {
+      $(".mobile-button").click(function () {
+          $(".mobile-button").toggleClass("active");
+          $(".mobile-menu").toggleClass("active");
+      });
+  });
+});
   

@@ -1,0 +1,24 @@
+<nav class="hidden md:block absolute top-0 right-0 w-full z-50 border-b border-{{ page.nav.color }}">
+    <div class="flex justify-end items-center gap-4 px-6 py-4">
+        {% for item in site.data.navigation.header %}
+        <a href="{{ item.url }}" class="px-4 uppercase text-{{ page.nav.color }} hover:transition hover:duration-500 hover:text-{{ page.nav.color }}">{{ item.title }}</a>
+        {% endfor %}
+        <a href="/index.html">
+            <img src="/uploads/icons/manamovement-4.png" class="w-48">
+        </a>
+    </div>
+</nav>
+
+<div class="md:hidden">
+    <div class="mobile-button">
+        <span class="mobile-top"></span>
+        <span class="mobile-middle"></span>
+        <span class="mobile-bottom"></span>
+    </div>
+
+    <nav class="mobile-menu">
+        {% for item in site.data.navigation.header %}
+        <a href="{{ item.url }}" class="px-2 mx-2 {% if forloop.last %}text-feature{% endif %}">{{ item.title }}</a>
+        {% endfor %}
+    </nav>
+</div>

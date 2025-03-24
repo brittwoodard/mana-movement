@@ -1,5 +1,8 @@
 ---
 layout: default
+nav: 
+  color: dark
+  hover: accent
 title: About Mana Movement
 hero-banner: 
   heading: The origin story of Mana Movement
@@ -85,13 +88,16 @@ seo:
 ---
 
 <!-- Hero Banner -->
-<section class="md:grid md:grid-cols-2 md:gap-8 min-h-screen">
+<section class="min-h-screen">
+  {% include site-header.html %}
+
+  <div class="md:grid md:grid-cols-2 lg:gap-8">
 
     <!-- Left Column / Fixed Image -->
     <div class="md:sticky md:top-0 md:h-screen bg-image-style h-[70vh] md:min-h-[80vh]" style="background-image: url('{{ page.hero-banner.image.image_path }}'); background-position: {{ page.hero-banner.image.image_focus }};"></div>
 
     <!-- Right Column / Scroll Text -->
-  <div class="overflow-y-auto mt-20 mb-0 lg:my-20 pr-8 lg:pr-20 pl-8 lg:pl-0">
+  <div class="overflow-y-auto mb-0 mt-20 md:mt-36 lg:mb-20 pr-8 lg:pr-20 pl-8 lg:pl-0">
     <h1 class="heading-md text-feature mb-8">{{ page.hero-banner.heading }}</h1>
   
     {% for block in page.hero-banner.timeline %}
@@ -116,6 +122,7 @@ seo:
     </div>
     {% endfor %}
   </div>
+</div>
   
 </section>
 

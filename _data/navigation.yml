@@ -1,13 +1,13 @@
 header:
   - title: Home
-    url: /homepage
+    url: /index
   - title: About
     url: /about  
   - title: Contact
     url: /contact
 footer:
   - title: Home
-    url: /homepage
+    url: /index
   - title: About
     url: /about  
   - title: Contact
