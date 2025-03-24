@@ -50,6 +50,10 @@
         @apply font-serif uppercase text-xl tracking-wide
     }
 
+    .fa-brands {
+        @apply text-accent hover:transition hover:duration-500 hover:text-dark px-2 mb-2 text-2xl
+    }
+
     /* Structure */
     .section-padding {
         @apply py-20 lg:py-10p px-8 lg:px-20

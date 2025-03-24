@@ -1,0 +1,39 @@
+<footer class="py-4 px-8 lg:px-20 bg-feature">
+
+    <div class="md:grid md:grid-cols-3">
+
+        <!-- Left Column -->
+        <div class="">
+            <a href="/index.html">
+                <img src="/uploads/icons/manamovement-4.png" class="w-48 mt-4">
+            </a>
+
+            {% for item in site.data.navigation.footer %}
+            <a href="{{ item.url }}"
+                class="block uppercase text-accent mb-2 hover:transition hover:duration-500 hover:text-dark">{{ item.title
+                }}</a>
+            {% endfor %}
+        </div>
+
+        <!-- Right Column -->
+        <div class="flex justify-center items-end mt-4 md:mt-0">
+            <a href="https://www.instagram.com/manamei_movement/" target="_blank"><i
+                    class="fa-brands fa-square-instagram"></i></a>
+    
+            <a href="https://www.facebook.com/groups/liberationthroughmovement" target="_blank"><i
+                    class="fa-brands fa-facebook"></i></a>
+    
+            <a href="https://www.youtube.com/@ManaMei" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+
+    </div>
+
+
+    <!-- Embodied Creative Agency -->
+    
+    <div class="mt-2">
+        <p class="text-center text-[0.9rem] text-accent/80">Designed & Developed by <a href="https://embodiedcreativeagency.com"
+                target="_blank">Embodied Creative</a></p>
+    </div>
+
+</footer>
