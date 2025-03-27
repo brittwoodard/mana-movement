@@ -7,6 +7,14 @@
 /* josefin-sans: 100, 300, 400, 600 */
 /* ltc-bodoni-175: 400 */
 
+@font-face {
+    font-family: 'inlander_smooth';
+    src: url('/fonts/inlander_smooth-webfont.woff2') format('woff2'),
+        url('/fonts/inlander_smooth-webfont.woff') format('woff');
+    font-weight: bold;
+    font-style: bold;
+}
+
 :root {
     --dark: #423634;
     --light: #F6EADB;

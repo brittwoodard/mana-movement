@@ -9,7 +9,7 @@ module.exports = {
     theme: {
       fontFamily: {
         sans: ['josefin-sans', 'sans-serif'],
-        serif: ['ltc-bodoni-175', 'serif'],
+        serif: ['inlander_smooth', 'serif'],
       },
       extend: {
         spacing: {

@@ -1,0 +1,29 @@
+---
+layout: default
+cta: 
+  heading_html: Sign up for the newsletter
+  subtitle: Fill out the form below to be in the know.
+  description_html: |
+    <p>Be the first to know when Mana Mei’ is offering in-person Mana Movement classes and workshops by signing up for the Email Newsletter. Check the calendar for an up-to-date listing of all scheduled classes, workshops, and retreats.</p>
+  background:
+    background_image: 
+    background_position: 
+    overlay_style: 
+seo: 
+  title: Sign up for the newsletter
+  description: Be the first to know when Mana Mei’ is offering in-person Mana Movement classes and workshops by signing up for the Email Newsletter. Check the calendar for an up-to-date listing of all scheduled classes, workshops, and retreats.
+  social_image: 
+  hide-from-google: true
+---
+
+<!-- Opt-In -->
+<section id="cta" class="bg-image-style py-10p px-5p md:p-10p text-center bg-overlay {{page.cta.background.overlay_style}} min-h-[100vh] flex items-center"
+    style="background-image: url('{{page.cta.background.background_image}}'); background-position: {{page.cta.background.background_position}};">
+    <div>
+      <h2 class="heading-lg-sans text-feature">{{page.cta.heading_html}}</h2>
+      <h3 class="text-feature mb-2">{{page.cta.subtitle}}</h3>
+      <div class="mb-8">{{page.cta.description_html}}</div>
+      {% include form-newsletter.html %}
+    </div>
+    
+</section>
