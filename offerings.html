@@ -1,0 +1,158 @@
+---
+layout: default
+title: Offerings
+map: 
+  heading: A place where there is something for everyone...
+  description: Whether you are brand new in your journey of Embodied Liberation, or if you have been dancing this path for years already, you will find an offering here to support you in your journey back home to your True Self and Liberated Expression.
+  offering:
+    - title: Mana Movement Foundations
+      type: Online Program
+      description: Begin your Embodiment journey by learning this simple yet powerful practice, designed for all women. This is the perfect place to begin, or deepen your practice of using movement as a daily ritual for awakening and connecting to your Feminine Power and returning to inner balance and clarity.
+      url: /mana-movement-foundations.html
+      button-text: Learn more
+      image_path: /uploads/icons/logo-feature.svg
+    - title: Mana Movement Full Course
+      type: Online Program
+      description: Take the next step to deepen your MANA Movement Practice in this 10 module full course which will take you through the detailed breakdown and practice of all elements of the MANA Movement Practice. This expanded course will teach you new exercise and movement not included in the Foundations Course.
+      url: /mana-movement.html
+      button-text: Learn more
+      image_path: /uploads/icons/logo-feature.svg
+    - title: confiDance
+      type: Online Program
+      description: Build your unique free flow dance that is sourced from the internal impulses of your body through this step-by-step Mana Movement Program. You will be guided into activating the Feminine Pathways through every part of the physical and energy body.
+      url: /confidance.html
+      button-text: Learn more
+      image_path: /uploads/icons/logo-feature.svg
+    - title: Mana Movement Maternity
+      type: Online Program
+      description: This course offers a powerful opportunity for pregnant women to reconnect with their bodies, intuition, and feminine energy in a nurturing and intentional way. Through mindful practices, it helps set the foundation for a transformative and empowering experience, where participants feel fully in their power, deeply attuned to their intuition, and open to receiving the joys of pregnancy and birth.
+      url: /mana-movement-maternity.html?v=2
+      image_path: /uploads/icons/logo-feature.svg
+      button-text: Learn more
+    - title: Mana Movement Online Teacher Training
+      type: next training May 12th - August 31st
+      description: The Mana Movement Teacher Training is a 4-month Live Online Program for women who wish to be certified as Mana Movement Teachers with the ability to offer Mana Movement classes under the official brand. The minimum pre-requisite to join the MM Teacher Training is to have completed the Mana Movement Full Course PLUS at least 3 months of personal practice.
+      url: /ttc-waitlist.html
+      button-text: Join the Waitlist
+      image_path: /uploads/icons/logo-feature.svg
+cta: 
+  type: masterclass-reply
+  heading_html: Liberation Through Movement<br>
+  subtitle: Free Masterclass Replay
+  description_html: <p>This is the perfect resource for anyone interested to learn more about the HOW and WHY the Liberation Through Movement Modality for Healing works.</p><p>In this experiential movement Masterclass where you will be introduced to the Liberation Through Movement Model- a 3-pillar process for taking the leap from feeling disconnected to arriving in life as a liberated and embodied woman.</p><p>I cover in depth the elements needed for you to take the journey back home to your True Self and arrive in a more satisfying experience of life, one in which you feel able to navigate the ups and downs of life from a place of grounded presence and safety.</p><p>You will also have the opportunity to be guided through an LTM Movement process to experience it yourself!</p>
+  background: 
+    background_image: /uploads/images/manamei-65.jpg
+    background_position: bottom
+    overlay_style: dark
+seo: 
+  title: Mana Mei Courses & Programs - Transformative Feminine Embodiment Journey
+  description: Explore Mana Mei's offerings, including online courses and mentorship in feminine embodiment and movement. Begin your journey to self-empowerment and join a global community of women embracing their inner strength through dance, somatic practices, and creative expression.
+  keywords: Mana Mei, feminine empowerment, movement mentorship, embodiment practices, online dance programs, somatic exercises, women's community, self-expression, inner strength, embodied movement
+  social_image: /uploads/icons/manamei-11.png
+  hide-from-google: false
+---
+
+<!-- Hero Banner -->
+
+
+<!-- Map -->
+<!-- Small Devices & Smaller -->
+<section class="md:hidden pt-10p px-5p">
+  <p class="text-md-serif text-feature text-center">{{page.map.heading}}</p>
+  <p class="text-center">{{page.map.description}}</p>
+
+  <h2 class="subheading mb-2 mt-12">Mana Movement Courses</h2>
+  <p>Mana Movement is an Embodied Movement Method that is based on introducing the Feminine Pathways and Energetics of movement into the physical body as a way to balance Mind-Body-Spirit connection. It is an all-in-one Somatic Healing Technique that incorporates Mindfulness Meditation, Physical Activation, and Spiritual Liberation. It is accessible to all bodies, and there is no former experience necessary.</p>
+  <p class="italic">Programs do not have to be completed in order. You are free to choose whichever one calls to you!</p>
+
+  <div class="grid grid-cols-5 mt-12">
+      {% for item in page.map.offering %}
+
+      <!-- icon -->
+      <div class="col-span-1 px-2 text-center">
+          <img src="{{item.image_path}}" class="h-16 sm:h-20 md:h-24 bg-lighter z-20 inline-block">
+          {% if forloop.last %}
+          <!-- Omit the div structure for the last item -->
+          {% else %}
+          <div class="grid grid-cols-2 h-full">
+              <div class="border-r-[0.5px] border-feature h-full"></div>
+              <div></div>
+          </div>
+          {% endif %}
+      </div>
+
+      <div class="col-span-4 mb-12 ml-2">
+          <h3 class="subheading mb-2 text-feature">{{item.title}}</h3>
+          <span class="uppercase mb-2 block text-feature">{{item.type}}</span>
+          <p>{{item.description}}</p>
+          <a href="{{item.url}}" class="link">{{item.button-text}}</a>
+      </div>
+
+      {% endfor %}
+</section>
+
+<!-- Medium Devices & Larger -->
+<section class="hidden md:block md:px-5p lg:px-10p pt-10p">
+  <div class="text-center">
+    <p class="text-md-serif text-feature">{{page.map.heading}}</p>
+    <p>{{page.map.description}}</p>
+    <h2 class="heading-md text-feature mb-4 mt-12">Mana Movement Courses</h2>
+    <p>Mana Movement is an Embodied Movement Method that is based on introducing the Feminine Pathways and Energetics of movement into the physical body as a way to balance Mind-Body-Spirit connection. It is an all-in-one Somatic Healing Technique that incorporates Mindfulness Meditation, Physical Activation, and Spiritual Liberation. It is accessible to all bodies, and there is no former experience necessary.</p>
+    <p class="italic">Programs do not have to be completed in order. You are free to choose whichever one calls to you!</p>
+  </div>
+
+  <div class="grid grid-cols-12 mt-16">
+      {% for item in page.map.offering %}
+      {% capture thecycle %}{% cycle 'left', 'right' %}{% endcapture %}
+      {% if thecycle == 'left' %}
+
+      <!-- Content Left -->
+      <div class="col-span-5 px-5p mb-12 
+      {% cycle 'text-right', 'text-left' %}">
+          <h3 class="subheading mb-2 text-feature">{{item.title}}</h3>
+          <span class="uppercase mb-2 block text-feature">{{item.type}}</span>
+          <p>{{item.description}}</p>
+          <a href="{{item.url}}" class="link">{{item.button-text}}</a>
+      </div>
+
+      <div class="col-span-2 px-2 text-center">
+          <img src="{{item.image_path}}" class="h-12 bg-lighter z-20 inline-block">
+          {% if forloop.last %}
+          <!-- Omit the div structure for the last item -->
+          {% else %}
+          <div class="grid grid-cols-2 h-full">
+              <div class="border-r border-feature h-full"></div>
+              <div></div>
+          </div>
+          {% endif %}
+      </div>
+
+      <div class="col-span-5"></div>
+      {% else %}
+
+      <!-- Content Right -->
+      <div class="col-span-5"></div>
+
+      <div class="col-span-2 px-2 text-center">
+          <img src="{{item.image_path}}" class="h-12 bg-lighter z-20 inline-block">
+          {% if forloop.last %}
+          <!-- Omit the div structure for the last item -->
+          {% else %}
+          <div class="grid grid-cols-2 h-full">
+              <div class="border-r border-feature h-full"></div>
+              <div></div>
+          </div>
+          {% endif %}
+      </div>
+
+      <div class="col-span-5 px-5p mb-12
+      {% cycle 'text-right', 'text-left' %}">
+          <h3 class="subheading mb-2 text-feature">{{item.title}}</h3>
+          <span class="uppercase mb-2 block text-feature">{{item.type}}</span>
+          <p>{{item.description}}</p>
+          <a href="{{item.url}}" class="link">{{item.button-text}}</a>
+      </div>
+      {% endif %}
+      {% endfor %}
+  </div>
+</section>
