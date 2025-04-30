@@ -452,6 +452,18 @@ p:last-child {
   --tw-contain-style:  ;
 }
 /* Typography */
+.heading-lg {
+  font-family: inlander_smooth, serif;
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+  text-transform: capitalize;
+}
+@media (min-width: 1024px) {
+  .heading-lg {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+  }
+}
 .heading-md {
   font-family: inlander_smooth, serif;
   font-size: 1.5rem;
@@ -600,6 +612,33 @@ p:last-child {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 500ms;
 }
+/* Overlays */
+.bg-overlay {
+        position: relative;
+    }
+.bg-overlay::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+    }
+.bg-overlay>* {
+        position: relative;
+    }
+.bg-overlay.light::before {
+        background-color: rgba(249, 248, 246, 0.7);
+
+    }
+.bg-overlay.medium::before {
+        background-color: rgba(249, 248, 246, 0.5);
+
+    }
+.bg-overlay.dark::before {
+        background-color: rgba(249, 248, 246, 0.3);
+
+    }
 /* Images */
 .bg-image-style {
   background-size: cover;
@@ -928,11 +967,11 @@ video {
 .aspect-square {
   aspect-ratio: 1 / 1;
 }
+.h-12 {
+  height: 3rem;
+}
 .h-16 {
   height: 4rem;
-}
-.h-28 {
-  height: 7rem;
 }
 .h-8 {
   height: 2rem;
@@ -954,9 +993,6 @@ video {
 }
 .h-screen {
   height: 100vh;
-}
-.h-12 {
-  height: 3rem;
 }
 .max-h-\[80vh\] {
   max-height: 80vh;
@@ -1106,6 +1142,10 @@ video {
   --tw-bg-opacity: 1;
   background-color: rgb(246 234 219 / var(--tw-bg-opacity));
 }
+.bg-lighter {
+  --tw-bg-opacity: 1;
+  background-color: rgb(249 248 246 / var(--tw-bg-opacity));
+}
 .bg-main {
   --tw-bg-opacity: 1;
   background-color: rgb(213 170 170 / var(--tw-bg-opacity));
@@ -1115,10 +1155,6 @@ video {
 }
 .bg-white\/80 {
   background-color: rgb(255 255 255 / 0.8);
-}
-.bg-lighter {
-  --tw-bg-opacity: 1;
-  background-color: rgb(249 248 246 / var(--tw-bg-opacity));
 }
 .bg-opacity-80 {
   --tw-bg-opacity: 0.8;
@@ -1236,9 +1272,6 @@ video {
 }
 .uppercase {
   text-transform: uppercase;
-}
-.lowercase {
-  text-transform: lowercase;
 }
 .italic {
   font-style: italic;
@@ -1522,6 +1555,9 @@ video {
   }
   .lg\:w-\[40vw\] {
     width: 40vw;
+  }
+  .lg\:w-\[60\%\] {
+    width: 60%;
   }
   .lg\:w-\[65\%\] {
     width: 65%;

@@ -50,6 +50,11 @@
 
 @layer components {
     /* Typography */
+    
+    .heading-lg {
+        @apply font-serif capitalize text-3xl lg:text-4xl
+    }
+
     .heading-md {
         @apply font-serif capitalize text-2xl lg:text-3xl
     }
@@ -86,6 +91,39 @@
 
     .link {
         @apply lowercase mb-2 border-b border-dark hover:text-accent hover:border-accent hover:transition hover:duration-500
+    }
+
+    /* Overlays */
+    .bg-overlay {
+        position: relative;
+    }
+
+    .bg-overlay::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+    }
+
+    .bg-overlay>* {
+        position: relative;
+    }
+
+    .bg-overlay.light::before {
+        background-color: rgba(249, 248, 246, 0.7);
+
+    }
+
+    .bg-overlay.medium::before {
+        background-color: rgba(249, 248, 246, 0.5);
+
+    }
+
+    .bg-overlay.dark::before {
+        background-color: rgba(249, 248, 246, 0.3);
+
     }
 
     /* Images */

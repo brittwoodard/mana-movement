@@ -3,6 +3,8 @@ header:
     url: /index
   - title: About
     url: /about  
+  - title: Offerings
+    url: /offerings
   - title: Contact
     url: /contact
 footer:
@@ -10,5 +12,7 @@ footer:
     url: /index
   - title: About
     url: /about  
+  - title: Offerings
+    url: /offerings
   - title: Contact
     url: /contact
