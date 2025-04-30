@@ -1237,9 +1237,6 @@ video {
 .pr-8 {
   padding-right: 2rem;
 }
-.pt-10p {
-  padding-top: 10%;
-}
 .text-left {
   text-align: left;
 }
@@ -1504,10 +1501,6 @@ video {
   .md\:p-10p {
     padding: 10%;
   }
-  .md\:px-5p {
-    padding-left: 5%;
-    padding-right: 5%;
-  }
   .md\:py-10p {
     padding-top: 10%;
     padding-bottom: 10%;
@@ -1582,10 +1575,6 @@ video {
   }
   .lg\:bg-contain {
     background-size: contain;
-  }
-  .lg\:px-10p {
-    padding-left: 10%;
-    padding-right: 10%;
   }
   .lg\:px-20 {
     padding-left: 5rem;
