@@ -52,7 +52,7 @@
     /* Typography */
     
     .heading-lg {
-        @apply font-serif capitalize text-3xl lg:text-4xl
+        @apply font-serif capitalize text-3xl md:text-5xl
     }
 
     .heading-md {
