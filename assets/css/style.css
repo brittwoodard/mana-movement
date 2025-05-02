@@ -1267,6 +1267,12 @@ video {
   font-size: 1.125rem;
   line-height: 1.75rem;
 }
+.text-\[3rem\] {
+  font-size: 3rem;
+}
+.text-\[4rem\] {
+  font-size: 4rem;
+}
 .uppercase {
   text-transform: uppercase;
 }
