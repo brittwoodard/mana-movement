@@ -3,8 +3,6 @@ header:
     url: /index
   - title: About
     url: /about  
-  - title: Courses
-    url: /courses
   - title: Contact
     url: /contact
 footer:
@@ -12,7 +10,5 @@ footer:
     url: /index
   - title: About
     url: /about  
-  - title: Courses
-    url: /courses
   - title: Contact
     url: /contact
