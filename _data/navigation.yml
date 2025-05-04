@@ -2,13 +2,17 @@ header:
   - title: Home
     url: /index
   - title: About
-    url: /about  
+    url: /about
+  - title: Courses
+    url: /courses
   - title: Contact
     url: /contact
 footer:
   - title: Home
     url: /index
   - title: About
-    url: /about  
+    url: /about
+  - title: Courses
+    url: /courses
   - title: Contact
     url: /contact
