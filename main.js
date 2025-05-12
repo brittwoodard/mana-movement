@@ -42,7 +42,6 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
   // Mobile Menu
-  // Mobile Menu
 // A $( document ).ready() block.
 $(document).ready(function () {
   $(document).ready(function () {
