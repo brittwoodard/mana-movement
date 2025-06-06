@@ -42,6 +42,23 @@ prerequisites:
     <span class="font-serif text-feature">OR</span> the Liberation Through Movement Mentorship Program
   description_html: |
     <p>Through successfully completing this training, you will have the experience, knowledge, and permission to teach Mana Movement online and in-person using the Mana Movement brand. This is the ONLY current training which allows you to use the Mana Movement name and specific structure of the practice.</p>
+structure: 
+  heading: Training Structure
+  description_html: |
+    <p>The Mana Movement Teacher Training is a 16-Week Live Online Program where you will be held in a container of support and accountability. You will have lifetime access to all training content and weekly live interaction with Mana Mei and other students in the training.</p>
+  subheading: This training consists of…
+  list_item: 
+   - Extensive PDF Training Manual with Foundational Theory and detailed breakdown of all movement sequences
+   - Lifetime access to all pre-recorded demo videos of all movements and sequences, Plus lifetime access to additional supplementary embodied movement meditations and practices (for personal use)
+   - Weekly Live Group Transmissions with Mana Mei, covering in-depth conceptual theory of Mana Movement and Feminine Embodiment, Somatic Healing, Nervous System Regulation, The Art of Authentic Facilitation, Building a business the Feminine Way, Creating Trust & Authority as a leader, and much more…
+   - Bi-weekly (every other week) Small Group Practice Teaching Pod calls lead by assigned Assistant Teacher who is a Certified Mana Movement Facilitator
+   - 1-on-1 and small group support from Certified Mana Movement Teachers
+   - Bi-weekly (every other week) Written and Video Homework Assignments
+   - Exclusive TELEGRAM Group with all students and Assistant Teachers for Support, connection, inspiration, and accountability
+   - Lifetime access to all training curriculum and Transmission recordings
+   - This training is open to <strong>women all over the world</strong>! We are a global community and we do our best to accommodate all time zones in the scheduling of the training. No matter where you live, we can make this training work for you.
+   - This training is designed with <strong>busy women</strong> in mind! Hey, we all have a lot going on in our lives… children and families, jobs and businesses, travel and self-care. This training has been thoughtfully crafted to fit into your life and everything else you have going on through a flexible “self study” aspect, plus availability of call replays and intentional “catch-up” integration weeks.
+   - This training container will ensure you <strong>never feel alone</strong> along the journey! Through carefully designed rings of support, ranging from 1-on-1 to whole group connection, you will never feel alone in your training experience and you will always have someone to turn to whether it be for support, inspiration, accountability, or authentic connection!
 seo:
   hide-from-google: true
 ---
@@ -133,24 +150,18 @@ seo:
 <!-- Training Structure -->
 <section>
     <div>
-        <h2>Training Structure</h2>
-        <p>The Mana Movement Teacher Training is a 16-Week Live Online Program where you will be held in a container of support and accountability. You will have lifetime access to all training content and weekly live interaction with Mana Mei and other students in the training.</p>
+        <h2>{{ page.structure.heading }}</h2>
+        <div>
+            {{ page.structure.description_html }}
+        </div>
         <img src="/uploads/icons/logo-dark.svg" class="h-20">
     </div>
 
-    <h3>This training consists of…</h3>
+    <h3>{{ page.structure.subheading }}</h3>
     <ul>
-        <li>Extensive PDF Training Manual with Foundational Theory and detailed breakdown of all movement sequences</li>
-        <li>Lifetime access to all pre-recorded demo videos of all movements and sequences, Plus lifetime access to additional supplementary embodied movement meditations and practices (for personal use)</li>
-        <li>Weekly Live Group Transmissions with Mana Mei, covering in-depth conceptual theory of Mana Movement and Feminine Embodiment, Somatic Healing, Nervous System Regulation, The Art of Authentic Facilitation, Building a business the Feminine Way, Creating Trust & Authority as a leader, and much more…</li>
-        <li>Bi-weekly (every other week) Small Group Practice Teaching Pod calls lead by assigned Assistant Teacher who is a Certified Mana Movement Facilitator</li>
-        <li>1-on-1 and small group support from Certified Mana Movement Teachers</li>
-        <li>Bi-weekly (every other week) Written and Video Homework Assignments</li>
-        <li>Exclusive TELEGRAM Group with all students and Assistant Teachers for Support, connection, inspiration, and accountability</li>
-        <li>Lifetime access to all training curriculum and Transmission recordings</li>
-        <li>This training is open to <strong>women all over the world</strong>! We are a global community and we do our best to accommodate all time zones in the scheduling of the training. No matter where you live, we can make this training work for you.</li>
-        <li>This training is designed with <strong>busy women</strong> in mind! Hey, we all have a lot going on in our lives… children and families, jobs and businesses, travel and self-care. This training has been thoughtfully crafted to fit into your life and everything else you have going on through a flexible “self study” aspect, plus availability of call replays and intentional “catch-up” integration weeks.</li>
-        <li>This training container will ensure you <strong>never feel alone</strong> along the journey! Through carefully designed rings of support, ranging from 1-on-1 to whole group connection, you will never feel alone in your training experience and you will always have someone to turn to whether it be for support, inspiration, accountability, or authentic connection!</li>
+        {% for item in page.structure.list_item %}
+        <li>{{ item }}</li>
+        {% endfor %}
     </ul>
 </section>
 
