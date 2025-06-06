@@ -971,6 +971,9 @@ video {
 .mt-8 {
   margin-top: 2rem;
 }
+.ml-8 {
+  margin-left: 2rem;
+}
 .block {
   display: block;
 }
@@ -1069,6 +1072,9 @@ video {
 }
 .w-full {
   width: 100%;
+}
+.w-\[60\%\] {
+  width: 60%;
 }
 .max-w-\[90vw\] {
   max-width: 90vw;
@@ -1293,6 +1299,9 @@ video {
 .pr-8 {
   padding-right: 2rem;
 }
+.pb-16 {
+  padding-bottom: 4rem;
+}
 .text-left {
   text-align: left;
 }
@@ -1330,6 +1339,9 @@ video {
 .text-6xl {
   font-size: 3.75rem;
   line-height: 1;
+}
+.font-bold {
+  font-weight: 700;
 }
 .uppercase {
   text-transform: uppercase;
@@ -1400,6 +1412,14 @@ video {
 
 
 /* ----------- ADDITIONAL COMPONENTS  --------- */
+
+.marker\:text-main *::marker {
+  color: rgb(213 170 170 );
+}
+
+.marker\:text-main::marker {
+  color: rgb(213 170 170 );
+}
 
 .placeholder\:font-sans::-moz-placeholder {
   font-family: josefin-sans, sans-serif;
@@ -1630,6 +1650,9 @@ video {
   .lg\:w-\[80\%\] {
     width: 80%;
   }
+  .lg\:w-\[60\%\] {
+    width: 60%;
+  }
   .lg\:grid-cols-3 {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
@@ -1654,6 +1677,9 @@ video {
   }
   .lg\:pr-20 {
     padding-right: 5rem;
+  }
+  .lg\:pb-10p {
+    padding-bottom: 10%;
   }
   .lg\:text-4xl {
     font-size: 2.25rem;

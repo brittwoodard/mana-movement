@@ -148,19 +148,21 @@ seo:
 
 
 <!-- Training Structure -->
-<section>
-    <div>
-        <h2>{{ page.structure.heading }}</h2>
-        <div>
+<section class="section-padding">
+    <div class="text-center pb-16">
+        <h2 class="heading-md text-feature mb-4">{{ page.structure.heading }}</h2>
+        <div class="lg:w-[60%] mx-auto mb-4">
             {{ page.structure.description_html }}
         </div>
-        <img src="/uploads/icons/logo-dark.svg" class="h-20">
+        <div class="flex justify-center">
+            <img src="/uploads/icons/logo-dark.svg" class="h-16">
+        </div>
     </div>
 
-    <h3>{{ page.structure.subheading }}</h3>
-    <ul>
+    <h3 class="font-bold text-lg mb-4">{{ page.structure.subheading }}</h3>
+    <ul class="list-disc marker:text-main ml-4">
         {% for item in page.structure.list_item %}
-        <li>{{ item }}</li>
+        <li class="mb-4">{{ item }}</li>
         {% endfor %}
     </ul>
 </section>
