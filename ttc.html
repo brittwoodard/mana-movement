@@ -1,30 +1,44 @@
 ---
 layout: default
+title: Mana Movement Teacher Training
+hero-banner:
+  title: Mana Movement Teacher Training
+  description: 16-week Live Online Mana Movement Teacher Training
+what:
+  heading: What is Mana Movement?
+  description_html: |
+    <p>Mana Movement is an “all-in-one” embodied movement method developed by Mana Mei. This simple yet profound practice flows through a series of guided movement sequences, focusing on spinal mobility, whole body fluidity, release, breath-body connection, and  returning to the Feminine Pathways.</p>
+    <p>Through cultivating sustained focus and presence with the feeling body, Mana Movement encourages harmonious reconnection to your physical body, awakens creative life force energy, and opens the pathway to somatic healing through the holistic trifecta of mindfulness meditation, physical activation, and spirit awakening.</p>
+  video:
+    thumbnail_image: /uploads/images/manamovement-30.jpg
+    url: https://www.youtube.com/embed/pyxYOMNIbvY?si=4lAlcCtZJGdUNafI
+seo:
+  hide-from-google: true
 ---
 
 <!-- Hero Banner -->
 <section class="bg-image-style h-[100vh] flex items-center justify-center" style="background-image: url('/uploads/images/manamovement-24.JPG')">
     <div class="text-center">
-        <h1 class="heading-lg text-light mb-2">Mana Movement Teacher Training</h1>
-        <p class="text-light text-2xl">16-week Live Online Mana Movement Teacher Training</p>
+        <h1 class="heading-lg text-light mb-2">{{ page.hero-banner.title }}</h1>
+        <p class="text-light text-2xl">{{ page.hero-banner.description }}</p>
     </div>
 </section>
 
 
 <!-- What is Mana Movement -->
-<section class="grid grid-cols-2">
+<section class="grid grid-cols-2 lg:gap-20 section-padding">
 
     <!-- Left Column -->
-    <div>
-        <h2>What is Mana Movement?</h2>
-        <p>Mana Movement is an “all-in-one” embodied movement method developed by Mana Mei. This simple yet profound practice flows through a series of guided movement sequences, focusing on spinal mobility, whole body fluidity, release, breath-body connection, and returning to the Feminine Pathways.</p>
-        <p>Through cultivating sustained focus and presence with the feeling body, Mana Movement encourages harmonious reconnection to your physical body, awakens creative life force energy, and opens the pathway to somatic healing through the holistic trifecta of mindfulness meditation, physical activation, and spirit awakening.</p>
+    <div class="flex items-center justify-center">
+        <div>
+            <h2 class="heading-md text-feature mb-2">{{ page.what.heading }}</h2>
+            <div>{{ page.what.description_html }}</div>
+        </div>
     </div>
 
     <!-- Video -->
-    <div>
-
-    </div>
+    <div class="bg-image-style aspect-video border border-main" style="background-image: url('{{ page.what.video.thumbnail_image }}')"></div>
+    
 </section>
 
 
