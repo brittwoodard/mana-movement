@@ -83,10 +83,27 @@ investment:
 banner_2:
   text: Join the waitlist to be the first to know when enrollment opens for the next training
   background_image: /uploads/images/manamovement-11.JPG
-testimonials: 
-  video: 
+testimonials:
+  video:
     thumbnail_image: /uploads/images/manamovement-26.jpg
     url: https://www.youtube.com/embed/hGEeDwbATx4?si=Qbp8H02hbchkwtRp
+  testimonials:
+    - testimonial_html: |
+        <p>"I love it!! I've been searching for this movement my whole life."</p>
+    - testimonial_html: |
+        <p>"I love the combo of movement, breathwork and meditation. Just what I was looking for without knowing I needed it!"</p>
+    - testimonial_html: |
+        <p>"In Mana Movement, every single class in a success. Every single class I see satisfied, happy, connected, excited people. It’s an absolutely amazing modality. It gives them freedom, more allowance to move as they want to move, to experience the body in a different way. It gives them a lot of freedom and a lot of sense of self acceptance. For myself, Mana Movement changed my life. I am very proud that I’m serving this medicine to humanity. It’s a new technique, it’s a new modality that has never been created before. It works as such a beautiful permission slip to move, to feel, and to have joy from movement.  If you are considering to join the Mana Movement Facilitator Training, please do!"</p>
+        <p class="text-right">- Katya Fornasiero, Certified Mana Movement Facilitator</p>
+    - testimonial_html: |
+        <p>"The Mana Movement Teacher Training was really, really, really life changing! It brought this softness to myself. It brought this love for myself that was lacking and that I had been searching for for a long time. Everywhere I go, at every retreat I am on, whenever there is a Mana Movement practice someone comes up to me after and just has the most amazing words to say. If you are thinking about doing this facilitation program, I suggest you dive in because it will be so much more than what you think it is. You will gain so much more than what you think you will!"</p>
+        <p class="text-right">- Caroline Pajewski, Certified Mana Movement Facilitator</p>
+    - testimonial_html: |
+        <p>"I feel so happy that I get to bring this gift to my participants. They seem to leave every class feeling very relaxed and very free. Mana Movement is the perfect balance of structure and freedom. And it gives me the opportunity to guide people through their own experience and then bring them to this point where they get to play a little bit. Play with movement. Have fun like we did when we were little kids and kinda throw away the rules, and that seems to be what people really love. I’ve had people talk to me about how Mana Movement has helped them with their anxiety. How Mana Movement has helped them feel more confident in speaking their truth outside of the studio. They always tell me, “Man, I slept so good after Mana Movement, it was amazing!” I am so loving getting to teach this modality and I am looking forward to bringing it to even more studios in my area!"</p>
+        <p class="text-right">- Antonia Martinez, Certified Mana Movement Facilitator</p>
+    - testimonial_html: |
+        <p>"It’s just been one of the most incredible things that I’ve ever said YES to. I’ve taught Mana Movement in many different places along my travels, as well as online. Wherever I go and wherever I share this practice, the love of this practice is just so felt. Everyone that I have shared it with is just touched so deeply."</p>
+        <p class="text-right">- Caitlyn Collins, Certified Mana Movement Facilitator</p>
 cta: 
   heading: Join the waitlist to be the first to know when enrollment opens for the next training.
 seo:
@@ -287,10 +304,17 @@ seo:
 
 
     <!-- Right Column -->
-    <h2 class="col-span-3 heading-md text-feature">Mana Movement Testimonials</h2>
-    <div>
-
+    <div class="col-span-3">
+        <h2 class="col-span-3 heading-md text-feature mb-8">Mana Movement Testimonials</h2>
+    
+        <div class="testimonial-container">
+            {% for item in page.testimonials.testimonials %}
+            <div class="testimonial-item italic">
+            {{ item.testimonial_html }}</div>
+        {% endfor %}
+        </div>
     </div>
+
 </section>
 
 
