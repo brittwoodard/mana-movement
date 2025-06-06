@@ -83,6 +83,10 @@ investment:
 banner_2:
   text: Join the waitlist to be the first to know when enrollment opens for the next training
   background_image: /uploads/images/manamovement-11.JPG
+testimonials: 
+  video: 
+    thumbnail_image: /uploads/images/manamovement-26.jpg
+    url: https://www.youtube.com/embed/hGEeDwbATx4?si=Qbp8H02hbchkwtRp
 seo:
   hide-from-google: true
 ---
@@ -255,15 +259,33 @@ seo:
 
 
 <!-- Testimonials -->
-<section class="grid grid-cols-4">
+<section class="section-padding grid grid-cols-4 lg:gap-20">
 
     <!-- Left Column -->
-    <div>
+    <div class="bg-image-style border border-main aspect-portrait flex items-center justify-center"
+        style="background-image: url('{{ page.testimonials.video.thumbnail_image }}');">
 
+    <!-- Play Button -->
+    <img id="openModalBtnTestimonials"
+        src="/uploads/icons/button-play.png"
+        class="h-20 cursor-pointer">
     </div>
 
+    <!-- Video Modal -->
+    <div id="videoModalTestimonials" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <iframe class="w-[360px] h-[202.5px] md:w-[700px] md:h-[394px]"
+                    src="{{ page.testimonials.video.url }}"
+                    frameborder="0"
+                    allowfullscreen>
+            </iframe>
+        </div>
+    </div>
+
+
     <!-- Right Column -->
-    <h2>Mana Movement Testimonials</h2>
+    <h2 class="col-span-3 heading-md text-feature">Mana Movement Testimonials</h2>
     <div>
 
     </div>

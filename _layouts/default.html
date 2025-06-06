@@ -125,6 +125,30 @@
     });
   });
   {% endif %}
+
+{% if page.testimonials.video %}
+  $(document).ready(function () {
+    $("#openModalBtnTestimonials").click(function () {
+      $("#videoModalTestimonials").css("display", "block");
+    });
+
+    // This “close” handler can stay generic
+    $("#videoModalTestimonials .close, #videoModalTestimonials .modal").click(function () {
+      $("#videoModalTestimonials").css("display", "none");
+      $("#videoModalTestimonials iframe").attr(
+        "src",
+        $("#videoModalTestimonials iframe").attr("src")
+      );
+    });
+
+    // Prevent clicks inside the modal-content from bubbling up (so clicking inside
+    // the white “box” doesn’t trigger the “.modal” handler).
+    $("#videoModalTestimonials .modal-content").click(function (event) {
+      event.stopPropagation();
+    });
+  });
+{% endif %}
+
 </script>
 
 </html>

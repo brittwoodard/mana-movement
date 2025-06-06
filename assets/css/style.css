@@ -842,6 +842,9 @@ video {
 .mobile-menu a:hover {
         color: var(--featured);
     }
+.visible {
+  visibility: visible;
+}
 .fixed {
   position: fixed;
 }
@@ -901,6 +904,9 @@ video {
 }
 .col-span-5 {
   grid-column: span 5 / span 5;
+}
+.col-span-3 {
+  grid-column: span 3 / span 3;
 }
 .m-2 {
   margin: 0.5rem;
