@@ -90,7 +90,7 @@
     }
 
     .link {
-        @apply lowercase mb-2 border-b border-dark hover:text-accent hover:border-accent hover:transition hover:duration-500
+        @apply lowercase mb-2 border-b border-inherit hover:text-accent hover:border-accent hover:transition hover:duration-500
     }
 
     /* Overlays */

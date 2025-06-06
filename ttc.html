@@ -70,6 +70,16 @@ after:
     subheading: Mana Movement is becoming exponentially more popular around the world…
     description_html: |
       <p>Which means there is a need for more Certified Mana Movement Teachers globally! This is an amazing opportunity to be at the forefront of a powerful movement. Every year, Mana Movement reaches and supports more and more women all around the world and my mission is to keep that going! Online is wonderful, but I would love to see MANA Movement classes happening in studios all over the world in many languages. AND YOU HAVE THE OPPORTUNITY TO HELP BRING THIS VISION TO LIFE! As well as to create opportunity and abundance for yourself and in your career.</p>
+investment:
+  heading: Investment
+  subheading: 16-week live online Mana Movement Teacher Training
+  description_html: |
+    <p>Applications now Closed. <a href="https://manamei.com/ttc-waitlist.html" class="link">Join the waitlist</a> to be the first to know when enrollment opens for the next training.</p>
+  price: 
+    payment_plan: $1,000 USD
+    pay_in_full: $3,800 USD
+    alumni: $3,500 USD
+  background_image: /uploads/backgrounds/mana-movement-2.png
 seo:
   hide-from-google: true
 ---
@@ -212,19 +222,23 @@ seo:
 
 
 <!-- Investment -->
-<section>
-    <h2>Investment</h2>
-    <p class="uppercase">16-week live online Mana Movement Teacher Training</p>
-    <p>Applications now Closed. <a href="#" class="link">Join the waitlist</a> to be the first to know when enrollment opens for the next training.</p>
+<section class="section-padding" style="background-image: url('{{ page.investment.background_image }}'); background-position: right;">
+    <div class="text-light font-bold">
+        <h2 class="heading-md mb-2">{{ page.investment.heading }}</h2>
+    <p class="uppercase">{{ page.investment.subheading }}</p>
+    <div class="mb-8">
+        {{ page.investment.description_html }}
+    </div>
 
-    <h3>4-Month Payment Plan</h3>
-    <p>$1000 USD per month</p>
+    <h3 class="uppercase">4-Month Payment Plan</h3>
+    <p>{{ page.investment.price.payment_plan }} per month</p>
 
-    <h3>Pay in Full</h3>
-    <p>$3800 USD</p>
+    <h3 class="uppercase">Pay in Full</h3>
+    <p>{{ page.investment.price.pay_in_full }}</p>
 
-    <h3>LTM Facilitator / Mentorship Graduate</h3>
-    <p>$3500 USD</p>
+    <h3 class="uppercase text-feature">LTM Facilitator / Mentorship Graduate</h3>
+    <p>{{ page.investment.price.alumni }}</p>
+    </div>
 </section>
 
 
