@@ -974,6 +974,9 @@ video {
 .ml-8 {
   margin-left: 2rem;
 }
+.mr-20 {
+  margin-right: 5rem;
+}
 .block {
   display: block;
 }
@@ -1036,6 +1039,9 @@ video {
 }
 .h-4 {
   height: 1rem;
+}
+.h-\[80vh\] {
+  height: 80vh;
 }
 .max-h-\[80vh\] {
   max-height: 80vh;
@@ -1158,6 +1164,10 @@ video {
 }
 .border {
   border-width: 1px;
+}
+.border-y {
+  border-top-width: 1px;
+  border-bottom-width: 1px;
 }
 .border-b {
   border-bottom-width: 1px;
@@ -1586,6 +1596,9 @@ video {
   }
   .md\:gap-8 {
     gap: 2rem;
+  }
+  .md\:gap-20 {
+    gap: 5rem;
   }
   .md\:bg-\[length\:250px_250px\] {
     background-size: 250px 250px;
