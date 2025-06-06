@@ -4,6 +4,9 @@ title: Mana Movement Teacher Training
 nav:
   color: light
   hover: main
+button-cta: 
+  text: Join the Waitlist
+  url: https://manamei.com/ttc-waitlist.html
 hero-banner:
   title: Mana Movement Teacher Training
   description: 16-week Live Online Mana Movement Teacher Training
@@ -19,6 +22,9 @@ who:
   heading: Who is this training for?
   description_html: |
     <p>This training is for women who have the desire to teach the Mana Movement Practice using the specific structure of the practice as designed by Mana Mei. This practice follows a series of specific, and carefully designed movement patterns and sequences that will create a powerful and successful experience of self-connection and physical and energetic activation through the entire body.</p>
+banner-1: 
+  heading: Join a global movement of women embodying freedom, joy, and purpose.
+  background_image: /uploads/images/manamovement-25.JPG
 seo:
   hide-from-google: true
 ---
@@ -73,9 +79,9 @@ seo:
 
 
 <!-- Banner -->
-<section>
-    <h2>Join a global movement of women embodying freedom, joy, and purpose.</h2>
-    <a href="https://manamei.com/ttc-waitlist" class="button">Join the waitlist</a>
+<section class="bg-image-style section-padding" style="background-image: url('{{ page.banner-1.background_image }}'); background-position: 50% 70%;">
+    <h2 class="heading-md text-light lg:w-[70%]">{{ page.banner-1.heading }}</h2>
+    {% include button-cta.html %}
 </section>
 
 
