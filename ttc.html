@@ -25,6 +25,23 @@ who:
 banner-1: 
   heading: Join a global movement of women embodying freedom, joy, and purpose.
   background_image: /uploads/images/manamovement-25.JPG
+prerequisites:
+  heading: Training Prerequisites
+  included_item_html:
+   - Minimum 3-months of active and regular personal Mana Movement Practice
+   - Personal experience with self-development, personal transformation, or embodiment work
+   - Have completed at least TWO of the following offerings by Mana Mei:</li>
+            <ul class="list-disc ml-4">
+                <li>Mana Movement Foundations Course</li>
+                <li>Mana Movement Full Course</li>
+                <li>Mana Movement Maternity Course</li>
+                <li>confiDance Course</li>
+                <li>All YouTube Mana Movement Practices</li>
+            </ul>
+  option_2_html: |
+    <span class="font-serif text-feature">OR</span> the Liberation Through Movement Mentorship Program
+  description_html: |
+    <p>Through successfully completing this training, you will have the experience, knowledge, and permission to teach Mana Movement online and in-person using the Mana Movement brand. This is the ONLY current training which allows you to use the Mana Movement name and specific structure of the practice.</p>
 seo:
   hide-from-google: true
 ---
@@ -86,30 +103,29 @@ seo:
 
 
 <!-- Prerequisites -->
-<section class="grid grid-cols-2">
+<section class="grid grid-cols-2 gap-8 lg:gap-20 section-padding bg-main text-light">
 
     <!-- Left Column -->
-    <div>
-        <p>Through successfully completing this training, you will have the experience, knowledge, and permission to teach Mana Movement online and in-person using the Mana Movement brand. This is the ONLY current training which allows you to use the Mana Movement name and specific structure of the practice.</p>
+    <div class="flex items-center justify-center">
+        <div class="italic">
+        {{ page.prerequisites.description_html }}
+        </div>
     </div>
 
     <!-- Right Column -->
     <div>
-        <h2>Training Prerequisites</h2>
-        <ul>
-            <li>Minimum 3-months of active and regular personal Mana Movement Practice</li>
-            <li>Personal experience with self-development, personal transformation, or embodiment work</li>
-            <li>Have completed at least TWO of the following offerings by Mana Mei:</li>
-            <ul>
-                <li>Mana Movement Foundations Course</li>
-                <li>Mana Movement Full Course</li>
-                <li>Mana Movement Maternity Course</li>
-                <li>confiDance Course</li>
-                <li>All YouTube Mana Movement Practices</li>
-            </ul>
-            </ul>
-        </ul>
-        <p>OR the Liberation Through Movement Mentorship Program</p>
+        <h2 class="heading-md mb-4">{{ page.prerequisites.heading }}</h2>
+
+        {% for item in page.prerequisites.included_item_html %}
+        <div class="flex gap-4 mb-4 last:mb-0 ml-2">
+            <i class="fa-solid fa-check text-feature"></i>
+            <div>{{ item }}</div>
+        </div>
+        {% endfor %}
+        
+        <div class="ml-2">
+            {{ page.prerequisites.option_2_html }}
+        </div>
     </div>
 </section>
 
