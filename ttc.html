@@ -87,6 +87,8 @@ testimonials:
   video: 
     thumbnail_image: /uploads/images/manamovement-26.jpg
     url: https://www.youtube.com/embed/hGEeDwbATx4?si=Qbp8H02hbchkwtRp
+cta: 
+  heading: Join the waitlist to be the first to know when enrollment opens for the next training.
 seo:
   hide-from-google: true
 ---
@@ -293,9 +295,9 @@ seo:
 
 
 <!-- CTA -->
-<section>
+<section class="py-20 lg:py-10p mx-8 lg:mx-20 border-t border-main">
     <div>
-        <h2>Join the waitlist to be the first to know when enrollment opens for the next training.</h2>
-        <a href="#" class="button">Join the Waitlist</a>
+        <h2 class="heading-md text-feature lg:w-[70%] mb-4">{{ page.cta.heading }}</h2>
+        {% include button-cta.html %}
     </div>
 </section>
