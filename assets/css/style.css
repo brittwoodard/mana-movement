@@ -1187,6 +1187,10 @@ video {
   --tw-border-opacity: 1;
   border-color: rgb(213 170 170 / var(--tw-border-opacity));
 }
+.border-light {
+  --tw-border-opacity: 1;
+  border-color: rgb(246 234 219 / var(--tw-border-opacity));
+}
 .bg-accent {
   --tw-bg-opacity: 1;
   background-color: rgb(205 145 60 / var(--tw-bg-opacity));
@@ -1448,6 +1452,11 @@ video {
 .hover\:text-feature:hover {
   --tw-text-opacity: 1;
   color: rgb(158 99 101 / var(--tw-text-opacity));
+}
+
+.hover\:text-light:hover {
+  --tw-text-opacity: 1;
+  color: rgb(246 234 219 / var(--tw-text-opacity));
 }
 
 .hover\:transition:hover {
