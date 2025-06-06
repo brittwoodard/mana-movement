@@ -1,6 +1,9 @@
 ---
 layout: default
 title: Mana Movement Teacher Training
+nav:
+  color: light
+  hover: main
 hero-banner:
   title: Mana Movement Teacher Training
   description: 16-week Live Online Mana Movement Teacher Training
@@ -18,6 +21,7 @@ seo:
 
 <!-- Hero Banner -->
 <section class="bg-image-style h-[100vh] flex items-center justify-center" style="background-image: url('/uploads/images/manamovement-24.JPG')">
+    {% include site-header.html %}
     <div class="text-center">
         <h1 class="heading-lg text-light mb-2">{{ page.hero-banner.title }}</h1>
         <p class="text-light text-2xl">{{ page.hero-banner.description }}</p>
