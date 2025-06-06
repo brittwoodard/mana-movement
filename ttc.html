@@ -80,6 +80,9 @@ investment:
     pay_in_full: $3,800 USD
     alumni: $3,500 USD
   background_image: /uploads/backgrounds/mana-movement-2.png
+banner_2:
+  text: Join the waitlist to be the first to know when enrollment opens for the next training
+  background_image: /uploads/images/manamovement-11.JPG
 seo:
   hide-from-google: true
 ---
@@ -243,10 +246,10 @@ seo:
 
 
 <!-- Banner -->
-<section>
-    <div>
-        <h2>Join the waitlist to be the first to know when enrollment opens for the next training</h2>
-        <a href="#" class="button">Join the waitlist</a>
+<section class="section-padding bg-image-style" style="background-image: url('{{ page.banner_2.background_image }}');">
+    <div class="text-center lg:w-[80%] mx-auto">
+        <h2 class="heading-md text-light">{{ page.banner_2.text }}</h2>
+        {% include button-cta.html %}
     </div>
 </section>
 
