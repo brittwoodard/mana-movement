@@ -106,6 +106,25 @@
         });
     });
     {% endif %}
+
+{% if page.what.video %}
+  $(document).ready(function () {
+    // 1) Change IDs here if you’d rather use something like #openModalBtnWhat
+    $("#openModalBtnBanner").click(function () {
+      $("#videoModalBanner").css("display", "block");
+    });
+    $(".close, .modal").click(function () {
+      $("#videoModalBanner").css("display", "none");
+      $("#videoModalBanner iframe").attr(
+        "src",
+        $("#videoModalBanner iframe").attr("src")
+      );
+    });
+    $(".modal-content").click(function (event) {
+      event.stopPropagation();
+    });
+  });
+  {% endif %}
 </script>
 
 </html>

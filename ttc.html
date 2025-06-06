@@ -37,7 +37,19 @@ seo:
     </div>
 
     <!-- Video -->
-    <div class="bg-image-style aspect-video border border-main" style="background-image: url('{{ page.what.video.thumbnail_image }}')"></div>
+    <div class="bg-image-style aspect-video border border-main flex items-center justify-center" style="background-image: url('{{ page.what.video.thumbnail_image }}')">
+        <img id="openModalBtnBanner" src="/uploads/icons/button-play.png" class="h-20 cursor-pointer">
+    </div>
+
+    <div id="videoModalBanner" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+
+            <!-- YouTube iframe -->
+            <iframe class="w-[360px] h-[202.5px] md:w-[700px] md:h-[394px]" src="{{ page.what.video.url }}" frameborder="0"
+                  allowfullscreen></iframe>  
+          </div>
+      </div>
     
 </section>
 
