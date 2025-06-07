@@ -113,7 +113,7 @@ seo:
 
 
 <!-- What is Mana Movement -->
-<section class="grid grid-cols-2 lg:gap-20 section-padding">
+<section class="lg:grid lg:grid-cols-2 lg:gap-20 section-padding">
 
     <!-- Left Column -->
     <div class="flex items-center justify-center">
@@ -124,7 +124,7 @@ seo:
     </div>
 
     <!-- Video -->
-    <div class="bg-image-style aspect-video border border-main flex items-center justify-center" style="background-image: url('{{ page.what.video.thumbnail_image }}')">
+    <div class="mt-8 lg:mt-0 bg-image-style aspect-video border border-main flex items-center justify-center" style="background-image: url('{{ page.what.video.thumbnail_image }}')">
         <img id="openModalBtnBanner" src="/uploads/icons/button-play.png" class="h-20 cursor-pointer">
     </div>
 
@@ -142,7 +142,7 @@ seo:
 
 
 <!-- Who Mana Movement is For -->
-<section class="bg-image-style grid grid-cols-3 section-padding" style="background-image: url('/uploads/backgrounds/mana-movement-1.png'); background-position: left;">
+<section class="bg-image-style lg:grid lg:grid-cols-3 section-padding" style="background-image: url('/uploads/backgrounds/mana-movement-1.png'); background-position: left;">
     <div></div>
     <div class="col-span-2 text-light">
         <h2 class="heading-md mb-4">{{ page.who.heading }}</h2>
@@ -159,10 +159,10 @@ seo:
 
 
 <!-- Prerequisites -->
-<section class="grid grid-cols-2 gap-8 lg:gap-20 section-padding bg-main text-light">
+<section class="grid lg:grid-cols-2 gap-8 lg:gap-20 section-padding bg-main text-light">
 
     <!-- Left Column -->
-    <div class="flex items-center justify-center">
+    <div class="flex items-center justify-center order-last lg:order-first">
         <div class="italic">
         {{ page.prerequisites.description_html }}
         </div>
@@ -211,13 +211,13 @@ seo:
 <section>
 
     <!-- Top -->
-    <div class="grid grid-cols-3 md:gap-20 mr-20 border-y border-main">
+    <div class="lg:grid lg:grid-cols-3 md:gap-20 lg:mr-20 border-y border-main">
 
         <!-- Left Column -->
         <div class="bg-image-style min-h-[80vh]" style="background-image: url('{{ page.after.featured_image }}')"></div>
 
         <!-- Right Column -->
-        <div class="col-span-2 flex items-center">
+        <div class="col-span-2 flex items-center py-20 lg:py-0 px-8 lg:px-0">
             <div>
                 <h2 class="heading-md text-feature mb-4">{{ page.after.heading }}</h2>
             <div>
@@ -270,10 +270,10 @@ seo:
 
 
 <!-- Testimonials -->
-<section class="section-padding grid grid-cols-4 lg:gap-20">
+<section class="section-padding lg:grid lg:grid-cols-4 lg:gap-20">
 
     <!-- Left Column -->
-    <div class="bg-image-style border border-main aspect-portrait flex items-center justify-center"
+    <div class="bg-image-style border border-main aspect-portrait flex items-center justify-center mb-12 lg:mb-0"
         style="background-image: url('{{ page.testimonials.video.thumbnail_image }}');">
 
     <!-- Play Button -->
