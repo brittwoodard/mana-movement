@@ -1,8 +1,6 @@
-cat << 'EOF' > netlify.toml
 [build]
 command = "bundle install && npm install && npm run build && bundle exec jekyll build --config _config.yml"
 publish = "_site"
 
 [build.environment]
 JEKYLL_ENV = "production"
-EOF
