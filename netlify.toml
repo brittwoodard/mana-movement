@@ -1,10 +1,11 @@
+cat << 'EOF' > netlify.toml
 [build]
   # 1) install Ruby gems
   # 2) install npm packages
-  # 3) build your CSS
-  # 4) build the Jekyll site with your config
-  command   = "bundle install && npm install && npm run build-css && bundle exec jekyll build --config _config.yml"
+  # 3) build both CSS and Jekyll via npm run build
+  command   = "bundle install && npm install && npm run build && bundle exec jekyll build --config _config.yml"
   publish   = "_site"
 
 [build.environment]
   JEKYLL_ENV = "production"
+EOF
