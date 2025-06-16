@@ -48,9 +48,11 @@ structure:
    - Bi-weekly (every other week) Written and Video Homework Assignments
    - Exclusive TELEGRAM Group with all students and Assistant Teachers for Support, connection, inspiration, and accountability
    - Lifetime access to all training curriculum and Transmission recordings
-   - This training is open to <strong>women all over the world</strong>! We are a global community and we do our best to accommodate all time zones in the scheduling of the training. No matter where you live, we can make this training work for you.
-   - This training is designed with <strong>busy women</strong> in mind! Hey, we all have a lot going on in our lives… children and families, jobs and businesses, travel and self-care. This training has been thoughtfully crafted to fit into your life and everything else you have going on through a flexible “self study” aspect, plus availability of call replays and intentional “catch-up” integration weeks.
-   - This training container will ensure you <strong>never feel alone</strong> along the journey! Through carefully designed rings of support, ranging from 1-on-1 to whole group connection, you will never feel alone in your training experience and you will always have someone to turn to whether it be for support, inspiration, accountability, or authentic connection!
+  featured_image: /uploads/images/manamovement-16.jpg
+  paragraph_html: |
+    <p>This training is open to <strong>women all over the world</strong>! We are a global community and we do our best to accommodate all time zones in the scheduling of the training. No matter where you live, we can make this training work for you.</p>
+    <p>This training is designed with <strong>busy women</strong> in mind! Hey, we all have a lot going on in our lives… children and families, jobs and businesses, travel and self-care. This training has been thoughtfully crafted to fit into your life and everything else you have going on through a flexible “self study” aspect, plus availability of call replays and intentional “catch-up” integration weeks.</p>
+    <p>This training container will ensure you <strong>never feel alone</strong> along the journey! Through carefully designed rings of support, ranging from 1-on-1 to whole group connection, you will never feel alone in your training experience and you will always have someone to turn to whether it be for support, inspiration, accountability, or authentic connection!</p>
 after: 
   heading: As a certified Mana Movement Facilitator...
   description_html: |
@@ -187,8 +189,8 @@ seo:
 
 
 <!-- Training Structure -->
-<section class="section-padding">
-    <div class="text-center pb-16">
+<section>
+    <div class="mt-20 lg:mt-10p x-padding text-center">
         <h2 class="heading-md text-feature mb-4">{{ page.structure.heading }}</h2>
         <div class="lg:w-[60%] mx-auto mb-4">
             {{ page.structure.description_html }}
@@ -198,12 +200,19 @@ seo:
         </div>
     </div>
 
-    <h3 class="font-bold text-lg mb-4">{{ page.structure.subheading }}</h3>
-    <ul class="list-disc marker:text-main ml-4">
-        {% for item in page.structure.list_item %}
-        <li class="mb-4">{{ item }}</li>
-        {% endfor %}
-    </ul>
+    <div class="section-padding">
+        <h3 class="font-bold text-lg mb-4">{{ page.structure.subheading }}</h3>
+        <ul class="list-disc marker:text-main ml-4">
+            {% for item in page.structure.list_item %}
+            <li class="mb-4">{{ item }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+    
+    <div class="bg-image-style min-h-[60vh]" style="background-image: url('{{ page.structure.featured_image }}');"></div>
+    <div class="section-padding lg:w-[80%]">
+        {{ page.structure.paragraph_html }}
+    </div>
 </section>
 
 
