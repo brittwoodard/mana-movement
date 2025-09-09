@@ -1,0 +1,49 @@
+<div id="popupOverlay" class="hidden fixed inset-0 bg-black bg-opacity-50 z-50"></div>
+
+<div id="popup" class="hidden fixed inset-0 z-50 flex items-center justify-center">
+    <div class="relative max-w-[95vw] md:max-w-[80vw] lg:max-w-[40vw]">
+        <button id="closePopup" class="absolute top-0 right-[1.5rem] md:right-[2rem] text-accent text-[3rem] font-extralight hover:text-black hover:duration-500">&times;</button>
+
+        <!-- Images for desktop and mobile -->
+        <img src="/uploads/images/ltm-mentorship-popup.jpg" alt="Liberation Through Movement Mentorship with Mana Mei" class="w-full border border-accent">
+
+        <!-- Learn More Button -->
+        <button id="learnMoreButton" href="/liberation-through-movement-mentorship.html" class="absolute bottom-[10%] md:bottom-[15%] right-[1.3rem] md:right-[1.5rem] bg-accent/95 rounded-[4rem] hover:bg-accent/70 hover:duration-500 py-[0.25rem] px-[1.5rem] text-black">
+            Learn More
+        </button>
+    </div>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        // Check sessionStorage instead of localStorage
+        if (!sessionStorage.getItem('popupShown')) {
+            setTimeout(function () {
+                showPopup();
+            }, 5000);
+        }
+
+        function showPopup() {
+            document.getElementById('popup').classList.remove('hidden');
+            document.getElementById('popupOverlay').classList.remove('hidden');
+            // Set popup as shown in sessionStorage
+            sessionStorage.setItem('popupShown', 'true');
+        }
+
+        function closePopup() {
+            document.getElementById('popup').classList.add('hidden');
+            document.getElementById('popupOverlay').classList.add('hidden');
+        }
+
+        // Close popup with button and overlay
+        document.getElementById('closePopup').addEventListener('click', closePopup);
+        document.getElementById('popupOverlay').addEventListener('click', closePopup);
+
+        // Learn more button action
+        document.getElementById('learnMoreButton').addEventListener('click', function () {
+            closePopup();
+            window.location.href = 'https://manamei.com/liberation-through-movement-mentorship'; 
+        });
+    });
+</script>
+
