@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    {% include head.html %}
+
+</head>
+
+<body>
+
+    {{content}}
+
+</body>
+
+<!-- Alpine -->
+<script src="//unpkg.com/alpinejs" defer></script>
+
+<!-- jQuery -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"
+    integrity="sha512-AFwxAkWdvxRd9qhYYp1qbeRZj6/iTNmJ2GFwcxsMOzwwTaRwz2a/2TX225Ebcj3whXte1WGQb38cXE5j7ZQw3g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<!-- Slick -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"
+    integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<!-- Swiper -->
+<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script>
+
+<!-- Javascript  -->
+<script src="/main.js" defer></script>
+
+<!-- Click to pop up video scripts -->
+<script>
+    {% if page.video %}
+    // Click to pop up video
+    $(document).ready(function () {
+        // Open modal on button click
+        $("#openModalBtnVideo").click(function () {
+            $("#videoModalVideo").css("display", "block");
+        });
+
+        // Close modal on close button click or outside click
+        $(".close, .modal").click(function () {
+            $("#videoModalVideo").css("display", "none");
+            // Stop video playback by resetting the src
+            $("#videoModalVideo iframe").attr("src", $("#videoModalVideo iframe").attr("src"));
+        });
+
+        // Prevent modal from closing when clicking inside the modal content
+        $(".modal-content").click(function (event) {
+            event.stopPropagation();
+        });
+    });
+    {% endif %}
+
+    {% if page.hero-banner.button.show == true %}
+    // Click to pop up video
+    $(document).ready(function () {
+        // Open modal on button click
+        $("#openModalBtnBanner").click(function () {
+            $("#videoModalBanner").css("display", "block");
+        });
+
+        // Close modal on close button click or outside click
+        $(".close, .modal").click(function () {
+            $("#videoModalBanner").css("display", "none");
+            // Stop video playback by resetting the src
+            $("#videoModalBanner iframe").attr("src", $("#videoModalBanner iframe").attr("src"));
+        });
+
+        // Prevent modal from closing when clicking inside the modal content
+        $(".modal-content").click(function (event) {
+            event.stopPropagation();
+        });
+    });
+    {% endif %}
+
+    {% if page.about %}
+    // Read More
+    document.addEventListener('DOMContentLoaded', function () {
+        var descriptionContainer = document.getElementById('aboutDescription');
+        var readMoreBtn = document.getElementById('readMoreBtn');
+
+        if (descriptionContainer.scrollHeight > descriptionContainer.clientHeight) {
+            readMoreBtn.style.display = 'block';
+        }
+
+        readMoreBtn.addEventListener('click', function () {
+            if (descriptionContainer.style.maxHeight) {
+                descriptionContainer.style.maxHeight = null;
+                readMoreBtn.textContent = 'Read More';
+            } else {
+                descriptionContainer.style.maxHeight = descriptionContainer.scrollHeight + 'px';
+                readMoreBtn.textContent = 'Read Less';
+            }
+        });
+    });
+    {% endif %}
+
+{% if page.what.video %}
+  $(document).ready(function () {
+    // 1) Change IDs here if you’d rather use something like #openModalBtnWhat
+    $("#openModalBtnBanner").click(function () {
+      $("#videoModalBanner").css("display", "block");
+    });
+    $(".close, .modal").click(function () {
+      $("#videoModalBanner").css("display", "none");
+      $("#videoModalBanner iframe").attr(
+        "src",
+        $("#videoModalBanner iframe").attr("src")
+      );
+    });
+    $(".modal-content").click(function (event) {
+      event.stopPropagation();
+    });
+  });
+  {% endif %}
+
+{% if page.testimonials.video %}
+  $(document).ready(function () {
+    $("#openModalBtnTestimonials").click(function () {
+      $("#videoModalTestimonials").css("display", "block");
+    });
+
+    // This “close” handler can stay generic
+    $("#videoModalTestimonials .close, #videoModalTestimonials .modal").click(function () {
+      $("#videoModalTestimonials").css("display", "none");
+      $("#videoModalTestimonials iframe").attr(
+        "src",
+        $("#videoModalTestimonials iframe").attr("src")
+      );
+    });
+
+    // Prevent clicks inside the modal-content from bubbling up (so clicking inside
+    // the white “box” doesn’t trigger the “.modal” handler).
+    $("#videoModalTestimonials .modal-content").click(function (event) {
+      event.stopPropagation();
+    });
+  });
+{% endif %}
+
+</script>
+
+</html>
