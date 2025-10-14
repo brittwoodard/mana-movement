@@ -1001,6 +1001,9 @@ video {
 .mt-8 {
   margin-top: 2rem;
 }
+.mt-1 {
+  margin-top: 0.25rem;
+}
 .block {
   display: block;
 }
@@ -1170,6 +1173,9 @@ video {
 }
 .gap-8 {
   gap: 2rem;
+}
+.gap-3 {
+  gap: 0.75rem;
 }
 .overflow-y-auto {
   overflow-y: auto;
@@ -1592,6 +1598,14 @@ video {
 .focus\:ring-feature:focus {
   --tw-ring-opacity: 1;
   --tw-ring-color: rgb(158 99 101 / var(--tw-ring-opacity));
+}
+
+.disabled\:cursor-not-allowed:disabled {
+  cursor: not-allowed;
+}
+
+.disabled\:opacity-60:disabled {
+  opacity: 0.6;
 }
 
 @media (min-width: 640px) {
