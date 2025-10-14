@@ -193,48 +193,45 @@ seo:
     const form = document.getElementById('ttc-application');
     const errorEl = document.getElementById('captcha-error');
     const submitBtn = document.getElementById('submit-btn');
+    if (!form || !submitBtn) return;
 
-    if (!form) return;
+    const DISABLED_CLASSES = ['opacity-60', 'cursor-not-allowed'];
+    const ENABLED_CLASSES  = ['opacity-100', 'cursor-pointer'];
 
-    // Helper: get reCAPTCHA response value (Netlify/Google injects this hidden field)
     function getRecaptchaValue() {
       const el = document.querySelector('textarea.g-recaptcha-response');
       return el && el.value ? el.value.trim() : '';
     }
 
-    // On submit: block if user didn’t complete reCAPTCHA
+    function setEnabled(isEnabled) {
+      submitBtn.disabled = !isEnabled;
+      // toggle visuals
+      DISABLED_CLASSES.forEach(c => submitBtn.classList.toggle(c, !isEnabled));
+      ENABLED_CLASSES.forEach(c => submitBtn.classList.toggle(c,  isEnabled));
+      if (isEnabled && errorEl) errorEl.classList.add('hidden');
+    }
+
+    // start disabled visuals
+    setEnabled(false);
+
+    // Block submit if captcha missing
     form.addEventListener('submit', function (e) {
-      const token = getRecaptchaValue();
-      if (!token) {
+      if (!getRecaptchaValue()) {
         e.preventDefault();
-        // show error
         if (errorEl) errorEl.classList.remove('hidden');
-
-        // scroll to the widget so users see it
         const widget = document.querySelector('.g-recaptcha, [data-netlify-recaptcha]');
-        if (widget && widget.scrollIntoView) {
-          widget.scrollIntoView({ behavior: 'smooth', block: 'center' });
-        }
-
-        // try to move focus to the checkbox (improves accessibility)
-        // Google’s widget manages focus internally; this puts focus near it.
-        if (widget && widget.focus) widget.focus();
+        if (widget && widget.scrollIntoView) widget.scrollIntoView({ behavior: 'smooth', block: 'center' });
       }
     });
 
-    // Optional: live-enable a disabled submit button once captcha is solved.
-    // (If you want to disable the button by default, add disabled to the button in HTML.)
-    // Poll the hidden field for changes (simple + reliable).
+    // Poll for captcha solved/expired and toggle button state
     let last = '';
     setInterval(function () {
       const val = getRecaptchaValue();
       if (val !== last) {
         last = val;
-        if (val) {
-          if (errorEl) errorEl.classList.add('hidden');
-          if (submitBtn) submitBtn.removeAttribute('disabled');
-        }
+        setEnabled(!!val);
       }
-    }, 400);
+    }, 300);
   })();
 </script>

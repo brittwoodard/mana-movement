@@ -1445,6 +1445,9 @@ video {
 .opacity-60 {
   opacity: 0.6;
 }
+.opacity-100 {
+  opacity: 1;
+}
 
 /* Fonts */
 /* josefin-sans: 100, 300, 400, 600 */
