@@ -179,3 +179,21 @@ seo:
         <button type="submit" class="button mt-4">Submit</button>
     </form>
 </section>
+
+</section>
+
+<script>
+  (function () {
+    const form = document.getElementById('ttc-application');
+    if (!form) return;
+
+    const start = Date.now();
+    form.addEventListener('submit', function (e) {
+      const elapsed = Date.now() - start;
+      if (elapsed < 2000) { // less than 2 seconds = probably a bot
+        e.preventDefault();
+        alert('Please take a moment to complete the form before submitting.');
+      }
+    });
+  })();
+</script>
