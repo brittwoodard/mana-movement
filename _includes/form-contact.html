@@ -1,106 +1,87 @@
 <!-- Best practice: Netlify Forms + Honeypot + reCAPTCHA -->
-    <form id="contact" name="contact" method="post" data-netlify="true"
-        data-netlify-honeypot="bot-field" data-netlify-recaptcha="true" action="/thankyou-contact.html">
-        
-        <!-- REQUIRED for Netlify to recognize the form -->
-        <input type="hidden" name="form-name" value="contact">
+<form id="contact" name="contact" method="post" data-netlify="true" data-netlify-honeypot="bot-field"
+    data-netlify-recaptcha="true" action="/thankyou-contact.html">
 
-        <!-- Honeypot (hidden from users & screen readers) -->
-        <p class="hidden" aria-hidden="true">
-            <label>Don’t fill this out if you're human: <input name="bot-field"></label>
-        </p>
+    <input type="hidden" name="form-name" value="contact">
+
+    <p class="hidden" aria-hidden="true">
+        <label>Don’t fill this out if you're human: <input name="bot-field"></label>
+    </p>
 
     <div class="grid sm:grid-cols-2 gap-2 mb-4">
         <div>
-            <input type="text" id="first-name" name="first-name" required placeholder="First Name"
-                class="block border p-2 border-dark bg-transparent w-full placeholder:text-main rounded-none focus:outline-none focus:ring focus:ring-feature
+            <input type="text" id="first-name" name="first-name" required placeholder="First Name" class="block border p-2 border-dark bg-transparent w-full placeholder:text-main rounded-none focus:outline-none focus:ring focus:ring-feature
 ">
         </div>
 
         <div>
-            <input type="text" id="last-name" name="last-name" placeholder="Last Name"
-                class="block border p-2 border-dark bg-transparent w-full placeholder:text-main rounded-none focus:outline-none focus:ring focus:ring-feature
+            <input type="text" id="last-name" name="last-name" placeholder="Last Name" class="block border p-2 border-dark bg-transparent w-full placeholder:text-main rounded-none focus:outline-none focus:ring focus:ring-feature
 ">
         </div>
     </div>
 
     <div class="mb-4">
-        <input type="email" id="email" name="email" required placeholder="Email"
-            class="block border p-2 border-dark bg-transparent w-full placeholder:text-main rounded-none focus:outline-none focus:ring focus:ring-feature
+        <input type="email" id="email" name="email" required placeholder="Email" class="block border p-2 border-dark bg-transparent w-full placeholder:text-main rounded-none focus:outline-none focus:ring focus:ring-feature
  placeholdeer:font-sans">
     </div>
 
     <div>
-        <textarea id="message" name="message" required rows="8" placeholder="Message"
-            class="border border-dark bg-transparent w-full p-2 text-feature placeholder:font-sans placeholder:text-main rounded-none focus:outline-none focus:ring focus:ring-feature
+        <textarea id="message" name="message" required rows="8" placeholder="Message" class="border border-dark bg-transparent w-full p-2 text-feature placeholder:font-sans placeholder:text-main rounded-none focus:outline-none focus:ring focus:ring-feature
 "></textarea>
     </div>
 
     <!-- Container for captcha + button -->
     <div class="mt-6 flex flex-col items-end gap-3">
-  
-        <!-- reCAPTCHA widget (Netlify injects it here) -->
-        <div data-netlify-recaptcha="true"></div>
 
-        <p id="captcha-error" class="text-accent text-sm hidden" role="alert">
-            Please check the “I’m not a robot” box to continue.
-        </p>
+        <!-- Captcha + button -->
+        <div class="mt-6 flex flex-col items-end gap-3">
+            <div data-netlify-recaptcha="true"></div>
 
-        <button
-            id="submit-btn"
-            type="submit"
-            disabled
-            class="button mt-1 hover:opacity-60 disabled:cursor-not-allowed">
-            Submit
-        </button>
-</div>
+            <p id="captcha-error" class="text-accent text-sm hidden" role="alert">
+                Please check the “I’m not a robot” box to continue.
+            </p>
 
+            <button id="submit-btn" type="submit" disabled
+                class="button mt-1 hover:opacity-60 disabled:hover:opacity-100 disabled:cursor-not-allowed transition-opacity">
+                Submit
+            </button>
+
+        </div>
 </form>
 
 <script>
-  (function () {
-    const form = document.getElementById('ttc-application');
-    const errorEl = document.getElementById('captcha-error');
-    const submitBtn = document.getElementById('submit-btn');
-    if (!form || !submitBtn) return;
+    (function () {
+        const form = document.getElementById('contact');        // <-- fixed id
+        const errorEl = document.getElementById('captcha-error');
+        const submitBtn = document.getElementById('submit-btn');
+        if (!form || !submitBtn) return;
 
-    const DISABLED_CLASSES = ['opacity-60', 'cursor-not-allowed'];
-    const ENABLED_CLASSES  = ['opacity-100', 'cursor-pointer'];
+        // Get reCAPTCHA v2 token (Netlify/Google injects this hidden textarea)
+        function getRecaptchaValue() {
+            const el = document.querySelector('textarea.g-recaptcha-response');
+            return el && el.value ? el.value.trim() : '';
+        }
 
-    function getRecaptchaValue() {
-      const el = document.querySelector('textarea.g-recaptcha-response');
-      return el && el.value ? el.value.trim() : '';
-    }
+        // Guard submit if captcha missing
+        form.addEventListener('submit', function (e) {
+            if (!getRecaptchaValue()) {
+                e.preventDefault();
+                errorEl?.classList.remove('hidden');
+                const widget = document.querySelector('.g-recaptcha, [data-netlify-recaptcha]');
+                widget?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }
+        });
 
-    function setEnabled(isEnabled) {
-      submitBtn.disabled = !isEnabled;
-      // toggle visuals
-      DISABLED_CLASSES.forEach(c => submitBtn.classList.toggle(c, !isEnabled));
-      ENABLED_CLASSES.forEach(c => submitBtn.classList.toggle(c,  isEnabled));
-      if (isEnabled && errorEl) errorEl.classList.add('hidden');
-    }
-
-    // start disabled visuals
-    setEnabled(false);
-
-    // Block submit if captcha missing
-    form.addEventListener('submit', function (e) {
-      if (!getRecaptchaValue()) {
-        e.preventDefault();
-        if (errorEl) errorEl.classList.remove('hidden');
-        const widget = document.querySelector('.g-recaptcha, [data-netlify-recaptcha]');
-        if (widget && widget.scrollIntoView) widget.scrollIntoView({ behavior: 'smooth', block: 'center' });
-      }
-    });
-
-    // Poll for captcha solved/expired and toggle button state
-    let last = '';
-    setInterval(function () {
-      const val = getRecaptchaValue();
-      if (val !== last) {
-        last = val;
-        setEnabled(!!val);
-      }
-    }, 300);
-  })();
+        // Enable/disable the button based on captcha state
+        let last = '';
+        setInterval(function () {
+            const val = getRecaptchaValue();
+            if (val !== last) {
+                last = val;
+                const solved = !!val;
+                submitBtn.disabled = !solved;        // <-- this triggers Tailwind disabled: styles
+                if (solved) errorEl?.classList.add('hidden');
+            }
+        }, 300);
+    })();
 </script>

@@ -1447,6 +1447,11 @@ video {
 .opacity-60 {
   opacity: 0.6;
 }
+.transition-opacity {
+  transition-property: opacity;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
 
 /* Fonts */
 /* josefin-sans: 100, 300, 400, 600 */
@@ -1606,6 +1611,10 @@ video {
 
 .disabled\:opacity-60:disabled {
   opacity: 0.6;
+}
+
+.disabled\:hover\:opacity-100:hover:disabled {
+  opacity: 1;
 }
 
 @media (min-width: 640px) {
