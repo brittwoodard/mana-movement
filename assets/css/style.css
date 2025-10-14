@@ -1119,6 +1119,9 @@ video {
 .cursor-pointer {
   cursor: pointer;
 }
+.cursor-not-allowed {
+  cursor: not-allowed;
+}
 .list-disc {
   list-style-type: disc;
 }
@@ -1382,6 +1385,10 @@ video {
   font-size: 1.125rem;
   line-height: 1.75rem;
 }
+.text-sm {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
 .font-bold {
   font-weight: 700;
 }
@@ -1425,11 +1432,18 @@ video {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
+.text-red-600 {
+  --tw-text-opacity: 1;
+  color: rgb(220 38 38 / var(--tw-text-opacity));
+}
 .accent-feature {
   accent-color: #9E6365;
 }
 .accent-accent {
   accent-color: #cd913c;
+}
+.opacity-60 {
+  opacity: 0.6;
 }
 
 /* Fonts */
