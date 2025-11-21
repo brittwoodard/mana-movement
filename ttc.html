@@ -126,6 +126,7 @@ seo:
     <div class="text-center">
         <h1 class="heading-lg text-light mb-2">{{ page.hero-banner.title }}</h1>
         <p class="text-light text-2xl">{{ page.hero-banner.description }}</p>
+        {% include button-cta.html %}
     </div>
 </section>
 
@@ -165,6 +166,7 @@ seo:
     <div class="col-span-2 text-light">
         <h2 class="heading-md mb-4">{{ page.who.heading }}</h2>
         <div>{{ page.who.description_html }}</div>
+        {% include button-cta-light.html %}
     </div>
 </section>
 
@@ -172,7 +174,6 @@ seo:
 <!-- Banner -->
 <section class="bg-image-style section-padding" style="background-image: url('{{ page.banner-1.background_image }}'); background-position: 50% 70%;">
     <h2 class="heading-md text-light lg:w-[70%]">{{ page.banner-1.heading }}</h2>
-    {% include button-cta.html %}
 </section>
 
 

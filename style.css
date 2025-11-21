@@ -85,8 +85,12 @@
         @apply bg-accent/80 text-lighter font-serif py-2 px-4 capitalize text-[1.2rem] tracking-wide inline-block mt-4 hover:transition hover:duration-500 hover:shadow-lg
     }
 
-    .button-light {
+    .button-lighter {
         @apply bg-lighter text-main font-serif py-2 px-4 capitalize text-[1.2rem] tracking-wide inline-block mt-4 hover:transition hover:duration-500 hover:shadow-lg
+    }
+
+    .button-light {
+        @apply bg-light text-main font-serif py-2 px-4 capitalize text-[1.2rem] tracking-wide inline-block mt-4 hover:transition hover:duration-500 hover:shadow-lg
     }
 
     .link {
