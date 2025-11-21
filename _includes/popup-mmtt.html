@@ -1,0 +1,60 @@
+<!-- Popup -->
+<div id="popup"
+    class="hidden fixed inset-0 flex items-center justify-center z-50 bg-black bg-opacity-80">
+
+    <div id="popupContent" class="relative">
+        <!-- Background Image as an Image Element -->
+        <img src="/uploads/images/mmtt-1.jpg" alt="Popup Image"
+            class="w-auto h-auto max-h-[80vh] max-w-[90vw]" />
+
+        <!-- Close Button (X) -->
+        <button id="popupClose"
+            class="absolute top-4 right-6 text-[1.5rem] font-100 text-accent hover:text-white hover:transition hover:duration-500">
+            X
+        </button>
+
+        <!-- Learn More Button -->
+        <div class="absolute bottom-[5rem] md:bottom-[14rem] lg:bottom-[9rem] right-4 md:right-[1.5rem]">
+            <a href="/ttc.html" class="button bg-accent/80  border-accent text-black">Learn More</a>
+        </div>
+    </div>
+</div>
+
+
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const popup = document.getElementById('popup');
+        const popupClose = document.getElementById('popupClose');
+        const popupContent = document.getElementById('popupContent');
+
+        // Check if popup has already been shown this session
+        if (!sessionStorage.getItem('popupShown')) {
+            // Show the popup after 5 seconds
+            setTimeout(function () {
+                popup.classList.remove('hidden');
+            }, 5000);
+
+            // Mark popup as shown in this session
+            sessionStorage.setItem('popupShown', 'true');
+        }
+
+        // Function to close the popup
+        function closePopup() {
+            popup.classList.add('hidden');
+        }
+
+        // Close the popup when clicking the 'X' button
+        popupClose.addEventListener('click', function (e) {
+            e.stopPropagation(); // Prevent event from bubbling up
+            closePopup();
+        });
+
+        // Close the popup when clicking outside the popup content
+        popup.addEventListener('click', function (e) {
+            if (!popupContent.contains(e.target)) {
+                closePopup();
+            }
+        });
+    });
+</script>
