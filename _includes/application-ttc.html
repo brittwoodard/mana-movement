@@ -1,0 +1,178 @@
+<!-- Best practice: Netlify Forms + Honeypot + reCAPTCHA -->
+    <form id="ttc-application" name="ttc-application" method="post" data-netlify="true"
+        data-netlify-honeypot="bot-field" data-netlify-recaptcha="true" action="/ttc-application-thank-you.html">
+        
+        <!-- REQUIRED for Netlify to recognize the form -->
+        <input type="hidden" name="form-name" value="ttc-application">
+
+        <!-- Honeypot (hidden from users & screen readers) -->
+        <p class="hidden" aria-hidden="true">
+            <label>Don’t fill this out if you're human: <input name="bot-field"></label>
+        </p>
+
+
+        <!-- Name -->
+        <fieldset class="mt-12">
+            <legend>What is your name?</legend>
+            <div>
+                <label class="block">
+                    <input type="text" name="Name" required
+                        class="w-full px-1 py-2 border-b border-feature bg-transparent text-feature focus:outline-none focus:ring-0 focus:border-accent">
+                </label>
+            </div>
+        </fieldset>
+
+        <!-- Email -->
+        <fieldset class="mt-12">
+            <legend>What is your best email?</legend>
+            <div>
+                <label class="block">
+                    <input type="email" name="What_is_your_best_email" required
+                        class="w-full px-1 py-2 border-b border-feature bg-transparent text-feature focus:outline-none focus:ring-0 focus:border-accent">
+                </label>
+            </div>
+        </fieldset>
+
+        <!-- Location -->
+        <fieldset class="mt-12">
+            <legend>Where are you located?</legend>
+            <div>
+                <label class="block">
+                    <input type="text" name="Location" required
+                        class="w-full px-1 py-2 border-b border-feature bg-transparent text-feature focus:outline-none focus:ring-0 focus:border-accent">
+                </label>
+            </div>
+        </fieldset>
+
+        <!-- Mana Movement Frequency -->
+        <fieldset class="mt-12">
+            <legend class="mb-2">How long, and in what frequency have you been practicing Mana Movement?</legend>
+            <div>
+                <label class="block">
+                    <textarea name="Frequency_practicing_mana_movement" required
+                        class="w-full p-2 border border-feature bg-transparent text-feature h-32 focus:outline-none focus:ring-1 focus:ring-accent focus:border-transparent"></textarea>
+                </label>
+            </div>
+        </fieldset>
+
+        <!-- Mana Movement Experience -->
+        <fieldset class="mt-12">
+            <legend class="mb-2">Tell me a bit more about your experience with Mana Movement. What personal benefits
+                have you received from the practice?</legend>
+            <div>
+                <label class="block">
+                    <textarea name="What_is_your_experience_with_Mana_Movement" required
+                        class="w-full p-2 border border-feature bg-transparent text-feature h-32 focus:outline-none focus:ring-1 focus:ring-accent focus:border-transparent"></textarea>
+                </label>
+            </div>
+        </fieldset>
+
+
+        <!-- Completed Courses -->
+        <fieldset class="mt-12">
+            <legend class="mb-2">
+                Mark all Mana Movement Offerings have you completed:
+            </legend>
+            <div>
+                <label class="block mb-2">
+                    <input type="checkbox" name="Completed[]" value="Mana Movement Foundations"
+                        class="mr-2 accent-accent accent-accent">
+                    Mana Movement Foundations
+                </label>
+                <label class="block mb-2">
+                    <input type="checkbox" name="Completed[]" value="Mana Movement Full Course"
+                        class="mr-2 accent-accent">
+                    Mana Movement Full Course
+                </label>
+                <label class="block mb-2">
+                    <input type="checkbox" name="Completed[]" value="Mana Movement Maternity"
+                        class="mr-2 accent-accent">
+                    Mana Movement Maternity
+                </label>
+                <label class="block mb-2">
+                    <input type="checkbox" name="Completed[]" value="confiDance" class="mr-2 accent-accent">
+                    confiDance
+                </label>
+
+                <label class="block mb-2">
+                    <input type="checkbox" name="Completed[]" value="YouTube Mana Movement Practices"
+                        class="mr-2 accent-accent">
+                    YouTube Mana Movement Practices
+                </label>
+
+                <label class="block mb-2">
+                    <input type="checkbox" name="Completed[]" value="LTM Mentorship Program" class="mr-2 accent-accent">
+                    LTM Mentorship Program
+                </label>
+
+            </div>
+        </fieldset>
+
+
+        <!-- Why -->
+        <fieldset class="mt-12">
+            <legend class="mb-2">Why do you feel inspired to become a certified Mana Movement Facilitator?</legend>
+            <div>
+                <label class="block">
+                    <textarea name="Why_do_you_feel_inspired_to_become_a_certified_Mana_Movement_Facilitator?" required
+                        class="w-full p-2 border border-feature bg-transparent text-feature h-32 focus:outline-none focus:ring-1 focus:ring-accent focus:border-transparent"></textarea>
+                </label>
+            </div>
+        </fieldset>
+
+
+        <!-- Commitment -->
+        <p class="mt-12">This training will be an intensive deep dive and require your active participation for the
+            16-week period. Do you have at least 8 hours a week to devote to studying, learning, and completing assigned
+            homework for this training?</p>
+        <div>
+            <label class="block mb-2">
+                <input type="radio" name="Time_investment_commitment" value="Yes"
+                    class="mr-2 accent-accent focus:ring-accent focus:ring-1"> Yes
+            </label>
+            <label class="block">
+                <input type="radio" name="Time_investment_commitment" value="No"
+                    class="mr-2 accent-accent focus:ring-accent focus:ring-1"> No
+            </label>
+        </div>
+
+
+        <!-- Budget -->
+        <p class="mt-12">Do you have a budget of at least 3,800 USD to invest in this training? (payment plan available)
+        </p>
+        <div>
+            <label class="block mb-2">
+                <input type="radio" name="Budget_commitment" value="Yes"
+                    class="mr-2 accent-accent focus:ring-accent focus:ring-1"> Yes
+            </label>
+            <label class="block">
+                <input type="radio" name="Budget_commitment" value="No"
+                    class="mr-2 accent-accent focus:ring-accent focus:ring-1"> No
+            </label>
+        </div>
+
+        <!-- Additional Information -->
+        <fieldset class="mt-12">
+            <legend class="mb-2">Is there anything else I should know in consideration of your application?
+            </legend>
+            <div>
+                <label class="block mb-2">
+                    <textarea name="Additional_information"
+                        class="w-full p-2 border border-feature bg-transparent text-feature h-32 focus:outline-none focus:ring-1 focus:ring-accent focus:border-transparent"></textarea>
+                </label>
+            </div>
+        </fieldset>
+
+        <!-- reCAPTCHA widget (Netlify injects it here) -->
+        <div class="mt-6" data-netlify-recaptcha="true"></div>
+            <p id="captcha-error" class="mt-2 text-accent text-sm hidden" role="alert">Please check the “I’m not a robot” box to continue.</p>
+
+        <button
+            id="submit-btn"
+            type="submit"
+            disabled
+            class="button mt-4 hover:opacity-60 cursor-not-allowed">
+                Submit
+            </button>
+
+    </form>
