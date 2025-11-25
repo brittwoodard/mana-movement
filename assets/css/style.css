@@ -1848,6 +1848,12 @@ video {
   .lg\:w-\[80\%\] {
     width: 80%;
   }
+  .lg\:w-\[90\%\] {
+    width: 90%;
+  }
+  .lg\:w-\[85\%\] {
+    width: 85%;
+  }
   .lg\:max-w-\[40vw\] {
     max-width: 40vw;
   }
