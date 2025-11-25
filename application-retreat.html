@@ -1,0 +1,80 @@
+---
+layout: blank
+title: Application
+seo:
+  hide-from-google: true
+---
+
+<section class="p-10p">
+    <h1 class="heading-md text-feature mb-12">Mana Movement Greece Retreat — Application</h1>
+    <p> Thank you for your interest in joining the Mana Movement Greece Retreat in Pelion! Please find a quiet moment to carefully complete this application. Once successfully completed, you will receive an email invitation to book your 30-minute Connection Call with Mana.</p>
+
+    <iframe
+        src="https://link.manamovement.co/widget/form/P0SYQ1e23CH31nWzqCPg"
+        style="width:100%;height:100%;border:none;border-radius:0px"
+        id="inline-P0SYQ1e23CH31nWzqCPg" 
+        data-layout="{'id':'INLINE'}"
+        data-trigger-type="alwaysShow"
+        data-trigger-value=""
+        data-activation-type="alwaysActivated"
+        data-activation-value=""
+        data-deactivation-type="neverDeactivate"
+        data-deactivation-value=""
+        data-form-name="Application - MMTT"
+        data-height="1654"
+        data-layout-iframe-id="inline-P0SYQ1e23CH31nWzqCPg"
+        data-form-id="P0SYQ1e23CH31nWzqCPg"
+        title="Application - MMTT"
+        >
+    </iframe>
+    <script src="https://link.manamovement.co/js/form_embed.js"></script>
+        
+</section>
+
+<script>
+  (function () {
+    const form = document.getElementById('ttc-application');
+    const errorEl = document.getElementById('captcha-error');
+    const submitBtn = document.getElementById('submit-btn');
+    if (!form || !submitBtn) return;
+
+    const DISABLED_CLASSES = ['opacity-60', 'cursor-not-allowed'];
+    const ENABLED_CLASSES  = ['opacity-100', 'cursor-pointer'];
+
+    function getRecaptchaValue() {
+      const el = document.querySelector('textarea.g-recaptcha-response');
+      return el && el.value ? el.value.trim() : '';
+    }
+
+    function setEnabled(isEnabled) {
+      submitBtn.disabled = !isEnabled;
+      // toggle visuals
+      DISABLED_CLASSES.forEach(c => submitBtn.classList.toggle(c, !isEnabled));
+      ENABLED_CLASSES.forEach(c => submitBtn.classList.toggle(c,  isEnabled));
+      if (isEnabled && errorEl) errorEl.classList.add('hidden');
+    }
+
+    // start disabled visuals
+    setEnabled(false);
+
+    // Block submit if captcha missing
+    form.addEventListener('submit', function (e) {
+      if (!getRecaptchaValue()) {
+        e.preventDefault();
+        if (errorEl) errorEl.classList.remove('hidden');
+        const widget = document.querySelector('.g-recaptcha, [data-netlify-recaptcha]');
+        if (widget && widget.scrollIntoView) widget.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
+    });
+
+    // Poll for captcha solved/expired and toggle button state
+    let last = '';
+    setInterval(function () {
+      const val = getRecaptchaValue();
+      if (val !== last) {
+        last = val;
+        setEnabled(!!val);
+      }
+    }, 300);
+  })();
+</script>
