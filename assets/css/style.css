@@ -902,8 +902,8 @@ video {
 .bottom-\[5rem\] {
   bottom: 5rem;
 }
-.bottom-\[9rem\] {
-  bottom: 9rem;
+.bottom-\[8rem\] {
+  bottom: 8rem;
 }
 .left-0 {
   left: 0px;
@@ -931,9 +931,6 @@ video {
 }
 .top-4 {
   top: 1rem;
-}
-.bottom-\[8rem\] {
-  bottom: 8rem;
 }
 .z-10 {
   z-index: 10;
@@ -1451,9 +1448,6 @@ video {
 .uppercase {
   text-transform: uppercase;
 }
-.lowercase {
-  text-transform: lowercase;
-}
 .italic {
   font-style: italic;
 }
@@ -1683,8 +1677,8 @@ video {
   .md\:bottom-\[15\%\] {
     bottom: 15%;
   }
-  .md\:bottom-\[23rem\] {
-    bottom: 23rem;
+  .md\:bottom-\[22rem\] {
+    bottom: 22rem;
   }
   .md\:right-\[1\.5rem\] {
     right: 1.5rem;
@@ -1694,12 +1688,6 @@ video {
   }
   .md\:top-0 {
     top: 0px;
-  }
-  .md\:bottom-\[21rem\] {
-    bottom: 21rem;
-  }
-  .md\:bottom-\[22rem\] {
-    bottom: 22rem;
   }
   .md\:mx-8 {
     margin-left: 2rem;
@@ -1789,17 +1777,11 @@ video {
 }
 
 @media (min-width: 1024px) {
-  .lg\:bottom-\[20rem\] {
-    bottom: 20rem;
+  .lg\:bottom-\[19rem\] {
+    bottom: 19rem;
   }
   .lg\:bottom-\[9rem\] {
     bottom: 9rem;
-  }
-  .lg\:bottom-\[18rem\] {
-    bottom: 18rem;
-  }
-  .lg\:bottom-\[19rem\] {
-    bottom: 19rem;
   }
   .lg\:order-first {
     order: -9999;
