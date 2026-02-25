@@ -1,0 +1,50 @@
+<div id="popup"
+    class="hidden fixed inset-0 flex items-center justify-center z-50 bg-black bg-opacity-80">
+
+    <div id="popupContent" class="relative">
+        <!-- Background Image as an Image Element -->
+        <img src="/uploads/images/popup-greece-retreat.jpg" alt="Popup Image"
+            class="w-auto h-auto max-h-[80vh] max-w-[90vw]" />
+
+        <!-- Close Button (X) -->
+        <button id="popupClose"
+            class="absolute top-4 right-6 text-[1.5rem] font-100 text-accent hover:text-lighter hover:transition hover:duration-500">
+            X
+        </button>
+
+        <!-- Learn More Button -->
+        <div class="absolute bottom-[6rem] md:bottom-[15rem] lg:bottom-[10rem] right-[26%] md:right-[39%] lg:right-[33%]">
+            <a href="/application-retreat.html" class="button bg-accent/80  border-accent text-lighter">Learn More</a>
+        </div>
+    </div>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        // Check sessionStorage
+        if (!sessionStorage.getItem('popupShown')) {
+            setTimeout(function () {
+                showPopup();
+            }, 5000);
+        }
+
+        function showPopup() {
+            document.getElementById('popup').classList.remove('hidden');
+            sessionStorage.setItem('popupShown', 'true');
+        }
+
+        function closePopup() {
+            document.getElementById('popup').classList.add('hidden');
+        }
+
+        // CORRECTED ID: Matches 'popupClose' in your HTML
+        document.getElementById('popupClose').addEventListener('click', closePopup);
+
+        // OPTIONAL: Close when clicking the dark background area
+        document.getElementById('popup').addEventListener('click', function(e) {
+            if (e.target.id === 'popup') {
+                closePopup();
+            }
+        });
+    });
+</script>
