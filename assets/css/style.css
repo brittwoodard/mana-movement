@@ -896,11 +896,11 @@ video {
 .bottom-20 {
   bottom: 5rem;
 }
+.bottom-\[0\.25rem\] {
+  bottom: 0.25rem;
+}
 .bottom-\[10\%\] {
   bottom: 10%;
-}
-.bottom-\[1rem\] {
-  bottom: 1rem;
 }
 .bottom-\[5rem\] {
   bottom: 5rem;
@@ -949,12 +949,6 @@ video {
 }
 .top-4 {
   top: 1rem;
-}
-.bottom-\[0rem\] {
-  bottom: 0rem;
-}
-.bottom-\[0\.25rem\] {
-  bottom: 0.25rem;
 }
 .z-10 {
   z-index: 10;
