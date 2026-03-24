@@ -1460,6 +1460,9 @@ video {
   font-size: 0.875rem;
   line-height: 1.25rem;
 }
+.text-\[1rem\] {
+  font-size: 1rem;
+}
 .font-bold {
   font-weight: 700;
 }
@@ -1610,6 +1613,15 @@ video {
 .hover\:text-white:hover {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.hover\:text-accent\/80:hover {
+  color: rgb(205 145 60 / 0.8);
+}
+
+.hover\:text-main:hover {
+  --tw-text-opacity: 1;
+  color: rgb(213 170 170 / var(--tw-text-opacity));
 }
 
 .hover\:opacity-60:hover {
