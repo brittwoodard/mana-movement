@@ -902,6 +902,9 @@ video {
 .bottom-\[10\%\] {
   bottom: 10%;
 }
+.bottom-\[5\.7rem\] {
+  bottom: 5.7rem;
+}
 .bottom-\[5rem\] {
   bottom: 5rem;
 }
@@ -919,6 +922,9 @@ video {
 }
 .left-1\/2 {
   left: 50%;
+}
+.left-\[0\.5rem\] {
+  left: 0.5rem;
 }
 .right-0 {
   right: 0px;
@@ -949,12 +955,6 @@ video {
 }
 .top-4 {
   top: 1rem;
-}
-.bottom-\[5\.7rem\] {
-  bottom: 5.7rem;
-}
-.left-\[0\.5rem\] {
-  left: 0.5rem;
 }
 .z-10 {
   z-index: 10;
@@ -1449,11 +1449,11 @@ video {
   font-size: 1.875rem;
   line-height: 2.25rem;
 }
-.text-\[0\.9rem\] {
-  font-size: 0.9rem;
-}
 .text-\[1\.5rem\] {
   font-size: 1.5rem;
+}
+.text-\[1rem\] {
+  font-size: 1rem;
 }
 .text-\[3rem\] {
   font-size: 3rem;
@@ -1465,9 +1465,6 @@ video {
 .text-sm {
   font-size: 0.875rem;
   line-height: 1.25rem;
-}
-.text-\[1rem\] {
-  font-size: 1rem;
 }
 .font-bold {
   font-weight: 700;
@@ -1484,9 +1481,6 @@ video {
 .text-accent {
   --tw-text-opacity: 1;
   color: rgb(205 145 60 / var(--tw-text-opacity));
-}
-.text-accent\/80 {
-  color: rgb(205 145 60 / 0.8);
 }
 .text-black {
   --tw-text-opacity: 1;
@@ -1621,15 +1615,6 @@ video {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
-.hover\:text-accent\/80:hover {
-  color: rgb(205 145 60 / 0.8);
-}
-
-.hover\:text-main:hover {
-  --tw-text-opacity: 1;
-  color: rgb(213 170 170 / var(--tw-text-opacity));
-}
-
 .hover\:opacity-60:hover {
   opacity: 0.6;
 }
@@ -1715,6 +1700,9 @@ video {
   .md\:sticky {
     position: sticky;
   }
+  .md\:bottom-\[11rem\] {
+    bottom: 11rem;
+  }
   .md\:bottom-\[14rem\] {
     bottom: 14rem;
   }
@@ -1729,6 +1717,9 @@ video {
   }
   .md\:bottom-\[22rem\] {
     bottom: 22rem;
+  }
+  .md\:left-\[1rem\] {
+    left: 1rem;
   }
   .md\:right-\[1\.5rem\] {
     right: 1.5rem;
@@ -1747,15 +1738,6 @@ video {
   }
   .md\:top-0 {
     top: 0px;
-  }
-  .md\:bottom-\[12\.5rem\] {
-    bottom: 12.5rem;
-  }
-  .md\:left-\[1rem\] {
-    left: 1rem;
-  }
-  .md\:bottom-\[11rem\] {
-    bottom: 11rem;
   }
   .md\:mx-8 {
     margin-left: 2rem;
@@ -1857,6 +1839,9 @@ video {
   .lg\:bottom-\[19rem\] {
     bottom: 19rem;
   }
+  .lg\:bottom-\[8\.5rem\] {
+    bottom: 8.5rem;
+  }
   .lg\:bottom-\[9rem\] {
     bottom: 9rem;
   }
@@ -1865,9 +1850,6 @@ video {
   }
   .lg\:right-\[3rem\] {
     right: 3rem;
-  }
-  .lg\:bottom-\[8\.5rem\] {
-    bottom: 8.5rem;
   }
   .lg\:order-first {
     order: -9999;
