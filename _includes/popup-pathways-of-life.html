@@ -1,0 +1,78 @@
+<div id="popup" class="hidden fixed inset-0 z-50 flex items-center justify-center bg-black/80">
+
+  <!-- Portrait box -->
+  <div id="popupContent"
+       class="relative aspect-[3/4] h-[90vh] max-w-[90vw] overflow-hidden">
+
+    <!-- 2x2 grid that fills the portrait box -->
+    <div class="grid grid-cols-2 grid-rows-2 h-full w-full">
+
+      <!-- Text / Left (top-left) -->
+      <div class="flex items-center justify-center p-6 bg-black">
+        <div class="text-accent text-center">
+          <h2 class="font-serif text-[2.75rem] leading-[1em] mb-4">Pathways of Life</h2>
+          <p class="leading-snug">Personal Empowerment through Mind-Body Exploration of Feminine Shapes</p>
+          <p class="uppercase">4-Week Live Online Program</p>
+        </div>
+      </div>
+
+      <!-- Image / Right (top-right) -->
+      <div class="bg-[url('/uploads/images/pathways-of-life-18.png')] bg-cover bg-center"></div>
+
+      <!-- Image / Left (bottom-left) -->
+      <div class="bg-[url('/uploads/images/pathways-of-life-17.png')] bg-cover bg-center"></div>
+
+      <!-- Text / Right (bottom-right) -->
+      <div class="flex items-center justify-center p-6 bg-black">
+        <div class="text-accent text-center">
+          <p class="uppercase">July 11th - August 8th</p>
+          <a href="https://manamei.com/pathways-of-life" class="button bg-accent/80 text-dark border-0 hover:border-0">Enroll Now</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Close -->
+    <button id="popupClose"
+            class="absolute top-3 right-3 text-[1.5rem] font-100 text-accent hover:text-black duration-300">
+      X
+    </button>
+  </div>
+</div>
+
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const popup = document.getElementById('popup');
+        const popupClose = document.getElementById('popupClose');
+        const popupContent = document.getElementById('popupContent');
+
+
+        if (!sessionStorage.getItem('popupShown')) {
+
+            setTimeout(function () {
+                popup.classList.remove('hidden');
+            }, 5000);
+
+
+            sessionStorage.setItem('popupShown', 'true');
+        }
+
+
+        function closePopup() {
+            popup.classList.add('hidden');
+        }
+
+
+        popupClose.addEventListener('click', function (e) {
+
+            closePopup();
+        });
+
+
+        popup.addEventListener('click', function (e) {
+            if (!popupContent.contains(e.target)) {
+                closePopup();
+            }
+        });
+    });
+</script>
