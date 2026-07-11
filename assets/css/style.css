@@ -941,6 +941,9 @@ video {
 .right-0 {
   right: 0px;
 }
+.right-3 {
+  right: 0.75rem;
+}
 .right-4 {
   right: 1rem;
 }
@@ -968,14 +971,14 @@ video {
 .top-0 {
   top: 0px;
 }
+.top-3 {
+  top: 0.75rem;
+}
 .top-4 {
   top: 1rem;
 }
-.right-3 {
-  right: 0.75rem;
-}
-.top-3 {
-  top: 0.75rem;
+.left-12 {
+  left: 3rem;
 }
 .z-10 {
   z-index: 10;
@@ -985,9 +988,6 @@ video {
 }
 .z-50 {
   z-index: 50;
-}
-.z-auto {
-  z-index: auto;
 }
 .order-last {
   order: 9999;
@@ -1102,6 +1102,9 @@ video {
 .hidden {
   display: none;
 }
+.aspect-\[3\/4\] {
+  aspect-ratio: 3/4;
+}
 .aspect-landscape {
   aspect-ratio: 2 / 1 ;
 }
@@ -1113,9 +1116,6 @@ video {
 }
 .aspect-video {
   aspect-ratio: 16 / 9;
-}
-.aspect-\[3\/4\] {
-  aspect-ratio: 3/4;
 }
 .h-12 {
   height: 3rem;
@@ -1138,6 +1138,9 @@ video {
 .h-\[70vh\] {
   height: 70vh;
 }
+.h-\[90vh\] {
+  height: 90vh;
+}
 .h-\[95vh\] {
   height: 95vh;
 }
@@ -1149,9 +1152,6 @@ video {
 }
 .h-screen {
   height: 100vh;
-}
-.h-\[90vh\] {
-  height: 90vh;
 }
 .max-h-\[80vh\] {
   max-height: 80vh;
@@ -1340,6 +1340,9 @@ video {
   --tw-bg-opacity: 1;
   background-color: rgb(0 0 0 / var(--tw-bg-opacity));
 }
+.bg-black\/80 {
+  background-color: rgb(0 0 0 / 0.8);
+}
 .bg-feature {
   --tw-bg-opacity: 1;
   background-color: rgb(158 99 101 / var(--tw-bg-opacity));
@@ -1368,21 +1371,11 @@ video {
 .bg-white\/80 {
   background-color: rgb(255 255 255 / 0.8);
 }
-.bg-black\/80 {
-  background-color: rgb(0 0 0 / 0.8);
-}
-.bg-dark {
-  --tw-bg-opacity: 1;
-  background-color: rgb(66 54 52 / var(--tw-bg-opacity));
-}
 .bg-opacity-50 {
   --tw-bg-opacity: 0.5;
 }
 .bg-opacity-80 {
   --tw-bg-opacity: 0.8;
-}
-.bg-\[url\(\/uploads\/icons\/Logo-light\.svg\)\] {
-  background-image: url(/uploads/icons/Logo-light.svg);
 }
 .bg-\[url\(\'\/uploads\/images\/pathways-of-life-17\.png\'\)\] {
   background-image: url('/uploads/images/pathways-of-life-17.png');
@@ -1390,17 +1383,20 @@ video {
 .bg-\[url\(\'\/uploads\/images\/pathways-of-life-18\.png\'\)\] {
   background-image: url('/uploads/images/pathways-of-life-18.png');
 }
+.bg-\[url\(\/uploads\/icons\/Logo-light\.svg\)\] {
+  background-image: url(/uploads/icons/Logo-light.svg);
+}
 .bg-contain {
   background-size: contain;
 }
 .bg-cover {
   background-size: cover;
 }
-.bg-right {
-  background-position: right;
-}
 .bg-center {
   background-position: center;
+}
+.bg-right {
+  background-position: right;
 }
 .bg-no-repeat {
   background-repeat: no-repeat;
@@ -1513,6 +1509,9 @@ video {
 .text-\[1rem\] {
   font-size: 1rem;
 }
+.text-\[2\.75rem\] {
+  font-size: 2.75rem;
+}
 .text-\[3rem\] {
   font-size: 3rem;
 }
@@ -1524,9 +1523,6 @@ video {
   font-size: 0.875rem;
   line-height: 1.25rem;
 }
-.text-\[2\.75rem\] {
-  font-size: 2.75rem;
-}
 .font-bold {
   font-weight: 700;
 }
@@ -1535,9 +1531,6 @@ video {
 }
 .uppercase {
   text-transform: uppercase;
-}
-.lowercase {
-  text-transform: lowercase;
 }
 .italic {
   font-style: italic;
@@ -1831,6 +1824,9 @@ video {
   .md\:top-0 {
     top: 0px;
   }
+  .md\:left-24 {
+    left: 6rem;
+  }
   .md\:mx-8 {
     margin-left: 2rem;
     margin-right: 2rem;
@@ -1957,6 +1953,9 @@ video {
   }
   .lg\:right-\[3rem\] {
     right: 3rem;
+  }
+  .lg\:left-16 {
+    left: 4rem;
   }
   .lg\:order-first {
     order: -9999;
