@@ -1541,6 +1541,12 @@ video {
 .leading-snug {
   line-height: 1.375;
 }
+.leading-4 {
+  line-height: 1rem;
+}
+.leading-8 {
+  line-height: 2rem;
+}
 .text-accent {
   --tw-text-opacity: 1;
   color: rgb(205 145 60 / var(--tw-text-opacity));
