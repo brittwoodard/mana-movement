@@ -902,6 +902,9 @@ video {
 .bottom-\[10\%\] {
   bottom: 10%;
 }
+.bottom-\[17rem\] {
+  bottom: 17rem;
+}
 .bottom-\[18rem\] {
   bottom: 18rem;
 }
@@ -979,15 +982,6 @@ video {
 }
 .top-4 {
   top: 1rem;
-}
-.bottom-\[23rem\] {
-  bottom: 23rem;
-}
-.bottom-\[4rem\] {
-  bottom: 4rem;
-}
-.bottom-\[17rem\] {
-  bottom: 17rem;
 }
 .z-10 {
   z-index: 10;
@@ -1367,6 +1361,9 @@ video {
   --tw-bg-opacity: 1;
   background-color: rgb(249 248 246 / var(--tw-bg-opacity));
 }
+.bg-lighter\/80 {
+  background-color: rgb(249 248 246 / 0.8);
+}
 .bg-main {
   --tw-bg-opacity: 1;
   background-color: rgb(213 170 170 / var(--tw-bg-opacity));
@@ -1379,9 +1376,6 @@ video {
 }
 .bg-white\/80 {
   background-color: rgb(255 255 255 / 0.8);
-}
-.bg-lighter\/80 {
-  background-color: rgb(249 248 246 / 0.8);
 }
 .bg-opacity-50 {
   --tw-bg-opacity: 0.5;
@@ -1547,17 +1541,14 @@ video {
 .italic {
   font-style: italic;
 }
+.leading-8 {
+  line-height: 2rem;
+}
 .leading-\[1em\] {
   line-height: 1em;
 }
 .leading-snug {
   line-height: 1.375;
-}
-.leading-4 {
-  line-height: 1rem;
-}
-.leading-8 {
-  line-height: 2rem;
 }
 .text-accent {
   --tw-text-opacity: 1;
@@ -1582,10 +1573,6 @@ video {
 .text-lighter {
   --tw-text-opacity: 1;
   color: rgb(249 248 246 / var(--tw-text-opacity));
-}
-.text-main {
-  --tw-text-opacity: 1;
-  color: rgb(213 170 170 / var(--tw-text-opacity));
 }
 .accent-accent {
   accent-color: #cd913c;
@@ -1819,6 +1806,9 @@ video {
   .md\:bottom-\[3rem\] {
     bottom: 3rem;
   }
+  .md\:bottom-\[61\%\] {
+    bottom: 61%;
+  }
   .md\:left-24 {
     left: 6rem;
   }
@@ -1848,21 +1838,6 @@ video {
   }
   .md\:top-0 {
     top: 0px;
-  }
-  .md\:bottom-\[23rem\] {
-    bottom: 23rem;
-  }
-  .md\:bottom-\[35rem\] {
-    bottom: 35rem;
-  }
-  .md\:bottom-\[32rem\] {
-    bottom: 32rem;
-  }
-  .md\:bottom-\[50\%\] {
-    bottom: 50%;
-  }
-  .md\:bottom-\[61\%\] {
-    bottom: 61%;
   }
   .md\:mx-8 {
     margin-left: 2rem;
@@ -1967,6 +1942,9 @@ video {
   .lg\:bottom-\[19rem\] {
     bottom: 19rem;
   }
+  .lg\:bottom-\[25rem\] {
+    bottom: 25rem;
+  }
   .lg\:bottom-\[2rem\] {
     bottom: 2rem;
   }
@@ -1993,12 +1971,6 @@ video {
   }
   .lg\:right-\[3rem\] {
     right: 3rem;
-  }
-  .lg\:bottom-\[23rem\] {
-    bottom: 23rem;
-  }
-  .lg\:bottom-\[25rem\] {
-    bottom: 25rem;
   }
   .lg\:order-first {
     order: -9999;
