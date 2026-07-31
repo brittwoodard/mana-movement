@@ -1036,6 +1036,10 @@ video {
   margin-top: 5rem;
   margin-bottom: 5rem;
 }
+.my-2 {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
 .mb-0 {
   margin-bottom: 0px;
 }
@@ -1659,19 +1663,9 @@ video {
   background-color: rgb(205 145 60 / 0.7);
 }
 
-.hover\:bg-white:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
-}
-
 .hover\:bg-main:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(213 170 170 / var(--tw-bg-opacity));
-}
-
-.hover\:bg-feature:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(158 99 101 / var(--tw-bg-opacity));
 }
 
 .hover\:text-accent:hover {
@@ -1824,6 +1818,9 @@ video {
   .md\:bottom-\[61\%\] {
     bottom: 61%;
   }
+  .md\:bottom-\[8rem\] {
+    bottom: 8rem;
+  }
   .md\:left-24 {
     left: 6rem;
   }
@@ -1853,9 +1850,6 @@ video {
   }
   .md\:top-0 {
     top: 0px;
-  }
-  .md\:bottom-\[8rem\] {
-    bottom: 8rem;
   }
   .md\:mx-8 {
     margin-left: 2rem;
@@ -1972,6 +1966,9 @@ video {
   .lg\:bottom-\[8\.5rem\] {
     bottom: 8.5rem;
   }
+  .lg\:bottom-\[8rem\] {
+    bottom: 8rem;
+  }
   .lg\:bottom-\[9rem\] {
     bottom: 9rem;
   }
@@ -1989,9 +1986,6 @@ video {
   }
   .lg\:right-\[3rem\] {
     right: 3rem;
-  }
-  .lg\:bottom-\[8rem\] {
-    bottom: 8rem;
   }
   .lg\:order-first {
     order: -9999;
