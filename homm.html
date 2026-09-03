@@ -1,0 +1,29 @@
+---
+layout: default
+heading: 
+  title: HōMM
+  subtitle: Academy of Mana Movement
+  description: An Educational Haven for the Art of Feminine Healing
+---
+
+<!-- Hero -->
+<section class="section-video h-[95vh] flex items-center justify-center">
+    {% include site-header.html %}
+  
+    <video autoplay muted loop playsinline poster class="bg-video">
+      <source src="/uploads/video/manamovement-3.webm" type="video/webm">
+      <source src="/uploads/video/manamovement-3.mp4" type="video/mp4">
+      <p>Sorry, your browser doesn't support embedded videos</p> 
+    </video>
+
+    <div class="text-accent text-center section-padding">
+        <div>
+            <h2 class="heading-lg mb-4">{{ page.heading.title }}</h2>
+            <h3 class="uppercase mb-2">{{ page.heading.subtitle }}</h3>
+            <p class="max-w-2xl mx-auto">{{ page.heading.description }}</p>
+        </div>
+        <div class="flex justify-center">
+          <img src="/uploads/icons/logo-accent.svg" class="h-16 mt-4">
+        </div>
+    </div>
+</section>
