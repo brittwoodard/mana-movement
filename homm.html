@@ -10,6 +10,11 @@ heading:
   title: HōMM
   subtitle: Academy of Mana Movement
   description: An Educational Haven for the Art of Feminine Healing
+testimonials:
+  background_color: feature
+  title: Mana Movement Testimonials
+  testimonial:
+    - testimonial_html: "HōMM is a space of community, resources, and practice- where women come to weave Mana Movement into everyday life. Whether you are just beginning your embodiment journey, or deepening your devotional path, HōMM meets you where you are, as you choose the rhythm, support, and guidance for your personal healing journey. Because coming HōMM is really about returning to the wisdom already within you."
 ---
 
 <!-- Hero -->
@@ -17,8 +22,7 @@ heading:
     {% include site-header.html %}
   
     <video autoplay muted loop playsinline poster class="bg-video">
-      <!-- <source src="/uploads/video/manamovement-3.webm" type="video/webm"> -->
-      <source src="/uploads/video/manamovement-4-optimized.mp4" type="video/mp4">
+      <source src="/uploads/video/manamovement-4.mp4" type="video/mp4">
       <p>Sorry, your browser doesn't support embedded videos</p> 
     </video>
 
@@ -66,4 +70,25 @@ heading:
             <p class="heading-lg mt-8 text-feature">Welcome HōMM</p>
         </div>
     </div>
+</section>
+
+<!-- Banner -->
+<section class="bg-image-style section-padding min-h-[60vh]" style="background-image: url('/uploads/images/manamovement-6.JPEG'); background-position: 50% 78%;"></section>
+
+<!-- Banner -->
+<section class="section-padding bg-main text-lighter text-center">
+    <p>HōMM is an Online Academy focused on providing women with a space, community, and resources to bring Mana Movement and the Feminine Healing Arts into a vital part of their lifestyle. A place for women where you are welcomed into this very experience of co-creating a safe space of Feminine Expression, creativity, and nourishment.</p>
+</section>
+
+<!-- Testimonials -->
+<section class="section-padding bg-feature">
+  <div class="testimonial-container">
+
+    {% for item in page.testimonials %}
+    <div class="testimonial-item text-center text-lighter">
+      <h2 class="heading-md">Mana Movement Testimonials</h2>
+      <p class="italic text-lg"><em>{{item.testimonial_html}}</em></p>
+    </div>
+    {% endfor %}
+  </div>
 </section>

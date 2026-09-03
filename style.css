@@ -40,7 +40,7 @@
     }
 
     p {
-        @apply mb-4 last:mb-0
+        @apply mb-4 last:mb-0 text-[1.1rem]
     }
 
 }
