@@ -2076,6 +2076,15 @@ video {
   .lg\:w-\[85\%\] {
     width: 85%;
   }
+  .lg\:w-\[50\%\] {
+    width: 50%;
+  }
+  .lg\:w-\[55\%\] {
+    width: 55%;
+  }
+  .lg\:w-\[90\%\] {
+    width: 90%;
+  }
   .lg\:max-w-\[40vw\] {
     max-width: 40vw;
   }
