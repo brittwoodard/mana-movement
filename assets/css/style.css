@@ -1094,6 +1094,9 @@ video {
 .mt-8 {
   margin-top: 2rem;
 }
+.-mt-2 {
+  margin-top: -0.5rem;
+}
 .block {
   display: block;
 }
@@ -1511,6 +1514,9 @@ video {
 .font-serif {
   font-family: inlander_smooth, serif;
 }
+.font-sans {
+  font-family: josefin-sans, sans-serif;
+}
 .text-2xl {
   font-size: 1.5rem;
   line-height: 2rem;
@@ -1675,6 +1681,11 @@ video {
   border-width: 0px;
 }
 
+.hover\:border-main:hover {
+  --tw-border-opacity: 1;
+  border-color: rgb(213 170 170 / var(--tw-border-opacity));
+}
+
 .hover\:bg-accent\/70:hover {
   background-color: rgb(205 145 60 / 0.7);
 }
@@ -1717,6 +1728,11 @@ video {
 .hover\:text-white:hover {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.hover\:text-main:hover {
+  --tw-text-opacity: 1;
+  color: rgb(213 170 170 / var(--tw-text-opacity));
 }
 
 .hover\:opacity-60:hover {
