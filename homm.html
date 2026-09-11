@@ -144,12 +144,12 @@ tiers:
 </section>
 
 <!-- Tiers -->
-<section class="section-padding text-center">
+<section class="section-padding text-center bg-image-style" style="background-image: url('/uploads/backgrounds/tree-homm.png'); background-position: 50% 78%;">
   <h2 class="heading-md text-feature mb-4">HoMM Academy is a Tiered Educational Haven.</h2>
   <p>You choose your level. You choose your depth of engagement and devotion…</p>
 
   {% for item in page.tiers %}
-    <div class="mt-12">
+    <div class="mt-12 lg:w-[60%] mx-auto">
       <h3 class="heading-md text-feature mb-4">{{ item.title }}</h3>
       <p class="uppercase">{{ item.level }}</p>
       <p class="text-feature"><strong>{{ item.subscription }}</strong></p>
@@ -167,4 +167,99 @@ tiers:
   <p>but unfolding, layer by sacred layer.</p>
   <p class="font-serif text-[1.5rem] text-feature">Welcome HoMM - The Academy of Mana Movement</p>
   <p>Where you don’t chase growth— <em>you become it.</em></p>
+</section>
+
+<!-- What's Included -->
+<section class="section-padding">
+  <div class="border border-main">
+    <div class="p-8 text-center">
+      <h2 class="heading-md text-feature">What Grows at Each Level</h2>
+    </div>
+
+    <div class="overflow-x-auto">
+      <table class="w-full min-w-[640px] text-center border-collapse">
+        <thead>
+          <tr class="border-t border-main">
+            <th class="p-4"></th>
+            <th class="p-4 font-normal uppercase tracking-wide">Seed</th>
+            <th class="p-4 font-normal uppercase tracking-wide">Roots</th>
+            <th class="p-4 font-normal uppercase tracking-wide">Trunk</th>
+            <th class="p-4 font-normal uppercase tracking-wide">Canopy</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="border-t border-main">
+            <td class="p-4 text-left">Community Forum access</td>
+            <td class="p-4"><span class="inline-block h-4 w-4 rounded-full bg-accent"></span></td>
+            <td class="p-4"><span class="inline-block h-4 w-4 rounded-full bg-accent"></span></td>
+            <td class="p-4"><span class="inline-block h-4 w-4 rounded-full bg-accent"></span></td>
+            <td class="p-4"><span class="inline-block h-4 w-4 rounded-full bg-accent"></span></td>
+          </tr>
+          <tr class="border-t border-main">
+            <td class="p-4 text-left">Unlimited Workshop Replay Library (20+ replays)</td>
+            <td class="p-4"></td>
+            <td class="p-4"><span class="inline-block h-4 w-4 rounded-full bg-accent"></span></td>
+            <td class="p-4"><span class="inline-block h-4 w-4 rounded-full bg-accent"></span></td>
+            <td class="p-4"><span class="inline-block h-4 w-4 rounded-full bg-accent"></span></td>
+          </tr>
+          <tr class="border-t border-main">
+            <td class="p-4 text-left">Unlimited access to ALL Evergreen courses</td>
+            <td class="p-4"></td>
+            <td class="p-4"></td>
+            <td class="p-4"><span class="inline-block h-4 w-4 rounded-full bg-accent"></span></td>
+            <td class="p-4"><span class="inline-block h-4 w-4 rounded-full bg-accent"></span></td>
+          </tr>
+          <tr class="border-t border-main">
+            <td class="p-4 text-left">Monthly Live Guided Session with Mana Mei (+ Q&amp;A)</td>
+            <td class="p-4"></td>
+            <td class="p-4"></td>
+            <td class="p-4"><span class="inline-block h-4 w-4 rounded-full bg-accent"></span></td>
+            <td class="p-4"><span class="inline-block h-4 w-4 rounded-full bg-accent"></span></td>
+          </tr>
+          <tr class="border-t border-main">
+            <td class="p-4 text-left">Monthly Live Guest Session (Certified Facilitators)</td>
+            <td class="p-4"></td>
+            <td class="p-4"></td>
+            <td class="p-4"><span class="inline-block h-4 w-4 rounded-full bg-accent"></span></td>
+            <td class="p-4"><span class="inline-block h-4 w-4 rounded-full bg-accent"></span></td>
+          </tr>
+          <tr class="border-t border-main">
+            <td class="p-4 text-left">Monthly "Art of Feminine Healing" Transmission</td>
+            <td class="p-4"></td>
+            <td class="p-4"></td>
+            <td class="p-4"><span class="inline-block h-4 w-4 rounded-full bg-accent"></span></td>
+            <td class="p-4"><span class="inline-block h-4 w-4 rounded-full bg-accent"></span></td>
+          </tr>
+          <tr class="border-t border-main">
+            <td class="p-4 text-left">Free Live Online Workshops (valued up to $100)</td>
+            <td class="p-4"></td>
+            <td class="p-4"></td>
+            <td class="p-4"><span class="inline-block h-4 w-4 rounded-full bg-accent"></span></td>
+            <td class="p-4"><span class="inline-block h-4 w-4 rounded-full bg-accent"></span></td>
+          </tr>
+          <tr class="border-t border-main">
+            <td class="p-4 text-left">Exclusive discounts on all Mana Mei offerings &amp; retreats</td>
+            <td class="p-4"></td>
+            <td class="p-4"></td>
+            <td class="p-4"><span class="inline-block h-4 w-4 rounded-full bg-accent"></span></td>
+            <td class="p-4"><span class="inline-block h-4 w-4 rounded-full bg-accent"></span></td>
+          </tr>
+          <tr class="border-t border-main">
+            <td class="p-4 text-left">Quarterly "Mastermind" Meetups with Mana Mei</td>
+            <td class="p-4"></td>
+            <td class="p-4"></td>
+            <td class="p-4"></td>
+            <td class="p-4"><span class="inline-block h-4 w-4 rounded-full bg-accent"></span></td>
+          </tr>
+          <tr class="border-t border-main">
+            <td class="p-4 text-left">Exclusive "Mastery Student" discounts, incl. retreats</td>
+            <td class="p-4"></td>
+            <td class="p-4"></td>
+            <td class="p-4"></td>
+            <td class="p-4"><span class="inline-block h-4 w-4 rounded-full bg-accent"></span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
 </section>
