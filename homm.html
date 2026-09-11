@@ -144,18 +144,20 @@ tiers:
 </section>
 
 <!-- Tiers -->
-<section class="section-padding text-center bg-image-style" style="background-image: url('/uploads/backgrounds/tree-homm.png'); background-position: 50% 78%;">
+<section class="mt-20 lg:mt-40 mx-8 lg:mx-20 text-center">
   <h2 class="heading-md text-feature mb-4">HoMM Academy is a Tiered Educational Haven.</h2>
   <p>You choose your level. You choose your depth of engagement and devotion…</p>
 
-  {% for item in page.tiers %}
-    <div class="mt-12 lg:w-[60%] mx-auto">
-      <h3 class="heading-md text-feature mb-4">{{ item.title }}</h3>
-      <p class="uppercase">{{ item.level }}</p>
-      <p class="text-feature"><strong>{{ item.subscription }}</strong></p>
-      <p>{{ item.description_html }}</p>
-    </div>
-  {% endfor %}
+  <div class="bg-contain bg-center bg-no-repeat" style="background-image: url('/uploads/backgrounds/tree-homm.png');">
+    {% for item in page.tiers %}
+      <div class="mt-12 lg:w-[60%] mx-auto">
+        <h3 class="heading-md text-feature mb-4">{{ item.title }}</h3>
+        <p class="uppercase">{{ item.level }}</p>
+        <p class="text-feature"><strong>{{ item.subscription }}</strong></p>
+        <p>{{ item.description_html }}</p>
+      </div>
+    {% endfor %}
+  </div>
 
   <hr class="border-main my-20">
 
