@@ -2102,11 +2102,11 @@ video {
   .lg\:mt-36 {
     margin-top: 9rem;
   }
-  .lg\:mt-8 {
-    margin-top: 2rem;
-  }
   .lg\:mt-40 {
     margin-top: 10rem;
+  }
+  .lg\:mt-8 {
+    margin-top: 2rem;
   }
   .lg\:block {
     display: block;
