@@ -23,6 +23,48 @@ testimonials:
     - testimonial_html: “It feels right, it feels so natural. My mind is still and quiet. I feel grounded and quiet inside.”
     - testimonial_html: “My energy is exploding! I feel so emotionally stable and safe. I react to things happening to me with ease and people seem to notice it and treat me differently..  or rather, it's me looking at things through different lenses. Life is just flowing…”
     - testimonial_html: “I clearly see and feel the changes in my life and in my body. I see more fluidity in every parts of the every day life, professional, personal…It’s really amazing and magical !!! I feel more present, more grounded, more feminine, more aware, more confident…”
+tiers: 
+  - title: Seed
+    level: Elementary Level
+    subscription: Free Subscription for Community Forum
+    description_html: | 
+      <p>Like a tree, all true growth begins in stillness.</p>
+      <p>Here, intention is planted.</p>
+      <p>A quiet awakening.</p>
+      <p>You soften, listen, and open to a new pathway home.</p>
+      <p>Infinite potential awaits within…</p>
+      <p>The SEED Level is for women who are interested in connecting with the Global Community of Sisters on the Mana Movement Journey.</p>
+      <p><em>All women who purchase a Mana Movement Evergreen Course will gain automatic free entrance to the SEED Level of the Academy which features a community Forum for sharing and connection.</em></p>
+  - title: Roots
+    level: Foundations Level
+    subscription: Tier 1 Subscription
+    description_html: |
+      <p>You descend and anchor.</p>
+      <p></p>Nourishing your foundation with consistency, practice, and presence.</p>
+      <p>Here, you reclaim your depth—your intuition, your movement, your truth.</p>
+      <p>Connecting deeply with your inner strength through practiced devotion.</p>
+      <p><em>The ROOTS Level is for women who are wanting opportunities to practice live with their global sisterhood, and are ready to step into consistent devotion to their movement rituals.</em></p>
+  - title: Trunk
+    level: Apprenticeship Level
+    subscription: Tier 2 Subscription
+    description_html: |
+      <p>You rise.</p>
+      <p></p>Steady, embodied, and anchored in who you are becoming.</p>
+      <p>Your energy expands. Your power awakens.</p>
+      <p>You stand—not rigid, but rooted and receptive.</p>
+      <p>You remember that you are a bridge between Earth & Sky,</p>
+      <p>A vessel for Divine Wisdom expressed through the Feminine Form.</p>
+      <p><em>The TRUNK Level is for women ready to commit fully to the path of the Feminine Healing Arts. With weekly opportunities to connect live in powerful movement sessions as well as gaining unlimited access to a wealth of embodiment resources and experiences.</em></p>
+  - title: Canopy
+    level: Mastery Level
+    subscription: Tier 3 Subscription exclusive for LTM & MMTT Graduates
+    description_html: |
+      <p>You expand.</p>
+      <p></p>A beacon of Embodied Feminine Leadership. </p>
+      <p>Your growth becomes shelter, medicine, and inspiration for others.</p>
+      <p>With a continued devotion to bloom and nourish</p>
+      <p>You are no longer becoming—you are being.</p>
+      <p><em>The CANOPY Level is exclusively for women who have successfully completed the Liberation Through Movement Mentorship Program or the Mana Movement Teacher Training. A space to connect with other Leaders in this space as well as gain incredible access to a wealth of embodiment resources and experiences.</em></p>
 ---
 
 <!-- Hero -->
@@ -103,5 +145,23 @@ testimonials:
 
 <!-- Tiers -->
 <section>
+  <h2>HoMM Academy is a Tiered Educational Haven. You choose your level. You choose your depth of engagement and devotion…</h2>
 
+  {% for item in page.tiers %}
+    <div class="">
+      <h3>{{ item.title }}</h3>
+      <p class="uppercase">{{ item.level }}</p>
+      <p class="text-feature bold"> {{ item.subscription }}</p>
+      <p>{{ item.description_html }}</p>
+    </div>
+  {% endfor %}
+
+  <div>
+    <p>This is the path of the tree.</p>
+  </div>
+  <p></p>This is the rhythm of the feminine.</p>
+  <p>Not rushed, not forced—</p>
+  <p>but unfolding, layer by sacred layer.</p>
+  <p>Welcome HoMM - The Academy of Mana Movement</p>
+  <p>Where you don’t chase growth— you become it.</p>
 </section>
