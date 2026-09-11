@@ -144,24 +144,27 @@ tiers:
 </section>
 
 <!-- Tiers -->
-<section>
-  <h2>HoMM Academy is a Tiered Educational Haven. You choose your level. You choose your depth of engagement and devotion…</h2>
+<section class="section-padding text-center">
+  <h2 class="heading-md text-feature mb-4">HoMM Academy is a Tiered Educational Haven.</h2>
+  <p>You choose your level. You choose your depth of engagement and devotion…</p>
 
   {% for item in page.tiers %}
-    <div class="">
-      <h3>{{ item.title }}</h3>
+    <div class="mt-12">
+      <h3 class="heading-md text-feature mb-4">{{ item.title }}</h3>
       <p class="uppercase">{{ item.level }}</p>
-      <p class="text-feature bold"> {{ item.subscription }}</p>
+      <p class="text-feature"><strong>{{ item.subscription }}</strong></p>
       <p>{{ item.description_html }}</p>
     </div>
   {% endfor %}
 
+  <hr class="border-main my-20">
+
   <div>
-    <p>This is the path of the tree.</p>
+    <p class="text-feature"><strong>This is the path of the tree.</strong></p>
   </div>
   <p></p>This is the rhythm of the feminine.</p>
   <p>Not rushed, not forced—</p>
   <p>but unfolding, layer by sacred layer.</p>
-  <p>Welcome HoMM - The Academy of Mana Movement</p>
-  <p>Where you don’t chase growth— you become it.</p>
+  <p class="font-serif text-[1.5rem] text-feature">Welcome HoMM - The Academy of Mana Movement</p>
+  <p>Where you don’t chase growth— <em>you become it.</em></p>
 </section>
