@@ -912,6 +912,9 @@ video {
 .bottom-\[1rem\] {
   bottom: 1rem;
 }
+.bottom-\[25\%\] {
+  bottom: 25%;
+}
 .bottom-\[5\.7rem\] {
   bottom: 5.7rem;
 }
@@ -983,9 +986,6 @@ video {
 }
 .top-4 {
   top: 1rem;
-}
-.bottom-\[25\%\] {
-  bottom: 25%;
 }
 .z-10 {
   z-index: 10;
@@ -1096,9 +1096,6 @@ video {
 }
 .mt-8 {
   margin-top: 2rem;
-}
-.-mt-2 {
-  margin-top: -0.5rem;
 }
 .block {
   display: block;
@@ -1514,11 +1511,11 @@ video {
 .text-right {
   text-align: right;
 }
-.font-serif {
-  font-family: inlander_smooth, serif;
-}
 .font-sans {
   font-family: josefin-sans, sans-serif;
+}
+.font-serif {
+  font-family: inlander_smooth, serif;
 }
 .text-2xl {
   font-size: 1.5rem;
@@ -1569,9 +1566,6 @@ video {
 }
 .italic {
   font-style: italic;
-}
-.leading-8 {
-  line-height: 2rem;
 }
 .leading-\[1em\] {
   line-height: 1em;
@@ -1728,14 +1722,14 @@ video {
   color: rgb(249 248 246 / var(--tw-text-opacity));
 }
 
-.hover\:text-white:hover {
-  --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
-}
-
 .hover\:text-main:hover {
   --tw-text-opacity: 1;
   color: rgb(213 170 170 / var(--tw-text-opacity));
+}
+
+.hover\:text-white:hover {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
 .hover\:opacity-60:hover {
@@ -1865,6 +1859,9 @@ video {
   .md\:left-\[3\.5rem\] {
     left: 3.5rem;
   }
+  .md\:right-16 {
+    right: 4rem;
+  }
   .md\:right-\[1\.5rem\] {
     right: 1.5rem;
   }
@@ -1885,9 +1882,6 @@ video {
   }
   .md\:top-0 {
     top: 0px;
-  }
-  .md\:right-16 {
-    right: 4rem;
   }
   .md\:mx-8 {
     margin-left: 2rem;
@@ -2019,6 +2013,9 @@ video {
   .lg\:left-\[2\.5rem\] {
     left: 2.5rem;
   }
+  .lg\:right-8 {
+    right: 2rem;
+  }
   .lg\:right-\[1\.8rem\] {
     right: 1.8rem;
   }
@@ -2027,9 +2024,6 @@ video {
   }
   .lg\:right-\[3rem\] {
     right: 3rem;
-  }
-  .lg\:right-8 {
-    right: 2rem;
   }
   .lg\:order-first {
     order: -9999;
@@ -2101,6 +2095,9 @@ video {
   }
   .lg\:w-\[85\%\] {
     width: 85%;
+  }
+  .lg\:w-\[75\%\] {
+    width: 75%;
   }
   .lg\:max-w-\[40vw\] {
     max-width: 40vw;

@@ -14,7 +14,15 @@ testimonials:
   background_color: feature
   title: Mana Movement Testimonials
   testimonial:
-    - testimonial_html: "HōMM is a space of community, resources, and practice- where women come to weave Mana Movement into everyday life. Whether you are just beginning your embodiment journey, or deepening your devotional path, HōMM meets you where you are, as you choose the rhythm, support, and guidance for your personal healing journey. Because coming HōMM is really about returning to the wisdom already within you."
+    - testimonial_html: “I feel SO FREE, so nurtured, so present in my body. There is this awakening of feminine energy in me that has taken over. I have fallen in love with this practice.”
+    - testimonial_html: “This work completely changed my life and brought me to find the missing pieces of so many parts of myself, and continues to be my go-to way to come home to myself, clear, align and embody.”
+    - testimonial_html: “I am so grateful for this medicine and the way it weaves through me, supporting me to find ways to embrace all the parts of me that are unknown or I have disowned.”
+    - testimonial_html: “When I did the practice for the first time, I cried ... because it moved me a lot and evoked emotions. After the practice, I felt lightness, softness. I felt like energy, suppressed emotions and blocks came out with each exhalation. It's unbelievable how quickly I was able to go in and feel the change.”
+    - testimonial_html: “I loved Mana Movement completely from the first moment. I crave really good somatic work and practices, I have found that and keep finding that in Mana Movement”
+    - testimonial_html: “The powerful energy of Mana Movement has changed my life. Activating my vital energy every morning has become my power.”
+    - testimonial_html: “It feels right, it feels so natural. My mind is still and quiet. I feel grounded and quiet inside.”
+    - testimonial_html: “My energy is exploding! I feel so emotionally stable and safe. I react to things happening to me with ease and people seem to notice it and treat me differently..  or rather, it's me looking at things through different lenses. Life is just flowing…”
+    - testimonial_html: “I clearly see and feel the changes in my life and in my body. I see more fluidity in every parts of the every day life, professional, personal…It’s really amazing and magical !!! I feel more present, more grounded, more feminine, more aware, more confident…”
 ---
 
 <!-- Hero -->
@@ -84,11 +92,16 @@ testimonials:
 <section class="section-padding bg-feature">
   <div class="testimonial-container">
 
-    {% for item in page.testimonials %}
+    {% for item in page.testimonials.testimonial %}
     <div class="testimonial-item text-center text-lighter">
-      <h2 class="heading-md">Mana Movement Testimonials</h2>
-      <p class="italic text-lg"><em>{{item.testimonial_html}}</em></p>
+      <h2 class="heading-md mb-8">Mana Movement Testimonials</h2>
+      <p class="italic text-lg lg:w-[75%] mx-auto"><em>{{item.testimonial_html}}</em></p>
     </div>
     {% endfor %}
   </div>
+</section>
+
+<!-- Tiers -->
+<section>
+
 </section>
