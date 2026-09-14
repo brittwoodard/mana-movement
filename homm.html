@@ -71,6 +71,51 @@ events:
     title: Mana Movement Session
     time: 11am California / 8pm Central Europe
     level: Trunk & Canopy
+  - month: October
+    date: Sunday, October 18th
+    title: Mana Movement Session
+    time: 9am California / 6pm Central Europe
+    level: Trunk & Canopy
+  - month: October
+    date: Thursday, October 29th
+    title: “Art of Feminine Healing” Session
+    time: 11am California / 7pm Central Europe
+    level: Trunk & Canopy
+  - month: November
+    date: Thursday, November 5th
+    title: “Mastermind” for Mastery Level Students
+    time: 10am California / 7pm Central Europe
+    level: Canopy
+  - month: November
+    date: Wednesday, November 11th
+    title: Mana Movement Session
+    time: 10am California / 7pm Central Europe
+    level: Trunk & Canopy
+  - month: November
+    date: November 19th
+    title: “Art of Feminine Healing” Session with Mana Mei
+    time: 10am California / 7pm Central Europe
+    level: Trunk & Canopy
+  - month: November
+    date: Wednesday, November 25th
+    title: Mana Movement Session
+    time: 11am California / 8pm Central Europe
+    level: Trunk & Canopy
+  - month: December
+    date: Monday, December 7th
+    title: Mana Movement Session
+    time: 10am California / 7pm Central Europe
+    level: Trunk & Canopy
+  - month: December
+    date: Wednesday, December 16th
+    title: "Art of Feminine Healing” Session"
+    time: 10am California / 7pm Central Europe
+    level: Trunk & Canopy
+  - month: December
+    date: Monday, December 21st
+    title: Mana Movement Session
+    time: 11am California / 8pm Central Europe
+    level: Trunk & Canopy
 ---
 
 <!-- Hero -->
@@ -273,7 +318,7 @@ events:
 </section>
 
 <!-- Schedule -->
-<section class="section-padding">
+<section class="pb-20 lg:pb-40 px-8 lg:px-20">
   <div class="text-center">
     <h2 class="heading-md text-feature mb-4">Upcoming Live Offerings</h2>
     <p class="lg:w-[60%] mx-auto">Included with Trunk & Canopy membership, while the Quarterly Mastermind is reserved exclusively for Canopy’s Mastery Level students. All times listed California / Central Europe.</p>
@@ -281,9 +326,11 @@ events:
 
     <div>
 
-      {% for item in page.events %}
-      <h3 class="font-serif text-feature text-[1.25rem] mb-4 mt-8">{{ item.month }}</h3>
-      <div class="grid grid-cols-7 gap-4 border-b border-main pb-4">
+      {% assign months = page.events | group_by: "month" %}
+      {% for month in months %}
+      <h3 class="font-serif text-feature text-[1.25rem] mt-8">{{ month.name }}</h3>
+      {% for item in month.items %}
+      <div class="grid grid-cols-7 gap-4 border-b border-main mt-4">
         <p class="col-span-2">{{ item.date }}</p>
         <div class="col-span-4">
           <p><strong>{{ item.title }}</strong>
@@ -291,6 +338,7 @@ events:
         </div>
         <p class="text-feature"><strong>{{ item.level }}</strong></p>
       </div>
+      {% endfor %}
       {% endfor %}
     </div>
   </div>
