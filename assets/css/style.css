@@ -1199,6 +1199,9 @@ video {
 .min-h-screen {
   min-height: 100vh;
 }
+.min-h-\[50vh\] {
+  min-height: 50vh;
+}
 .w-0 {
   width: 0px;
 }
@@ -2219,6 +2222,9 @@ video {
   }
   .lg\:pb-40 {
     padding-bottom: 10rem;
+  }
+  .lg\:pl-20 {
+    padding-left: 5rem;
   }
   .lg\:text-4xl {
     font-size: 2.25rem;
