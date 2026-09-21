@@ -1037,6 +1037,10 @@ video {
   margin-top: 5rem;
   margin-bottom: 5rem;
 }
+.my-6 {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
 .-mt-4 {
   margin-top: -1rem;
 }
@@ -1102,6 +1106,9 @@ video {
 }
 .ml-6 {
   margin-left: 1.5rem;
+}
+.mt-auto {
+  margin-top: auto;
 }
 .block {
   display: block;
@@ -1220,6 +1227,9 @@ video {
 .w-full {
   width: 100%;
 }
+.w-1\/2 {
+  width: 50%;
+}
 .min-w-\[545px\] {
   min-width: 545px;
 }
@@ -1336,6 +1346,9 @@ video {
 }
 .gap-12 {
   gap: 3rem;
+}
+.gap-6 {
+  gap: 1.5rem;
 }
 .overflow-hidden {
   overflow: hidden;
@@ -1627,6 +1640,10 @@ video {
 .text-xl {
   font-size: 1.25rem;
   line-height: 1.75rem;
+}
+.text-xs {
+  font-size: 0.75rem;
+  line-height: 1rem;
 }
 .font-bold {
   font-weight: 700;

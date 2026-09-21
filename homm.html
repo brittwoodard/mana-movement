@@ -65,6 +65,39 @@ tiers:
       <p>With a continued devotion to bloom and nourish</p>
       <p>You are no longer becoming—you are being.</p>
       <p><em>The CANOPY Level is exclusively for women who have successfully completed the Liberation Through Movement Mentorship Program or the Mana Movement Teacher Training. A space to connect with other Leaders in this space as well as gain incredible access to a wealth of embodiment resources and experiences.</em></p>
+pricing:
+  - title: Seed
+    level: Elementary Level
+    description: For all women who purchase a Mana Movement Course or register for a Live Online Workshop with Mana Mei
+    price: Free
+    price_note: Included with any Live Online or Evergreen Programs
+    button_text: Enroll
+    button_url: "#"
+    image: "/uploads/images/homm-30.jpg"
+  - title: Roots
+    level: Foundations Level
+    description: For all women who purchase a Mana Movement Course or register for a Live Online Workshop with Mana Mei
+    price: $19/mo
+    price_note: Included with any Live Online or Evergreen Programs
+    button_text: Enroll
+    button_url: "#"
+    image: "/uploads/images/homm-29.jpg"
+  - title: Trunk
+    level: Apprenticeship Level
+    description: For all women who purchase a Mana Movement Course or register for a Live Online Workshop with Mana Mei
+    price: $49/mo
+    price_note: Included with any Live Online or Evergreen Programs
+    button_text: Enroll
+    button_url: "#"
+    image: "/uploads/images/homm-37.jpg"
+  - title: Canopy
+    level: Mastery Level
+    description: For all women who purchase a Mana Movement Course or register for a Live Online Workshop with Mana Mei
+    price: $59/mo
+    price_note: Included with any Live Online or Evergreen Programs
+    button_text: Enroll
+    button_url: "#"
+    image: "/uploads/images/homm-38.jpg"
 events:
   - month: October
     date: Wednesday, October 14th
@@ -268,6 +301,32 @@ seo:
   <p>but unfolding, layer by sacred layer.</p>
   <p class="font-serif text-[1.5rem] text-accent">Welcome HoMM - The Academy of Mana Movement</p>
   <p>Where you don’t chase growth— <em>you become it.</em></p>
+</section>
+
+<!-- Pricing -->
+<section class="section-padding bg-black text-light">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        {% for item in page.pricing %}
+        <div class="border border-accent flex flex-col text-center">
+
+            <div class="aspect-portrait bg-cover bg-center bg-no-repeat border-b border-accent mb-6" {% if item.image
+                !=empty %} style="background-image: url('{{ item.image }}');" {% endif %}></div>
+
+            <div class="p-8">
+                <h3 class="font-serif text-accent text-xl tracking-wide">{{ item.title }}</h3>
+                <p class="uppercase text-xs tracking-wide mt-1">{{ item.level }}</p>
+                <p class="text-sm mt-4">{{ item.description }}</p>
+
+                <hr class="border-accent w-1/2 mx-auto my-6">
+
+                <p class="font-serif text-accent text-2xl">{{ item.price }}</p>
+                <p class="text-xs mt-2 mb-6">{{ item.price_note }}</p>
+
+                <a href="{{ item.button_url }}" class="button-accent mt-auto">{{ item.button_text }}</a>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
 </section>
 
 <!-- What's Included -->
