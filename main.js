@@ -3,7 +3,7 @@ $('.testimonial-container').slick({
     autoplay: true,
     autoplaySpeed: 3000,
     speed: 500,
-    arrows: false,
+    arrows: true,
     accessibility: true,
     dots: true,
     fade: true,

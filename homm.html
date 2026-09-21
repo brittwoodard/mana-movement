@@ -70,7 +70,7 @@ pricing:
     level: Elementary Level
     description: For all women who purchase a Mana Movement Course or register for a Live Online Workshop with Mana Mei
     price: Free
-    price_note: Included with any Live Online or Evergreen Programs
+    price_note: 
     button_text: Enroll
     button_url: "#"
     image: "/uploads/images/homm-30.jpg"
@@ -78,25 +78,25 @@ pricing:
     level: Foundations Level
     description: For all women who purchase a Mana Movement Course or register for a Live Online Workshop with Mana Mei
     price: $19/mo
-    price_note: Included with any Live Online or Evergreen Programs
+    price_note: Or $200/year
     button_text: Enroll
-    button_url: "#"
+    button_url: "https://flow.manamovement.co/homm-foundations"
     image: "/uploads/images/homm-29.jpg"
   - title: Trunk
     level: Apprenticeship Level
     description: For all women who purchase a Mana Movement Course or register for a Live Online Workshop with Mana Mei
     price: $49/mo
-    price_note: Included with any Live Online or Evergreen Programs
+    price_note: Or $500/year
     button_text: Enroll
-    button_url: "#"
+    button_url: "https://flow.manamovement.co/homm-apprenticeship"
     image: "/uploads/images/homm-37.jpg"
   - title: Canopy
     level: Mastery Level
     description: For all women who purchase a Mana Movement Course or register for a Live Online Workshop with Mana Mei
     price: $59/mo
-    price_note: Included with any Live Online or Evergreen Programs
+    price_note: Or $650/year
     button_text: Enroll
-    button_url: "#"
+    button_url: "https://flow.manamovement.co/homm-mastery"
     image: "/uploads/images/homm-38.jpg"
 events:
   - month: October
@@ -104,51 +104,61 @@ events:
     title: Mana Movement Session
     time: 11am California / 8pm Central Europe
     level: Trunk & Canopy
+    button: https://flow.manamovement.co/homm-apprenticeship
   - month: October
     date: Sunday, October 18th
     title: Mana Movement Session
     time: 9am California / 6pm Central Europe
     level: Trunk & Canopy
+    button: https://flow.manamovement.co/homm-apprenticeship
   - month: October
     date: Thursday, October 29th
     title: “Art of Feminine Healing” Session
     time: 11am California / 7pm Central Europe
     level: Trunk & Canopy
+    button: https://flow.manamovement.co/homm-apprenticeship
   - month: November
     date: Thursday, November 5th
     title: “Mastermind” for Mastery Level Students
     time: 10am California / 7pm Central Europe
     level: Canopy
+    button: https://flow.manamovement.co/homm-mastery
   - month: November
     date: Wednesday, November 11th
     title: Mana Movement Session
     time: 10am California / 7pm Central Europe
     level: Trunk & Canopy
+    button: https://flow.manamovement.co/homm-apprenticeship
   - month: November
     date: November 19th
     title: “Art of Feminine Healing” Session with Mana Mei
     time: 10am California / 7pm Central Europe
     level: Trunk & Canopy
+    button: https://flow.manamovement.co/homm-apprenticeship
   - month: November
     date: Wednesday, November 25th
     title: Mana Movement Session
     time: 11am California / 8pm Central Europe
     level: Trunk & Canopy
+    button: https://flow.manamovement.co/homm-apprenticeship
   - month: December
     date: Monday, December 7th
     title: Mana Movement Session
     time: 10am California / 7pm Central Europe
     level: Trunk & Canopy
+    button: https://flow.manamovement.co/homm-apprenticeship
   - month: December
     date: Wednesday, December 16th
     title: "Art of Feminine Healing” Session"
     time: 10am California / 7pm Central Europe
     level: Trunk & Canopy
+    button: https://flow.manamovement.co/homm-apprenticeship
   - month: December
     date: Monday, December 21st
     title: Mana Movement Session
     time: 11am California / 8pm Central Europe
     level: Trunk & Canopy
+    button: https://flow.manamovement.co/homm-apprenticeship
 seo:
   hide-from-google: true
 ---
@@ -304,7 +314,7 @@ seo:
 </section>
 
 <!-- Pricing -->
-<section class="section-padding bg-black text-light">
+<section class="mt-20 px-8 lg:px-20 bg-black text-light">
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
         {% for item in page.pricing %}
         <div class="border border-accent flex flex-col text-center">
@@ -313,14 +323,14 @@ seo:
                 !=empty %} style="background-image: url('{{ item.image }}');" {% endif %}></div>
 
             <div class="p-8">
-                <h3 class="font-serif text-accent text-xl tracking-wide">{{ item.title }}</h3>
-                <p class="uppercase text-xs tracking-wide mt-1">{{ item.level }}</p>
-                <p class="text-sm mt-4">{{ item.description }}</p>
+                <h3 class="font-serif text-accent text-2xl tracking-wide">{{ item.title }}</h3>
+                <p class="uppercase mt-4">{{ item.level }}</p>
+                <p class="mt-4">{{ item.description }}</p>
 
-                <hr class="border-accent w-1/2 mx-auto my-6">
+                <hr class="border-accent w-1/2 mx-auto my-8">
 
                 <p class="font-serif text-accent text-2xl">{{ item.price }}</p>
-                <p class="text-xs mt-2 mb-6">{{ item.price_note }}</p>
+                <p class="mt-2 mb-6">{{ item.price_note }}</p>
 
                 <a href="{{ item.button_url }}" class="button-accent mt-auto">{{ item.button_text }}</a>
             </div>
@@ -331,12 +341,12 @@ seo:
 
 <!-- What's Included -->
 <section class="section-padding">
-  <div class="border border-accent">
+  <div class="border border-accent bg-black">
     <div class="p-8 text-center">
       <h2 class="heading-md text-accent">What Grows at Each Level</h2>
     </div>
 
-    <div class="overflow-x-auto">
+    <div class="overflow-x-auto bg-black">
       <table class="w-full min-w-[545px] md:min-w-[640px] text-center border-collapse">
         <thead>
           <tr class="border-t border-accent">
@@ -427,7 +437,7 @@ seo:
 <!-- Schedule -->
 <section id="calendar" class="px-8 lg:px-20">
   <div class="text-center">
-    <h2 class="heading-md text-feature mb-4">Upcoming Live Offerings</h2>
+    <h2 class="heading-md text-accent mb-4">Upcoming Live Offerings</h2>
     <p class="lg:w-[60%] mx-auto">Included with Trunk & Canopy membership, while the Quarterly Mastermind is reserved exclusively for Canopy’s Mastery Level students. All times listed California / Central Europe.</p>
   </div>
 
@@ -435,15 +445,16 @@ seo:
 
       {% assign months = page.events | group_by: "month" %}
       {% for month in months %}
-      <h3 class="font-serif text-feature text-[1.25rem] mt-8">{{ month.name }}</h3>
+      <h3 class="font-serif text-accent text-[1.25rem] mt-8">{{ month.name }}</h3>
       {% for item in month.items %}
-      <div class="grid grid-cols-7 gap-4 border-b border-accent mt-4">
+      <div class="grid grid-cols-8 gap-4 border-b border-accent mt-4">
         <p class="col-span-2">{{ item.date }}</p>
         <div class="col-span-4">
           <p><strong>{{ item.title }}</strong>
           <br>{{ item.time }}</p>
         </div>
-        <p class="text-feature"><strong>{{ item.level }}</strong></p>
+        <p><strong>{{ item.level }}</strong></p>
+        <a href="{{ item.button }}" class=" text-right hover:text-feature hover:transition hover:duration-500"><strong>Enroll</strong></a>
       </div>
       {% endfor %}
       {% endfor %}
@@ -452,13 +463,16 @@ seo:
 
 </section>
 
+<!-- Banner -->
+<section class="mt-40 bg-image-style min-h-[60vh] bg-fixed" style="background-image: url('/uploads/images/homm-36.jpg');"></section>
+
 <!-- Testimonials -->
-<section class="section-padding bg-feature">
+<section class="py-20 lg:py-40 mx-8 lg:mx-20 border-b border-accent">
   <div class="testimonial-container">
 
     {% for item in page.testimonials.testimonial %}
     <div class="testimonial-item text-center ">
-      <h2 class="heading-md mb-8">Mana Movement Testimonials</h2>
+      <h2 class="heading-md mb-8 text-accent">Mana Movement Testimonials</h2>
       <p class="italic text-lg lg:w-[75%] mx-auto"><em>{{item.testimonial_html}}</em></p>
     </div>
     {% endfor %}

@@ -232,6 +232,25 @@
         color:white;
       }
 
+    /* Testimonial Slider */
+    .testimonial-container .slick-dots li button:before {
+        @apply text-accent;
+        opacity: 1;
+    }
+
+    .testimonial-container .slick-dots li.slick-active button:before {
+        @apply text-main;
+        opacity: 1;
+    }
+
+    .testimonial-container .slick-prev:before,
+    .testimonial-container .slick-next:before {
+        @apply text-accent;
+        opacity: 1;
+        font-family: Arial, Helvetica, sans-serif;
+        padding: 1rem;
+    }
+
       /* Mobile Menu */
     .mobile-button {
         position: fixed;
