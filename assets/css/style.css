@@ -2111,6 +2111,9 @@ video {
   .md\:bg-\[length\:250px_250px\] {
     background-size: 250px 250px;
   }
+  .md\:bg-fixed {
+    background-attachment: fixed;
+  }
   .md\:p-10p {
     padding: 10%;
   }
@@ -2275,6 +2278,9 @@ video {
   }
   .lg\:bg-contain {
     background-size: contain;
+  }
+  .lg\:bg-fixed {
+    background-attachment: fixed;
   }
   .lg\:px-0 {
     padding-left: 0px;
