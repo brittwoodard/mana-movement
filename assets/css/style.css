@@ -1324,6 +1324,9 @@ video {
 .grid-cols-8 {
   grid-template-columns: repeat(8, minmax(0, 1fr));
 }
+.grid-cols-3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
 .grid-rows-2 {
   grid-template-rows: repeat(2, minmax(0, 1fr));
 }
@@ -2090,6 +2093,9 @@ video {
   .md\:py-10p {
     padding-top: 10%;
     padding-bottom: 10%;
+  }
+  .md\:text-right {
+    text-align: right;
   }
 }
 
