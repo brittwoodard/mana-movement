@@ -1,16 +1,16 @@
-<footer class="py-4 px-8 lg:px-20 {% if page.url == '/homm.html' %} bg-accent {% else %} bg-feature{% endif %}">
+<footer class="py-4 px-8 lg:px-20 {% if page.url == '/homm.html' or page.url == '/unfurl.html' %} page.url == '/unfurl.html' %} bg-accent {% else %} bg-feature{% endif %}">
 
     <div class="md:grid md:grid-cols-3">
 
         <!-- Left Column -->
         <div class="">
             <a href="/index.html">
-                <img src="{% if page.url == '/homm.html' %}/uploads/icons/manamovement-1.png{% else %}/uploads/icons/manamovement-4.png{% endif %}" class="w-48 mt-4">
+                <img src="{% if page.url == '/homm.html' or page.url == '/unfurl.html' %}/uploads/icons/manamovement-1.png{% else %}/uploads/icons/manamovement-4.png{% endif %}" class="w-48 mt-4">
             </a>
 
             {% for item in site.data.navigation.footer %}
             <a href="{{ item.url }}"
-                class="block uppercase text-accent mb-2 hover:transition hover:duration-500 hover:text-dark {% if page.url == '/homm.html' %} text-black hover:text-feature{% endif %}">{{ item.title
+                class="block uppercase text-accent mb-2 hover:transition hover:duration-500 hover:text-dark {% if page.url == '/homm.html' or page.url == '/unfurl.html' %} text-black hover:text-feature{% endif %}">{{ item.title
                 }}</a>
             {% endfor %}
         </div>
@@ -18,12 +18,12 @@
         <!-- Right Column -->
         <div class="flex justify-center items-end mt-4 md:mt-0">
             <a href="https://www.instagram.com/manamei.embodiment/" target="_blank"><i
-                    class="fa-brands fa-square-instagram{% if page.url == '/homm.html' %} text-black hover:text-feature{% endif %}"></i></a>
+                    class="fa-brands fa-square-instagram{% if page.url == '/homm.html' or page.url == '/unfurl.html' %} text-black hover:text-feature{% endif %}"></i></a>
 
             <!-- <a href="https://www.facebook.com/groups/liberationthroughmovement" target="_blank"><i
                     class="fa-brands fa-facebook"></i></a> -->
 
-            <a href="https://www.youtube.com/@ManaMei" target="_blank"><i class="fa-brands fa-youtube{% if page.url == '/homm.html' %} text-black hover:text-feature{% endif %}"></i></a>
+            <a href="https://www.youtube.com/@ManaMei" target="_blank"><i class="fa-brands fa-youtube{% if page.url == '/homm.html' or page.url == '/unfurl.html' %} text-black hover:text-feature{% endif %}"></i></a>
         </div>
 
     </div>
@@ -32,7 +32,7 @@
     <!-- Brittany Woodard -->
     
     <div class="mt-2 text-center">
-        <a class="text-center text-[1rem] text-accent hover:text-dark hover:duration-500 hover:transition{% if page.url == '/homm.html' %} text-black hover:text-feature{% endif %}" href="https://brittanywoodard.com/"
+        <a class="text-center text-[1rem] text-accent hover:text-dark hover:duration-500 hover:transition{% if page.url == '/homm.html' or page.url == '/unfurl.html' %} text-black hover:text-feature{% endif %}" href="https://brittanywoodard.com/"
                 target="_blank">Designed & Developed by Brittany Woodard</a>
     </div>
 
