@@ -1513,9 +1513,6 @@ video {
 .bg-cover {
   background-size: cover;
 }
-.bg-fixed {
-  background-attachment: fixed;
-}
 .bg-center {
   background-position: center;
 }
@@ -2113,9 +2110,6 @@ video {
   }
   .md\:bg-\[length\:250px_250px\] {
     background-size: 250px 250px;
-  }
-  .md\:bg-fixed {
-    background-attachment: fixed;
   }
   .md\:p-10p {
     padding: 10%;
