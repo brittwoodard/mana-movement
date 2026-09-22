@@ -36,7 +36,7 @@
     }
 
     body {
-        @apply font-sans font-[400] text-dark bg-lighter antialiased overflow-x-hidden
+        @apply font-sans font-[400] text-dark bg-lighter antialiased
     }
 
     p {
