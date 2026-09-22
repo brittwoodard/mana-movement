@@ -32,11 +32,11 @@
 @layer base {
 
     html {
-        @apply scroll-smooth
+        @apply scroll-smooth overflow-x-hidden
     }
 
     body {
-        @apply font-sans font-[400] text-dark bg-lighter antialiased
+        @apply font-sans font-[400] text-dark bg-lighter antialiased overflow-x-hidden
     }
 
     p {

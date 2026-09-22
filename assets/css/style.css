@@ -327,9 +327,11 @@ video {
   display: none;
 }
 html {
+  overflow-x: hidden;
   scroll-behavior: smooth;
 }
 body {
+  overflow-x: hidden;
   --tw-bg-opacity: 1;
   background-color: rgb(249 248 246 / var(--tw-bg-opacity));
   font-family: josefin-sans, sans-serif;
@@ -1269,9 +1271,6 @@ video {
 .w-full {
   width: 100%;
 }
-.min-w-\[545px\] {
-  min-width: 545px;
-}
 .min-w-\[640px\] {
   min-width: 640px;
 }
@@ -1383,9 +1382,6 @@ video {
 }
 .overflow-hidden {
   overflow: hidden;
-}
-.overflow-x-auto {
-  overflow-x: auto;
 }
 .overflow-y-auto {
   overflow-y: auto;
@@ -1930,12 +1926,6 @@ video {
   opacity: 1;
 }
 
-@media not all and (min-width: 1024px) {
-  .max-lg\:bg-fixed {
-    background-attachment: fixed;
-  }
-}
-
 @media (min-width: 640px) {
   .sm\:h-20 {
     height: 5rem;
@@ -2079,9 +2069,6 @@ video {
   }
   .md\:w-\[80\%\] {
     width: 80%;
-  }
-  .md\:min-w-\[640px\] {
-    min-width: 640px;
   }
   .md\:max-w-\[80vw\] {
     max-width: 80vw;
