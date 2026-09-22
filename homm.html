@@ -70,6 +70,10 @@ pricing:
   - title: Seed
     level: Elementary Level
     description: For all women who purchase a Mana Movement Course or register for a Live Online Workshop with Mana Mei
+    description_html: |
+      <ul>
+        <li>&#10003; Access to Community Forum</li>
+      </ul>
     price: Free
     price_note: 
     button_text: Enroll
@@ -78,6 +82,11 @@ pricing:
   - title: Roots
     level: Foundations Level
     description: For women exploring self-care through Mana Movement, seeking self-guided study with our recorded practice library
+    description_html: |
+      <ul>
+        <li><strong>&#10003; Everything in Seed PLUS</strong></li>
+        <li>&#10003; Unlimited access to Mana Movement Workshop Replay Library (includes over 20 workshop replays)</li>
+      </ul>
     price: $200/year
     price_note: Or $19/month
     button_text: Enroll
@@ -85,7 +94,15 @@ pricing:
     image: "/uploads/images/homm-29.jpg"
   - title: Trunk
     level: Apprenticeship Level
-    description: For women devoted to deepening their Feminine Healing Arts education through practice, theory, and live sessions.
+    description: For women devoted to deepening their Feminine Healing Arts education through practice, theory, and live sessions
+    description_html: |
+      <ul>
+        <li><strong>&#10003; Everything in Roots PLUS</strong></li>
+        <li>&#10003; Unlimited Access to ALL pre-recorded Mana Movement Programs</li>
+        <li>&#10003; 2-per month Live Guided Mana Movement Sessions with Mana Mei or Certified MM Teacher</li>
+        <li>&#10003; 1-per month “Art of Feminine Healing” Transmission with Mana Mei or Guest Speaker</li>
+        <li>&#10003; Exclusive Discounts on all Mana Mei Offerings, including Live Online Programs, LTM Mentorship Program, and Mana Movement Teacher Training, and in-person Retreats</li>
+      </ul>
     price: $500/year
     price_note: Or $49/month
     button_text: Enroll
@@ -94,6 +111,12 @@ pricing:
   - title: Canopy
     level: Mastery Level
     description: Exclusively for women who have completed the MMTT or LTM Mentorship Program
+    description_html: |
+      <ul>
+        <li><strong>&#10003; Everything in Trunk PLUS</strong></li>
+        <li>&#10003; Quarterly “Mastermind” Meetups with Mana Mei</li>
+        <li>&#10003; Exclusive “Mastery Student” Discounts on all Mana Mei offerings including in-person retreats</li>
+      </ul>
     price: $650/year
     price_note: Or $59/month
     button_text: Enroll
@@ -332,7 +355,35 @@ seo:
 </section>
 
 <!-- Pricing -->
-<section id="enroll" class="mt-20 px-8 lg:px-20 bg-black text-light">
+<!-- Mobile -->
+<section id="enroll" class="md:hidden mt-20 px-8 lg:px-20 bg-black text-light mb-20">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        {% for item in page.pricing %}
+        <div class="border border-accent flex flex-col text-center">
+
+            <div class="aspect-portrait bg-cover bg-center bg-no-repeat border-b border-accent mb-6" {% if item.image
+                !=empty %} style="background-image: url('{{ item.image }}');" {% endif %}></div>
+
+            <div class="p-8">
+                <h3 class="font-serif text-accent text-2xl tracking-wide">{{ item.title }}</h3>
+                <p class="uppercase mt-4">{{ item.level }}</p>
+                
+                <p class="font-serif text-accent text-2xl">{{ item.price }}</p>
+                <p class="mt-2 mb-6">{{ item.price_note }}</p>
+
+                <a href="{{ item.button_url }}" class="button-accent mt-auto">{{ item.button_text }}</a>
+
+                <hr class="border-accent w-1/2 mx-auto my-8">
+
+                <p class="mt-4">{{ item.description_html }}</p>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</section>
+
+<!-- Desktop -->
+<section id="enroll" class="hidden md:block mt-20 px-8 lg:px-20 bg-black text-light">
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
         {% for item in page.pricing %}
         <div class="border border-accent flex flex-col text-center">
@@ -358,15 +409,15 @@ seo:
 </section>
 
 <!-- What's Included -->
-<section class="section-padding">
+<!-- Desktop -->
+<section class="hidden md:block section-padding">
   <div class="border border-accent bg-black">
     <div class="p-8 text-center">
       <h2 class="heading-md text-accent">What Grows at Each Level</h2>
-      <p class="md:hidden mt-4">← Swipe left to see</p>
     </div>
 
-    <div class="overflow-x-auto bg-black">
-      <table class="w-full min-w-[545px] md:min-w-[640px] text-center border-collapse">
+    <div>
+      <table class="w-full min-w-[640px] text-center border-collapse">
         <thead>
           <tr class="border-t border-accent">
             <th class="p-4"></th>
