@@ -1000,6 +1000,9 @@ video {
 .top-0 {
   top: 0px;
 }
+.top-1\/2 {
+  top: 50%;
+}
 .top-20 {
   top: 5rem;
 }
@@ -1009,20 +1012,17 @@ video {
 .top-4 {
   top: 1rem;
 }
-.top-1\/2 {
-  top: 50%;
-}
 .z-10 {
   z-index: 10;
 }
 .z-20 {
   z-index: 20;
 }
-.z-50 {
-  z-index: 50;
-}
 .z-30 {
   z-index: 30;
+}
+.z-50 {
+  z-index: 50;
 }
 .order-last {
   order: 9999;
@@ -1301,16 +1301,16 @@ video {
   --tw-translate-x: -50%;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
+.-translate-y-1\/2 {
+  --tw-translate-y: -50%;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
 .-translate-y-6 {
   --tw-translate-y: -1.5rem;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 .translate-x-6 {
   --tw-translate-x: 1.5rem;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-.-translate-y-1\/2 {
-  --tw-translate-y: -50%;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 .rotate-180 {
@@ -1600,13 +1600,13 @@ video {
   padding-top: 1rem;
   padding-bottom: 1rem;
 }
-.py-\[0\.25rem\] {
-  padding-top: 0.25rem;
-  padding-bottom: 0.25rem;
-}
 .py-6 {
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
+}
+.py-\[0\.25rem\] {
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
 }
 .pb-12 {
   padding-bottom: 3rem;
@@ -1655,6 +1655,9 @@ video {
   font-size: 1.875rem;
   line-height: 2.25rem;
 }
+.text-\[0\.7rem\] {
+  font-size: 0.7rem;
+}
 .text-\[1\.25rem\] {
   font-size: 1.25rem;
 }
@@ -1684,9 +1687,6 @@ video {
 .text-xl {
   font-size: 1.25rem;
   line-height: 1.75rem;
-}
-.text-\[0\.7rem\] {
-  font-size: 0.7rem;
 }
 .font-bold {
   font-weight: 700;
@@ -1840,14 +1840,14 @@ video {
   background-color: rgb(205 145 60 / 0.7);
 }
 
-.hover\:bg-main:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(213 170 170 / var(--tw-bg-opacity));
-}
-
 .hover\:bg-dark:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(66 54 52 / var(--tw-bg-opacity));
+}
+
+.hover\:bg-main:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(213 170 170 / var(--tw-bg-opacity));
 }
 
 .hover\:text-accent:hover {
@@ -2143,13 +2143,13 @@ video {
   .md\:p-4 {
     padding: 1rem;
   }
-  .md\:py-10p {
-    padding-top: 10%;
-    padding-bottom: 10%;
-  }
   .md\:px-3 {
     padding-left: 0.75rem;
     padding-right: 0.75rem;
+  }
+  .md\:py-10p {
+    padding-top: 10%;
+    padding-bottom: 10%;
   }
   .md\:text-right {
     text-align: right;
