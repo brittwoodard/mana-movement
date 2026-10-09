@@ -1,6 +1,6 @@
 header:
   - title: Home
-    url: /index
+    url: /
   - title: About
     url: /about
   - title: Courses
@@ -9,7 +9,7 @@ header:
     url: /contact
 footer:
   - title: Home
-    url: /index
+    url: /
   - title: About
     url: /about
   - title: Courses

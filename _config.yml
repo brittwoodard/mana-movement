@@ -1,3 +1,6 @@
+# Production domain (used for canonical and social sharing URLs)
+url: https://www.manamovement.co
+
 collections:
   events:
     output: true

@@ -8,7 +8,7 @@
 
 
 <!------------ SEO Metadata  --------------------------------->
-<title> {{page.seo.title }} </title>
+<title>{{ page.seo.title }}</title>
 <meta name="description" content="{{page.seo.description }}">
 <meta name="keywords" content="{{page.seo.keywords }}">
 
@@ -21,8 +21,11 @@
 <!------------  Social media sharing META Tags ------------>
 <meta property="og:title" content="{{ page.title }}">
 <meta property="og:description" content="{{ page.seo.description }}">
-<meta property="og:image" content="{{ page.seo.social_image }}">
-<meta property="og:url" content="{{ site.url }}{{ page.url }}">
+<meta property="og:image" content="{{ page.seo.social_image | absolute_url }}">
+<meta property="og:url" content="{{ page.url | remove: ".html" | absolute_url }}">
+
+<!-- Canonical URL -->
+<link rel="canonical" href="{{ page.url | remove: ".html" | absolute_url }}">
 
 <!-- Favicon -->
 <link rel="icon" type="image/png" href="/icons/favicon-96x96.png" sizes="96x96" />
