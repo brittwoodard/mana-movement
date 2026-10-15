@@ -1018,6 +1018,9 @@ video {
 .top-\[30\%\] {
   top: 30%;
 }
+.bottom-\[25\%\] {
+  bottom: 25%;
+}
 .z-10 {
   z-index: 10;
 }
@@ -2010,6 +2013,9 @@ video {
   .md\:top-0 {
     top: 0px;
   }
+  .md\:right-16 {
+    right: 4rem;
+  }
   .md\:col-span-2 {
     grid-column: span 2 / span 2;
   }
@@ -2175,6 +2181,9 @@ video {
   }
   .lg\:right-\[3rem\] {
     right: 3rem;
+  }
+  .lg\:right-8 {
+    right: 2rem;
   }
   .lg\:order-first {
     order: -9999;
