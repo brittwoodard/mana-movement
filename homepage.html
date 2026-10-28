@@ -35,6 +35,21 @@ benefits:
    - title: Spiritual Liberation
      description: Mana Movement® focuses on moving “from the inside-out” - feeling over form - opening the pathway to somatic healing through the holistic trifecta of mindfulness meditation, physical activation, and spiritual liberation.
      image_path: /uploads/icons/mana-spiritual-liberation-deep-rose.png
+pathways: 
+  heading: The Feminine Pathways of Movement
+  types: 
+    - title: Circles
+      image_path: /uploads/icons/mana-circle-gold.png
+      height: 24
+    - title: Spirals
+      image_path: /uploads/icons/mana-spiral-gold.png
+      height: 24
+    - title: Waves
+      image_path: /uploads/icons/mana-waves-gold.png
+      height: 16
+    - title: Infinity
+      image_path: /uploads/icons/mana-infinity-gold.png
+      height: 16
   second-description_html: |
     <p>The Mana Movement Practice is composed of simple, guided movement exercises, focused on the Feminine Paths of Movement- circles, spirals, and waves.</p>
     <p>Returning to these innate movement patterns with the intention of softening and opening will awaken the natural flow of Life Force Energy through the body, supporting you to feel a deep sense of clarity, peace, expansion, and a renewed sense of inspiration.</p>
@@ -181,6 +196,22 @@ seo:
       </div>
       {% endfor %}
     </div>
+  </div>
+</section>
+
+
+<!-- Feminine Pathways of Movement -->
+<section class="bg-dark section-padding">
+  <h2 class="text-center text-main uppercase font-semibold">The Feminine Pathways of Movement</h2>
+  <div class="flex gap-8 mt-8">
+    {% for item in page.pathways.types %}
+    <div class="flex-1">
+      <div class="h-24 mb-4 flex items-center justify-center">
+        <img src="{{ item.image_path }}" alt="{{ item.title }}" class="h-{{ item.height }}">
+      </div>
+      <p class="text-lighter font-serif text-xl text-center">{{ item.title }}</p>
+    </div>
+    {% endfor %}
   </div>
 </section>
 
