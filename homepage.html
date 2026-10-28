@@ -50,7 +50,7 @@ pathways:
     - title: Infinity
       image_path: /uploads/icons/mana-infinity-gold.png
       height: 16
-  second-description_html: |
+  description_html: |
     <p>The Mana Movement Practice is composed of simple, guided movement exercises, focused on the Feminine Paths of Movement- circles, spirals, and waves.</p>
     <p>Returning to these innate movement patterns with the intention of softening and opening will awaken the natural flow of Life Force Energy through the body, supporting you to feel a deep sense of clarity, peace, expansion, and a renewed sense of inspiration.</p>
     <p>Mana Movement is designed to suit all women, all bodies, at every stage of life and Feminine Rite of Passage.</p>
@@ -201,38 +201,33 @@ seo:
 
 
 <!-- Feminine Pathways of Movement -->
-<section class="bg-dark section-padding">
-  <h2 class="text-center text-main uppercase font-semibold">The Feminine Pathways of Movement</h2>
-  <div class="flex gap-8 mt-8">
-    {% for item in page.pathways.types %}
-    <div class="flex-1">
-      <div class="h-24 mb-4 flex items-center justify-center">
-        <img src="{{ item.image_path }}" alt="{{ item.title }}" class="h-{{ item.height }}">
-      </div>
-      <p class="text-lighter font-serif text-xl text-center">{{ item.title }}</p>
-    </div>
-    {% endfor %}
-  </div>
-</section>
-
-  <section class="md:grid md:grid-cols-3 md:gap-8 lg:gap-20 mb-20 lg:mb-10p mx-8 lg:mx-20">
-
-    <!-- Left Column / Image -->
-    <div class="bg-image-style border border-main min-h-[60vh]" style="background-image: url({{ page.about.image.image_path }}); background-position: {{ page.about.image.image_focus }};"></div>
-
-    <!-- Right Column / Text -->
-    <div class="col-span-2 lg:my-20 flex items-center mt-8 md:mt-0">
-      <div>
-        <div>
-          {{ page.about.second-description_html }}
+<section>
+    <div class="bg-dark section-padding">
+        <h2 class="text-center text-main uppercase font-semibold">The Feminine Pathways of Movement</h2>
+        <div class="flex gap-8 mt-8">
+            {% for item in page.pathways.types %}
+            <div class="flex-1">
+                <div class="h-24 mb-4 flex items-center justify-center">
+                    <img src="{{ item.image_path }}" alt="{{ item.title }}" class="h-{{ item.height }}">
+                </div>
+                <p class="text-lighter font-serif text-xl text-center">{{ item.title }}</p>
+            </div>
+            {% endfor %}
         </div>
-        <a href="{{ page.about.button.url }}" class="button">
-          {{ page.about.button.text }}
-        </a>
-      </div>
     </div>
 
-  </section>
+    <div class="section-padding ">
+      <div class="grid grid-cols-4">
+        <div class="bg-image-style" style="background-image: url('/uploads/images/manamovement-31.png');"></div>
+        <div class="col-span-3 my-20 px-8 lg:px-20">
+            <p>The Mana Movement® Practice is composed of simple, guided movement exercises, focused on the <strong>Feminine Pathways of Movement- circles, waves, spiral, & infinity</strong>.</p>
+            <p>The Feminine Pathways are not just shapes, they are the WAY OUT of limiting patterns and the WAY INTO new avenues that align with your desired experience of life!</p>
+            <p>The Feminine Pathways are the very fabric of existence- the way life flows through us and with us. By inviting the Feminine Pathways into our body, we are inviting this Universal flow into every facet of our life, restoring balance and harmony within us, and gaining the tools to navigate life’s ebbs and flows with more ease and grace.</p>
+            <p>Through bringing Mana Movement® into your life as a daily ritual, you will begin realigning with the natural flow of life, manifesting as your own accessible, renewable internal cauldron of life force energy and source of power, motivation, and inspiration.</p>
+        </div>
+    </div>
+    </div>
+</section>
 
 <!-- Banner -->
 <section class="bg-image-style section-padding" style="background-image: url({{ page.banner.background-image.image_path }}); background-position: {{ page.banner.background-image.image_focus }};">
@@ -245,6 +240,7 @@ seo:
       {{ page.banner.button.text }}
     </a>
   </div>
+
 </section>
 
 
