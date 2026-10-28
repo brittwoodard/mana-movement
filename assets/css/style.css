@@ -1156,11 +1156,17 @@ video {
 .mt-auto {
   margin-top: auto;
 }
+.-mt-8 {
+  margin-top: -2rem;
+}
 .block {
   display: block;
 }
 .inline-block {
   display: inline-block;
+}
+.inline {
+  display: inline;
 }
 .flex {
   display: flex;
@@ -1233,6 +1239,9 @@ video {
 }
 .h-screen {
   height: 100vh;
+}
+.h-\[81vh\] {
+  height: 81vh;
 }
 .max-h-\[80vh\] {
   max-height: 80vh;
@@ -1634,9 +1643,6 @@ video {
 }
 .text-right {
   text-align: right;
-}
-.font-sans {
-  font-family: josefin-sans, sans-serif;
 }
 .font-serif {
   font-family: inlander_smooth, serif;
@@ -2204,6 +2210,10 @@ video {
   .lg\:my-20 {
     margin-top: 5rem;
     margin-bottom: 5rem;
+  }
+  .lg\:mx-auto {
+    margin-left: auto;
+    margin-right: auto;
   }
   .lg\:mb-0 {
     margin-bottom: 0px;
