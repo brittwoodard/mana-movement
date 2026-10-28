@@ -204,9 +204,9 @@ seo:
 <section class="bg-dark py-20">
     <div class="px-8 lg:px-20">
         <h2 class="text-center text-main heading-md">The Feminine Pathways of Movement</h2>
-        <div class="flex justify-between gap-8 mt-8 pb-20">
+        <div class="md:flex md:justify-between md:gap-8 mt-8 pb-20">
             {% for item in page.pathways.types %}
-            <div>
+            <div class="mb-12 last:mb-0 md:mb-0">
                 <div class="h-24 mb-4 flex items-center justify-center">
                     <img src="{{ item.image_path }}" alt="{{ item.title }}" class="h-{{ item.height }}">
                 </div>
@@ -216,9 +216,9 @@ seo:
         </div>
     </div>
 
-    <div class="grid grid-cols-4">
-        <div class="bg-image-style" style="background-image: url('/uploads/images/manamovement-31.png');"></div>
-        <div class="col-span-3 text-lighter my-20 px-8 lg:px-20">
+    <div class="md:grid md:grid-cols-4">
+        <div class="bg-image-style min-h-[60vh]" style="background-image: url('/uploads/images/manamovement-31.png');"></div>
+        <div class="md:col-span-3 text-lighter mt-20 md:my-20 px-8 lg:px-20">
             <p>The Mana Movement® Practice is composed of simple, guided movement exercises, focused on the Feminine Pathways of Movement- circles, waves, spiral, & infinity.</p>
             <p>The Feminine Pathways are not just shapes, they are the WAY OUT of limiting patterns and the WAY INTO new avenues that align with your desired experience of life!</p>
             <p>The Feminine Pathways are the very fabric of existence- the way life flows through us and with us. By inviting the Feminine Pathways into our body, we are inviting this Universal flow into every facet of our life, restoring balance and harmony within us, and gaining the tools to navigate life’s ebbs and flows with more ease and grace.</p>
