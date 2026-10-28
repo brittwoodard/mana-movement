@@ -15,12 +15,26 @@ hero-banner:
     image_path: /uploads/images/manamovement-2.JPG
     image_focus: 
 about: 
-  first-description_html: |
+  description_html: |
     <p>Mana Movement® is a holistic personal wellness practice combining somatic movement and embodied dance through a Holistic integration for personal healing and transformation.</p>
     <p>This simple yet profound practice flows through a series of guided movement sequences, focusing on spinal mobility, whole body fluidity, release, breath-body connection, and introducing the Feminine Pathways of movement into the whole body.</p>
     <p>Mana Movement® is the graceful merging of dance & meditation.</p>
     <p>Through cultivating sustained focus and presence with the feeling body, Mana Movement® encourages harmonious reconnection to your physical and energy body. Through roots of somatic and embodied dance, Mana Movement® awakens creative life force energy and encourages authentic expression.</p>
     <p>Mana Movement® focuses on moving “from the inside-out” - feeling over form - and opening the pathway to somatic healing through the holistic trifecta of mindfulness meditation, physical activation, and spiritual liberation.</p>
+benefits:
+  heading: Balanced & Holistic Healing
+  description_html: |
+    <p>Looking for an “all-in-one” personal practice that you actually ENJOY while also offering holistic healing and wellness?</p>
+  trifecta: 
+   - title: Mindfulness Meditation
+     description: Mana Movement® is a moving meditation that cultivates sustained focus and presence with the feeling body, encouraging harmonious reconnection to your physical and energy body.
+     image_path: /uploads/icons/mana-mindfulness-meditation-deep-rose.png
+   - title: Physical Activation
+     description: Mana Movement® awakens creative life force energy and encourages authentic expression through roots of somatic and embodied dance.
+     image_path: /uploads/icons/mana-physical-activation-deep-rose.png
+   - title: Spiritual Liberation
+     description: Mana Movement® focuses on moving “from the inside-out” - feeling over form - opening the pathway to somatic healing through the holistic trifecta of mindfulness meditation, physical activation, and spiritual liberation.
+     image_path: /uploads/icons/mana-spiritual-liberation-deep-rose.png
   second-description_html: |
     <p>The Mana Movement Practice is composed of simple, guided movement exercises, focused on the Feminine Paths of Movement- circles, spirals, and waves.</p>
     <p>Returning to these innate movement patterns with the intention of softening and opening will awaken the natural flow of Life Force Energy through the body, supporting you to feel a deep sense of clarity, peace, expansion, and a renewed sense of inspiration.</p>
@@ -143,18 +157,34 @@ seo:
 
 
 <!-- About Section -->
-<section>
-
-  <!-- First Section -->
-  <div class="section-padding lg:w-[70%] mx-auto">
+<section class="section-padding lg:w-[70%] mx-auto">
     <img src="/uploads/icons/logo-dark.svg" class="h-16 mb-8 mx-auto">
     <div class="text-center">
-      {{ page.about.first-description_html }}
+        {{ page.about.description_html }}
+    </div>
+</section>
+
+
+<!-- Benefits -->
+<section class="py-20 bg-light">
+  <div class="px-8 lg:px-20">
+    <div class="text-center">
+        <h2 class="heading-md text-feature mb-4">{{ page.benefits.heading }}</h2>
+        <p>{{ page.benefits.description_html }}</p>
+    </div>
+    <div class="md:flex md:gap-8 mt-8">
+      {% for item in page.benefits.trifecta %}
+      <div class="md:flex-1 text-center mb-12 last:mb-0 md:mb-0">
+        <img src="{{ item.image_path }}" alt="{{ item.title }}" class="h-12 mb-4 mx-auto">
+        <h3 class="text-feature uppercase mb-2">{{ item.title }}</h3>
+        <p>{{ item.description }}</p>
+      </div>
+      {% endfor %}
     </div>
   </div>
+</section>
 
-  <!-- Second Section -->
-  <div class="md:grid md:grid-cols-3 md:gap-8 lg:gap-20 mb-20 lg:mb-10p mx-8 lg:mx-20">
+  <section class="md:grid md:grid-cols-3 md:gap-8 lg:gap-20 mb-20 lg:mb-10p mx-8 lg:mx-20">
 
     <!-- Left Column / Image -->
     <div class="bg-image-style border border-main min-h-[60vh]" style="background-image: url({{ page.about.image.image_path }}); background-position: {{ page.about.image.image_focus }};"></div>
@@ -171,10 +201,7 @@ seo:
       </div>
     </div>
 
-  </div>
-
-</section>
-
+  </section>
 
 <!-- Banner -->
 <section class="bg-image-style section-padding" style="background-image: url({{ page.banner.background-image.image_path }}); background-position: {{ page.banner.background-image.image_focus }};">

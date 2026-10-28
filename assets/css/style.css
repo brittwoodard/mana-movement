@@ -540,8 +540,6 @@ p:last-child {
 }
 @media (min-width: 1024px) {
   .section-padding {
-    padding-top: 10rem;
-    padding-bottom: 10rem;
     padding-left: 5rem;
     padding-right: 5rem;
   }
@@ -1156,9 +1154,6 @@ video {
 .mt-auto {
   margin-top: auto;
 }
-.-mt-8 {
-  margin-top: -2rem;
-}
 .block {
   display: block;
 }
@@ -1225,6 +1220,9 @@ video {
 .h-\[80vh\] {
   height: 80vh;
 }
+.h-\[81vh\] {
+  height: 81vh;
+}
 .h-\[90vh\] {
   height: 90vh;
 }
@@ -1239,9 +1237,6 @@ video {
 }
 .h-screen {
   height: 100vh;
-}
-.h-\[81vh\] {
-  height: 81vh;
 }
 .max-h-\[80vh\] {
   max-height: 80vh;
@@ -1305,6 +1300,9 @@ video {
 }
 .max-w-\[95vw\] {
   max-width: 95vw;
+}
+.flex-1 {
+  flex: 1 1 0%;
 }
 .flex-grow {
   flex-grow: 1;
@@ -2099,6 +2097,9 @@ video {
   .md\:max-w-\[80vw\] {
     max-width: 80vw;
   }
+  .md\:flex-1 {
+    flex: 1 1 0%;
+  }
   .md\:columns-3 {
     -moz-columns: 3;
          columns: 3;
@@ -2207,13 +2208,13 @@ video {
     margin-left: 5rem;
     margin-right: 5rem;
   }
-  .lg\:my-20 {
-    margin-top: 5rem;
-    margin-bottom: 5rem;
-  }
   .lg\:mx-auto {
     margin-left: auto;
     margin-right: auto;
+  }
+  .lg\:my-20 {
+    margin-top: 5rem;
+    margin-bottom: 5rem;
   }
   .lg\:mb-0 {
     margin-bottom: 0px;
@@ -2244,6 +2245,9 @@ video {
   }
   .lg\:block {
     display: block;
+  }
+  .lg\:flex {
+    display: flex;
   }
   .lg\:grid {
     display: grid;
@@ -2280,6 +2284,9 @@ video {
   }
   .lg\:max-w-\[40vw\] {
     max-width: 40vw;
+  }
+  .lg\:flex-1 {
+    flex: 1 1 0%;
   }
   .lg\:grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
