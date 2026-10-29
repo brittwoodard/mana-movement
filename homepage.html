@@ -51,15 +51,23 @@ pathways:
       image_path: /uploads/icons/mana-infinity-gold.png
       height: 16
   description_html: |
-    <p>The Mana Movement Practice is composed of simple, guided movement exercises, focused on the Feminine Paths of Movement- circles, spirals, and waves.</p>
+    <p>The Mana Movement Practice is composed of simple, guided movement exercises, focused on the <strong>Feminine Paths of Movement- circles, spirals, and waves</strong>.</p>
     <p>Returning to these innate movement patterns with the intention of softening and opening will awaken the natural flow of Life Force Energy through the body, supporting you to feel a deep sense of clarity, peace, expansion, and a renewed sense of inspiration.</p>
     <p>Mana Movement is designed to suit all women, all bodies, at every stage of life and Feminine Rite of Passage.</p>
   image: 
-    image_path: /uploads/images/manamovement-9.JPG
+    image_path: /uploads/images/manamovement-31.png
     image_focus: 
-  button: 
-    text: Bring Mana Movement to your festivals & events
-    url: mailto:manameilin@gmail.com?subject=Mana%20Movement%20at%20my%20event&body=Hello%20Mana%20Movement%20Team%2C%0AI%20want%20to%20discuss%20bringing%20Mana%20Movement%20to%20my%20event
+who: 
+  heading: A Practice for All Bodies
+  description_html: |
+    <p>Mana Movement® was specially designed with women in mind.</p>
+    <p>The intention was to create a powerful personal embodied movement wellness practice that was accessible to ALL WOMEN, no matter what phase of life you are in or what physical abilities you have.</p>
+    <p>To bring the power of movement medicine and intentional embodied dance to ANY WOMAN who was seeking a path for healing that is in alignment with the Feminine Way- through gentle opening, softening, artistic expression and pleasure!</p>
+    <p>Thousands of women around the world are already receiving the benefits of the Mana Movement® Practice in their daily lives, as a way to return back home to the safety and freedom in their bodies, and their Feminine Power through expression and movement.</p>
+    <p><strong>If you have a body, you can benefit from Mana Movement® in your daily life.</strong></p>
+  image: 
+    image_path: /uploads/images/manamovement-33.jpg
+    image_focus:
 banner: 
   description_html: |
     <p>Thousands of women around the world are already receiving the benefits of the Mana Movement Practice in their daily lives!</p>
@@ -199,6 +207,7 @@ seo:
   </div>
 </section>
 
+
 <!-- Pathways -->
 <section class="md:grid md:grid-cols-3 md:gap-8 lg:gap-20 my-20 mx-8 lg:mx-20">
 
@@ -215,6 +224,22 @@ seo:
             </div>
         </div>
     </div>
+</section>
+
+
+<!-- Who It's For -->
+<section class="grid grid-cols-3 gap-20 mb-20 mx-8 lg:mx-20">
+  <div class="col-span-2">
+    <div class="py-20 border-b border-main">
+      <h2 class="heading-md text-feature mb-4">{{ page.who.heading }}</h2>
+      <div>
+        {{ page.who.description_html }}
+      </div>
+    </div>
+  </div>
+
+  <div class="col-span-1 bg-image-style min-h-[60vh]" style="background-image: url({{ page.who.image.image_path }}); background-position: {{ page.who.image.image_focus }};">
+  </div>
 </section>
 
 
