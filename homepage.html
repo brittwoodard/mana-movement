@@ -121,6 +121,29 @@ concepts:
      description: Aligning with natural pulses of action and stillness
    - number: 7
      description: Prioritizing presence in the body and calmness in the mind
+
+pillars: 
+  heading: Mana Movement® and the 3 Pillars of Connection
+  description_html: |
+    <p>The Mana Movement® Practice is founded on the Liberation Through Movement Model developed by Mana Mei, called the 3 Pillars of Connection.</p>
+    <p>This model carves the path for embodied healing, personal empowerment, and life-lasting transformation.</p>
+  pillars:
+   - number: 1
+     heading: Connection to the Physical Body
+     image: 
+       image_path: /uploads/images/manamovement-17.JPG
+       image_focus: 
+   - number: 2
+     heading: Connection to the Energy Body
+     image: 
+       image_path: /uploads/images/manamovement-18.JPG
+       image_focus: 
+   - number: 3
+     heading: Connection to the Transpersonal Body
+     image: 
+       image_path: /uploads/images/manamovement-20.JPG
+       image_focus:
+
 offerings: 
   heading: Ways to bring Mana Movement into your daily wellness routine
   description_html: |
@@ -333,6 +356,32 @@ seo:
     </div>
 
     <div class="lg:hidden bg-image-style min-h-[80vh]" style="background-image: url({{ page.concepts.image.image_path}});"></div>
+</section>
+
+
+<!-- Pillars -->
+<section class="section-padding text-center bg-dark">
+  <h2 class="heading-md mb-4 text-main">{{ page.pillars.heading }}</h2>
+  <div class="text-lighter lg:w-[80%] mx-auto mb-8">
+    {{ page.pillars.description_html }}
+  </div>
+
+  <div class="md:grid md:grid-cols-3 md:gap-4 mt-8 lg:w-[80%] mx-auto">
+    {% for item in page.pillars.pillars %}
+    <div class="mb-12 last:mb-0 md:mb-0">
+      <div class="bg-image-style aspect-portrait" style="background-image: url({{ item.image.image_path }}); background-position: {{ item.image.image_focus }};"></div>
+      <div class="border-t-2 border-accent mt-8 pt-8">
+        <p class="uppercase font-semibold tracking-[0.25em] text-lighter mb-4">Pillar {{ item.number }}</p>
+        <p class="uppercase text-lighter">{{ item.heading }}</p>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+  <div class="text-lighter lg:w-[60%] mx-auto mt-8">
+    <p>Each and every Mana Movement® practice supports the embodied reconnection to the 3 essential pillars for healing and transformation, creating a sustainable (and pleasurable) path for personal expansion, in alignment with the Feminine Way!</p>
+    <p>The path is BUILT-IN to the Mana Movement® sequences.</p>
+    <p>Through simple, yet deeply intentional movements, each practice is crafted to increase physical mobility & kinesthetic sensing, clear energetic blockages and restore fluidity, and empower creative expression and authenticity.</p>
+  </div>
 </section>
 
 
