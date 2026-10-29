@@ -97,6 +97,30 @@ banner:
   background-image: 
     image_path: /uploads/images/manamovement-11.JPG
     image_focus: 
+
+concepts: 
+  heading: A Closer look into the Mana Movement Practice
+  description_html: |
+    <p>The Full Mana Movement practice includes 4 primary body positions- seated, hands & knees, kneeling, and standing. Practices can range from 3 to 120 minutes and focus on a variety of intentions and purposes.</p>
+    <p>Mana Movement® incorporates conscious, intentional breathing patterns in relationship to each specific movement pattern in order to increase body connection, as well as increase the nervous system’s ability to self regulate through intentional activation and settling in a safe and held container of practice.</p>
+  image: 
+    image_path: /uploads/images/manamovement-34.jpg
+    image_focus:
+  concepts: 
+   - number: 1
+     description: Intentional Breathing to support regulation of Nervous System
+   - number: 2
+     description: Simple movement patterns focusing on the core Feminine Pathways
+   - number: 3
+     description: Progressive activation of the full body through all layers and parts
+   - number: 4
+     description: Cultivating Balance in the Physical and Energy bodies, as well as between internal and external
+   - number: 5  
+     description: Internal focus and “listening” to voice of the body - feeling over form
+   - number: 6
+     description: Aligning with natural pulses of action and stillness
+   - number: 7
+     description: Prioritizing presence in the body and calmness in the mind
 offerings: 
   heading: Ways to bring Mana Movement into your daily wellness routine
   description_html: |
@@ -248,7 +272,7 @@ seo:
 
 
 <!-- Who It's For -->
-<section class="grid grid-cols-3 gap-20 mb-20 mx-8 lg:mx-20">
+<section class="grid grid-cols-3 gap-20 mb-40 mx-8 lg:mx-20">
   <div class="col-span-2">
     <div class="py-20 border-b border-main">
       <h2 class="heading-md text-feature mb-4">{{ page.who.heading }}</h2>
@@ -288,6 +312,27 @@ seo:
     </a>
   </div>
 
+</section>
+
+
+<!-- Inside -->
+<section class="section-padding bg-light">
+    <h2 class="heading-md text-feature mb-4">{{ page.concepts.heading }}</h2>
+    <div class="lg:w-[70%] mb-8">
+        <p>{{ page.concepts.description_html }}</p>
+    </div>
+    <p class="uppercase text-feature font-semibold mb-4">Core Concepts in Mana Movement®</p>
+
+    {% for item in page.concepts.concepts %}
+    <div class="flex items-center gap-8 mb-4">
+        <p class="text-3xl mb-0">{{ item.number }}</p>
+        <p>{{ item.description }}</p>
+    </div>
+    {% endfor %}
+
+    </div>
+
+    <div class="lg:hidden bg-image-style min-h-[80vh]" style="background-image: url({{ page.concepts.image.image_path}});"></div>
 </section>
 
 
