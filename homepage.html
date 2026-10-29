@@ -90,11 +90,10 @@ testimonials:
   - testimonial_html: |
       <p>“I clearly see and feel the changes in my life and in my body. I see more fluidity in every parts of the every day life, professional, personal…It’s really amazing and magical !!! I feel more present, more grounded, more feminine, more aware, more confident, more a lot of things!!! I also have more creativity.”</p>
 banner: 
-  description_html: |
-    <p>Thousands of women around the world are already receiving the benefits of the Mana Movement Practice in their daily lives!</p>
+  heading: Enter the Academy of Mana Movement to try it today!
   button: 
-    text: Bring Mana Movement to your festivals & events
-    url: mailto:manameilin@gmail.com?subject=Mana%20Movement%20at%20my%20event&body=Hello%20Mana%20Movement%20Team%2C%0AI%20want%20to%20discuss%20bringing%20Mana%20Movement%20to%20my%20event
+    text: Learn More
+    url: /homm
   background-image: 
     image_path: /uploads/images/manamovement-11.JPG
     image_focus: 
@@ -270,27 +269,21 @@ seo:
   <div class="md:columns-3 gap-8">
     {% for item in page.testimonials %}
     <div class="break-inside-avoid mb-8 p-8 bg-light border border-dark">
-      <span class="block font-serif text-accent text-7xl leading-none h-8" aria-hidden="true">&ldquo;</span>
+      <span class="block font-serif text-accent text-3xl leading-none h-8" aria-hidden="true">&ldquo;</span>
       <div>{{ item.testimonial_html }}</div>
-      <span class="block font-serif text-accent text-7xl leading-none h-8 text-right" aria-hidden="true">&rdquo;</span>
+      <span class="block font-serif text-accent text-3xl leading-none h-8 text-right" aria-hidden="true">&rdquo;</span>
     </div>
     {% endfor %}
-  </div>
-
-  <div class="flex justify-center">
-    <a href="/homm.html" class="button bg-dark mt-8">Enter the Academy of Mana Movement to try it today</a>
   </div>
 </section>
 
 
 <!-- Banner -->
-<section class="bg-image-style section-padding" style="background-image: url({{ page.banner.background-image.image_path }}); background-position: {{ page.banner.background-image.image_focus }};">
+<section class="bg-image-style section-padding bg-fixed" style="background-image: url({{ page.banner.background-image.image_path }}); background-position: {{ page.banner.background-image.image_focus }};">
 
-  <div>
-    <div class="font-serif text-light text-3xl lg:text-4xl lg:w-[65%]">
-      {{ page.banner.description_html }}
-    </div>
-    <a href="{{ page.banner.button.url }}" class="button">
+  <div class="text-center">
+    <h2 class="heading-md text-light">{{ page.banner.heading }}</h2>
+    <a href="{{ page.banner.button.url }}" class="button-dark">
       {{ page.banner.button.text }}
     </a>
   </div>
