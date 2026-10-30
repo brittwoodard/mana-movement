@@ -1795,12 +1795,6 @@ video {
 .accent-accent {
   accent-color: #cd913c;
 }
-.opacity-100 {
-  opacity: 1;
-}
-.opacity-60 {
-  opacity: 0.6;
-}
 .transition-opacity {
   transition-property: opacity;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -2033,9 +2027,6 @@ video {
   .md\:bottom-\[20\.5rem\] {
     bottom: 20.5rem;
   }
-  .md\:bottom-\[21rem\] {
-    bottom: 21rem;
-  }
   .md\:bottom-\[22rem\] {
     bottom: 22rem;
   }
@@ -2083,9 +2074,6 @@ video {
   }
   .md\:top-0 {
     top: 0px;
-  }
-  .md\:top-\[6rem\] {
-    top: 6rem;
   }
   .md\:top-\[11rem\] {
     top: 11rem;
