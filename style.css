@@ -134,6 +134,11 @@
 
     }
 
+    .bg-overlay.x-dark::before {
+        background-color: rgba(0, 0, 0, 0.4);
+
+    }
+
     /* Images */
     .bg-image-style {
         @apply bg-cover bg-no-repeat bg-center
