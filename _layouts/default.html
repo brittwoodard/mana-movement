@@ -82,6 +82,29 @@
     });
     {% endif %}
 
+    // Click to pop up form
+    $(document).ready(function () {
+        // Open modal on any [data-popup-open] button, loading its iframe the first time
+        $("[data-popup-open]").click(function () {
+            var modal = $("#popup-" + $(this).data("popup-open"));
+            var iframe = modal.find("iframe");
+            if (!iframe.attr("src")) {
+                iframe.attr("src", iframe.data("src"));
+            }
+            modal.removeClass("hidden");
+        });
+
+        // Close modal on close button click or outside click
+        $(".form-modal, .form-modal-close").click(function () {
+            $(this).closest(".form-modal").addClass("hidden");
+        });
+
+        // Prevent modal from closing when clicking inside the modal content
+        $(".form-modal-content").click(function (event) {
+            event.stopPropagation();
+        });
+    });
+
     {% if page.about %}
     // Read More
     document.addEventListener('DOMContentLoaded', function () {

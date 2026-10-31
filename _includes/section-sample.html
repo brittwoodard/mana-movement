@@ -9,9 +9,15 @@
             <div class="mb-4">
                 {{ site.data.samples.mm-10m-practice.description_html }}
             </div>
+            {% if site.data.samples.mm-10m-practice.button.popup %}
+            <button type="button" data-popup-open="{{ site.data.samples.mm-10m-practice.button.popup }}" class="button-dark cursor-pointer">
+                {{ site.data.samples.mm-10m-practice.button.text }}
+            </button>
+            {% else %}
             <a href="{{ site.data.samples.mm-10m-practice.button.url }}" class="button-dark">
                 {{ site.data.samples.mm-10m-practice.button.text }}
             </a>
+            {% endif %}
         </div>
     </div>
 
@@ -22,3 +28,8 @@
         </div>
     </div>
 </section>
+
+{% if site.data.samples.mm-10m-practice.button.popup %}
+<!-- Form Popup (GoHighLevel form lives on /free-class) -->
+{% include popup-form.html id="free-class" src="/free-class" title="Free Mana Movement Class" %}
+{% endif %}

@@ -179,7 +179,7 @@ offerings:
        <p>Be the first to know when Mana Mei’ is offering in-person Mana Movement® workshops & international retreats & trainings by signing up for our Email Newsletter.</p>
      button: 
        text: Be the first to know
-       url: #
+       popup: retreat-waitlist
      image: 
        image_path: /uploads/images/manamovement-34.jpg
        image_focus: 
@@ -303,9 +303,9 @@ seo:
 
 
 <!-- Who It's For -->
-<section class="md:grid md:grid-cols-3 md:gap-20 md:mb-40 mx-8 lg:mx-20">
+<section class="md:grid md:grid-cols-3 md:gap-8 lg:gap-20 md:mb-40 mx-8 lg:mx-20">
 
-  <div class="col-span-1 bg-image-style min-h-[60vh]" style="background-image: url({{ page.who.image.image_path }}); background-position: {{ page.who.image.image_focus }};"></div>
+  <div class="col-span-1 md:order-last bg-image-style min-h-[60vh]" style="background-image: url({{ page.who.image.image_path }}); background-position: {{ page.who.image.image_focus }};"></div>
 
   <div class="col-span-2">
     <div class="py-8 md:py-20 border-b border-main pt-8 mb-20 md:mb-0">
@@ -419,19 +419,25 @@ seo:
     <div class="md:grid md:grid-cols-3 md:gap-8">
         {% for item in page.offerings.offering %}
         <!-- Left Column / Image -->
-        <div class="bg-image-style border border-main min-h-[60vh] mt-12"
+        <div class="bg-image-style border border-main min-h-[60vh] lg:aspect-portrait self-start mt-12"
             style="background-image: url({{ item.image.image_path }}); background-position: {{ item.image.image_focus }};">
         </div>
 
         <!-- Right Column / Text -->
-        <div class="col-span-2 lg:py-20 flex items-center mt-8 md:mt-0 border-b border-main">
+        <div class="col-span-2 md:py-8 flex items-end mt-8 md:mt-0 border-b border-main">
             <div>
                 <h3 class="uppercase text-feature font-semibold mb-4 text-xl">{{ item.title }}</h3>
                 {{ item.description_html }}
 
+                {% if item.button.popup %}
+                <button type="button" data-popup-open="{{ item.button.popup }}" class="button mb-8 md:mb-0 cursor-pointer">
+                    {{ item.button.text }}
+                </button>
+                {% else %}
                 <a href="{{ item.button.url }}" class="button mb-8 md:mb-0">
                     {{ item.button.text }}
                 </a>
+                {% endif %}
             </div>
         </div>
         {% endfor %}
@@ -480,3 +486,7 @@ seo:
 
 <!-- Sample Section -->
 {% include section-sample.html %}
+
+
+<!-- Form Popup (GoHighLevel form lives on /retreat-waitlist) -->
+{% include popup-form.html id="retreat-waitlist" src="/retreat-waitlist" title="Retreat Waitlist" %}
