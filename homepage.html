@@ -171,7 +171,7 @@ offerings:
        text: Learn more
        url: /homm
      image: 
-       image_path: /uploads/images/manamovement-13.JPG
+       image_path: /uploads/images/homm-29.jpg
        image_focus: 
    - title: In-Person Retreats & Workshops
      description_html: |
@@ -181,7 +181,7 @@ offerings:
        text: Be the first to know
        url: #
      image: 
-       image_path: /uploads/images/manamovement-14.JPG
+       image_path: /uploads/images/manamovement-34.jpg
        image_focus: 
    - title: Become a Certified Mana Movement® Teacher
      description_html: |
@@ -191,7 +191,7 @@ offerings:
        text: Learn how to become a teacher
        url: /ttc
      image: 
-       image_path: /uploads/images/manamovement-5.JPEG
+       image_path: /uploads/images/manamovement-24.JPG
        image_focus: 
 
 testimonials_2: 
@@ -201,6 +201,7 @@ testimonials_2:
       <p>My energy is exploding! I feel so emotionally stable and safe. I react to things happening to me with ease and people seem to notice it and treat me differently..  or rather, it's me looking at things through different lenses. Life is just flowing…</p>
   - testimonial_html: |
       <p>I clearly see and feel the changes in my life and in my body. I see more fluidity in every parts of the every day life, professional, personal…It’s really amazing and magical !!! I feel more present, more grounded, more feminine, more aware, more confident, more a lot of things!!! I also have more creativity.</p>
+
 gallery: 
  - image_path: /uploads/images/manamovement-9.JPG
  - image_path: /uploads/images/manamovement-11.JPG
@@ -215,12 +216,12 @@ gallery:
  - image_path: /uploads/images/manamovement-15.JPG
  - image_path: /uploads/images/manamovement-5.JPEG
  - image_path: /uploads/images/manamovement-13.JPG
+
 seo:
   title: Mana Movement
   description: Mana Movement is an embodied movement method developed by Mana Mei. This simple yet profound practice flows through a series of guided movement sequences, focusing on spinal mobility, whole body fluidity, release, breath-body connection, and returning to the Feminine Pathways.
   keywords: 
   social_image: /uploads/images/manamovement-18.jpg
-  hide-from-google: false
 ---
 
 <!-- Hero Banner -->
@@ -411,32 +412,31 @@ seo:
 
 <!-- Offerings -->
 <section class="section-padding">
-  <div>
-    <h2 class="heading-md text-feature text-center mb-8">
-      {{ page.offerings.heading }}
+    <h2 class="heading-md text-feature text-center">
+        {{ page.offerings.heading }}
     </h2>
-  </div>
 
-  <div class="md:grid md:grid-cols-3 md:gap-8">
-    {% for item in page.offerings.offering %}
-    <div class="mt-12 md:mt-0">
-      <div class="bg-image-style aspect-square" style="background-image: url({{ item.image.image_path }});"></div>
-      <h3 class="subheading text-feature text-center mt-8 mb-4">
-        {{ item.title }}
-      </h3>
-      <p class="text-center">
-        {{ item.description_html }}
-      </p>
-      <div class="flex justify-center">
-        <a href="{{ item.button.url }}" class="link">
-          {{ item.button.text }}
-        </a>
-      </div>
-      
+    <div class="md:grid md:grid-cols-3 md:gap-8">
+        {% for item in page.offerings.offering %}
+        <!-- Left Column / Image -->
+        <div class="bg-image-style border border-main min-h-[60vh] mt-12"
+            style="background-image: url({{ item.image.image_path }}); background-position: {{ item.image.image_focus }};">
+        </div>
+
+        <!-- Right Column / Text -->
+        <div class="col-span-2 lg:py-20 flex items-center mt-8 md:mt-0 border-b border-main">
+            <div>
+                <h3 class="uppercase text-feature font-semibold mb-4">{{ item.title }}</h3>
+                {{ item.description_html }}
+
+                <a href="{{ item.button.url }}" class="button">
+                    {{ item.button.text }}
+                </a>
+            </div>
+        </div>
+        {% endfor %}
     </div>
-    {% endfor %}
-  </div>
-  
+
 </section>
 
 
@@ -453,7 +453,6 @@ seo:
     {% endfor %}
   </div>
 </section>
-
 
 
 <!-- Gallery -->
@@ -477,7 +476,6 @@ seo:
   </div>
   {% endfor %}
 </section>
-
 
 
 <!-- Sample Section -->
