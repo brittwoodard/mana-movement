@@ -387,15 +387,15 @@ seo:
     {{ page.pillars.description_html_2 }}
   </div>
 
-  <div class="md:hidden bg-image-style min-h-[80vh]" style="background-image: url('{{ page.pillars.image.image_path}}');"></div>
+  <img src="{{ page.pillars.image.image_path}}" class="md:hidden mt-8">
 
 </section>
 
 
 <!-- Foundation -->
-<section class="grid grid-cols-3 gap-20 my-20 mx-8 lg:mx-20">
+<section class="md:grid md:grid-cols-3 md:gap-20 mt-20 md:my-20 mx-8 lg:mx-20">
   <div class="col-span-2">
-    <div class="py-20 border-y border-main">
+    <div class="pt-20 pb-8 md:py-20 border-t md:border-y border-main">
       <h2 class="heading-md text-feature mb-4">{{ page.foundation.heading }}</h2>
       <div>
         {{ page.foundation.description_html }}
@@ -405,6 +405,8 @@ seo:
 
   <div class="col-span-1 bg-image-style min-h-[60vh]" style="background-image: url({{ page.foundation.image.image_path }}); background-position: {{ page.foundation.image.image_focus }};">
   </div>
+
+  <div class="md:hidden border-t border-main mt-20"></div>
 </section>
 
 
@@ -427,7 +429,7 @@ seo:
                 <h3 class="uppercase text-feature font-semibold mb-4 text-xl">{{ item.title }}</h3>
                 {{ item.description_html }}
 
-                <a href="{{ item.button.url }}" class="button">
+                <a href="{{ item.button.url }}" class="button mb-8 md:mb-0">
                     {{ item.button.text }}
                 </a>
             </div>

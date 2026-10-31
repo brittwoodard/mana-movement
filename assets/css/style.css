@@ -1660,6 +1660,9 @@ video {
 .pt-8 {
   padding-top: 2rem;
 }
+.pb-8 {
+  padding-bottom: 2rem;
+}
 .text-left {
   text-align: left;
 }
@@ -2171,6 +2174,13 @@ video {
   }
   .md\:gap-8 {
     gap: 2rem;
+  }
+  .md\:border-y {
+    border-top-width: 1px;
+    border-bottom-width: 1px;
+  }
+  .md\:border-b-0 {
+    border-bottom-width: 0px;
   }
   .md\:bg-\[length\:250px_250px\] {
     background-size: 250px 250px;
