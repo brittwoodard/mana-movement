@@ -127,14 +127,19 @@ pillars:
   description_html: |
     <p>The Mana Movement® Practice is founded on the Liberation Through Movement Model developed by Mana Mei, called the 3 Pillars of Connection.</p>
     <p>This model carves the path for embodied healing, personal empowerment, and life-lasting transformation.</p>
+  description_html_2: |
+    <p>Each and every Mana Movement® practice supports the embodied reconnection to the 3 essential pillars for healing and transformation, creating a sustainable (and pleasurable) path for personal expansion, in alignment with the Feminine Way!</p>
+    <p>The path is BUILT-IN to the Mana Movement® sequences.</p>
+    <p>Through simple, yet deeply intentional movements, each practice is crafted to increase physical mobility & kinesthetic sensing, clear energetic blockages and restore fluidity, and empower creative expression and authenticity.</p>
   image: 
-    image_path: /uploads/images/manamovement-19.JPG
+    image_path: /uploads/images/manamovement-35.png
+    image_focus: 
   pillars:
    - number: 1
      heading: Connection to the Physical Body
      image: 
-       image_path: /uploads/images/manamovement-17.JPG
-       image_focus: 
+       image_path: /uploads/images/manamovement-19.JPG
+       image_focus: 65% 50%
    - number: 2
      heading: Connection to the Energy Body
      image: 
@@ -146,6 +151,16 @@ pillars:
        image_path: /uploads/images/manamovement-20.JPG
        image_focus:
 
+foundation: 
+  heading: Resting on the Foundation of the Sacred Balance
+  description_html: |
+    <p><strong>At the core of the power of the Mana Movement® Practice is the non-negotiable cultivation of embodied SAFETY & FREEDOM.</strong></p>
+    <p>Our ability to feel free and liberated in our bodies and in our lives depends on our ability to first feel SAFE. Without this established sense of safety and positive connection to our WHOLE SELF (body and energy), we cannot open to the field of possibility and freedom that we desire.</p>
+    <p>Having the self awareness and applicable tools to be able to EMBODY true inner safety and freedom will CHANGE YOUR LIFE. You will feel more empowered to make meaningful changes in your life and connect with the love and satisfaction of life that you desire.</p>
+    <p>Through bringing Mana Movement® into your lifestyle as a personal ritual for daily wellbeing, you can be well on your way to embodied freedom and the feeling of satisfaction in life that you deserve!</p>
+  image: 
+    image_path: /uploads/images/manamovement-36.png
+    image_focus:
 offerings: 
   heading: Ways to bring Mana Movement into your daily wellness routine
   description_html: |
@@ -218,7 +233,6 @@ seo:
 ---
 
 <!-- Hero Banner -->
-
 <section class="section-video h-[81vh] flex items-center justify-center">
   {% include site-header.html %}
 
@@ -380,12 +394,27 @@ seo:
     {% endfor %}
   </div>
   <div class="text-lighter lg:w-[60%] mx-auto mt-8">
-    <p>Each and every Mana Movement® practice supports the embodied reconnection to the 3 essential pillars for healing and transformation, creating a sustainable (and pleasurable) path for personal expansion, in alignment with the Feminine Way!</p>
-    <p>The path is BUILT-IN to the Mana Movement® sequences.</p>
-    <p>Through simple, yet deeply intentional movements, each practice is crafted to increase physical mobility & kinesthetic sensing, clear energetic blockages and restore fluidity, and empower creative expression and authenticity.</p>
+    {{ page.pillars.description_html_2 }}
   </div>
 
   <div class="md:hidden bg-image-style min-h-[80vh]" style="background-image: url('{{ page.pillars.image.image_path}}');"></div>
+
+</section>
+
+
+<!-- Foundation -->
+<section class="grid grid-cols-3 gap-20 my-20 mx-8 lg:mx-20">
+  <div class="col-span-2">
+    <div class="py-20 border-y border-main">
+      <h2 class="heading-md text-feature mb-4">{{ page.foundation.heading }}</h2>
+      <div>
+        {{ page.foundation.description_html }}
+      </div>
+    </div>
+  </div>
+
+  <div class="col-span-1 bg-image-style min-h-[60vh]" style="background-image: url({{ page.foundation.image.image_path }}); background-position: {{ page.foundation.image.image_focus }};">
+  </div>
 </section>
 
 
