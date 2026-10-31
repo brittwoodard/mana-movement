@@ -1659,6 +1659,10 @@ video {
   padding-top: 0.25rem;
   padding-bottom: 0.25rem;
 }
+.py-8 {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
 .pb-12 {
   padding-bottom: 3rem;
 }
@@ -2203,6 +2207,10 @@ video {
   .md\:py-10p {
     padding-top: 10%;
     padding-bottom: 10%;
+  }
+  .md\:py-0 {
+    padding-top: 0px;
+    padding-bottom: 0px;
   }
   .md\:text-right {
     text-align: right;
