@@ -1079,6 +1079,10 @@ video {
   margin-top: 2rem;
   margin-bottom: 2rem;
 }
+.-mx-2 {
+  margin-left: -0.5rem;
+  margin-right: -0.5rem;
+}
 .-mt-4 {
   margin-top: -1rem;
 }
@@ -1636,6 +1640,10 @@ video {
   padding-top: 0.25rem;
   padding-bottom: 0.25rem;
 }
+.px-3 {
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+}
 .pb-12 {
   padding-bottom: 3rem;
 }
@@ -2166,8 +2174,14 @@ video {
   .md\:grid-cols-8 {
     grid-template-columns: repeat(8, minmax(0, 1fr));
   }
+  .md\:items-start {
+    align-items: flex-start;
+  }
   .md\:items-end {
     align-items: flex-end;
+  }
+  .md\:justify-between {
+    justify-content: space-between;
   }
   .md\:gap-16 {
     gap: 4rem;

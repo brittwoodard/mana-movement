@@ -1,18 +1,22 @@
 header:
   - title: Home
     url: /
-  - title: About
+  - title: About Mana Mei
     url: /about
-  - title: Courses
-    url: /courses
+  - title: Join the Academy
+    url: /homm
+  - title: Become a Teacher
+    url: /ttc
   - title: Contact
     url: /contact
 footer:
   - title: Home
     url: /
-  - title: About
+  - title: About Mana Mei
     url: /about
-  - title: Courses
-    url: /courses
+  - title: Join the Academy
+    url: /homm
+  - title: Become a Teacher
+    url: /ttc
   - title: Contact
     url: /contact
