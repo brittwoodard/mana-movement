@@ -1538,6 +1538,9 @@ video {
 .bg-\[url\(\/uploads\/icons\/Logo-light\.svg\)\] {
   background-image: url(/uploads/icons/Logo-light.svg);
 }
+.bg-\[url\(\/uploads\/icons\/logo-light\.svg\)\] {
+  background-image: url(/uploads/icons/logo-light.svg);
+}
 .bg-contain {
   background-size: contain;
 }

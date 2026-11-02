@@ -1,6 +1,5 @@
 ---
 layout: default
-noindex: false
 nav:
   color: accent
   hover: main
@@ -139,17 +138,17 @@ pillars:
    - number: 1
      heading: Connection to the Physical Body
      image: 
-       image_path: /uploads/images/manamovement-19.JPG
+       image_path: /uploads/images/manamovement-19.jpg
        image_focus: 65% 50%
    - number: 2
      heading: Connection to the Energy Body
      image: 
-       image_path: /uploads/images/manamovement-18.JPG
+       image_path: /uploads/images/manamovement-18.jpg
        image_focus: 
    - number: 3
      heading: Connection to the Transpersonal Body
      image: 
-       image_path: /uploads/images/manamovement-20.JPG
+       image_path: /uploads/images/manamovement-20.jpg
        image_focus:
 
 foundation: 
@@ -181,8 +180,8 @@ offerings:
        image_focus: 
    - title: In-Person Retreats & Workshops
      description_html: |
-       <p>Mana Mei runs yearly international retreats, workshops, and trainings. Find her in the Americans, Europe, or Bali! A unique and potent opportunity to train “in the flesh” , deepening your personal embodiment and nourishing your mind-body-spirit within a global sisterhood.</p>
-       <p>Be the first to know when Mana Mei’ is offering in-person Mana Movement® workshops & international retreats & trainings by signing up for our Email Newsletter.</p>
+       <p>Mana Mei runs yearly international retreats, workshops, and trainings. Find her in the Americas, Europe, or Bali! A unique and potent opportunity to train “in the flesh” , deepening your personal embodiment and nourishing your mind-body-spirit within a global sisterhood.</p>
+       <p>Be the first to know when Mana Mei is offering in-person Mana Movement® workshops & international retreats & trainings by signing up for our Email Newsletter.</p>
      button: 
        text: Be the first to know
        popup: retreat-waitlist
@@ -215,8 +214,8 @@ gallery:
  - image_path: /uploads/images/manamovement-2.JPG
  - image_path: /uploads/images/manamovement-8.JPG
  - image_path: /uploads/images/manamovement-7.JPG
- - image_path: /uploads/images/manamovement-16.JPG
- - image_path: /uploads/images/manamovement-22.JPG
+ - image_path: /uploads/images/manamovement-16.jpg
+ - image_path: /uploads/images/manamovement-22.jpg
  - image_path: /uploads/images/manamovement-4.JPEG
  - image_path: /uploads/images/manamovement-12.JPG
  - image_path: /uploads/images/manamovement-15.JPG
@@ -224,8 +223,8 @@ gallery:
  - image_path: /uploads/images/manamovement-13.JPG
 
 seo:
-  title: Mana Movement
-  description: Mana Movement is an embodied movement method developed by Mana Mei. This simple yet profound practice flows through a series of guided movement sequences, focusing on spinal mobility, whole body fluidity, release, breath-body connection, and returning to the Feminine Pathways.
+  title: Mana Movement® | Somatic Movement & Embodied Dance for Women
+  description: Mana Movement® is a somatic movement and embodied dance practice by Mana Mei, merging dance and meditation for women's healing and transformation.
   keywords: 
   social_image: /uploads/images/manamovement-18.jpg
 ---
@@ -239,7 +238,9 @@ seo:
     <p>Sorry, your browser doesn't support embedded videos</p> 
   </video>
   <div class="flex flex-col items-center justify-center text-center" data-aos="fade" data-aos-offset="0" data-aos-duration="3000">
-    <img src="/uploads/icons/manamovement-4.png" alt="Mana Movement" class=" w-[80vw] md:w-[60vw] lg:w-[40vw] mb-4">
+    <h1 class="mb-4">
+      <img src="/uploads/icons/manamovement-4.png" alt="Mana Movement® – Somatic Movement & Embodied Dance for Women" class="w-[80vw] md:w-[60vw] lg:w-[40vw]">
+    </h1>
     <div>
 
       <!-- Video Button -->
@@ -262,7 +263,7 @@ seo:
 
 <!-- About Section -->
 <section class="section-padding lg:w-[70%] mx-auto">
-    <img src="/uploads/icons/logo-dark.svg" class="h-16 mb-8 mx-auto">
+    <img src="/uploads/icons/logo-dark.svg" alt="Mana Movement logo" class="h-16 mb-8 mx-auto">
     <div class="text-center">
         {{ page.about.description_html }}
     </div>
@@ -274,7 +275,7 @@ seo:
   <div class="px-8 lg:px-20">
     <div class="text-center">
         <h2 class="heading-md text-feature mb-4">{{ page.benefits.heading }}</h2>
-        <p>{{ page.benefits.description_html }}</p>
+        <div>{{ page.benefits.description_html }}</div>
     </div>
     <div class="md:flex md:gap-24 mt-12">
       {% for item in page.benefits.trifecta %}
@@ -356,7 +357,7 @@ seo:
 <section class="section-padding bg-light">
     <h2 class="heading-md text-feature mb-4">{{ page.concepts.heading }}</h2>
     <div class="lg:w-[70%] mb-8">
-        <p>{{ page.concepts.description_html }}</p>
+        {{ page.concepts.description_html }}
     </div>
     <p class="uppercase text-feature font-semibold mb-4">Core Concepts in Mana Movement®</p>
 
@@ -366,8 +367,6 @@ seo:
         <p>{{ item.description }}</p>
     </div>
     {% endfor %}
-
-    </div>
 </section>
 
 
@@ -393,7 +392,7 @@ seo:
     {{ page.pillars.description_html_2 }}
   </div>
 
-  <img src="{{ page.pillars.image.image_path}}" class="md:hidden mt-8">
+  <img src="{{ page.pillars.image.image_path}}" alt="The 3 Pillars of Connection" class="md:hidden mt-8">
 
 </section>
 
