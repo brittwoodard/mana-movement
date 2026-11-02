@@ -1,0 +1,11 @@
+---
+layout: null
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+{% for page in site.html_pages %}{% unless page.noindex == true or page.seo.hide-from-google == true or page.sitemap == false %}
+  <url>
+    <loc>{{ page.url | remove: ".html" | absolute_url }}</loc>
+  </url>
+{% endunless %}{% endfor %}
+</urlset>
