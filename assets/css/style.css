@@ -1308,6 +1308,9 @@ video {
 .max-w-\[95vw\] {
   max-width: 95vw;
 }
+.max-w-xl {
+  max-width: 36rem;
+}
 .flex-grow {
   flex-grow: 1;
 }
