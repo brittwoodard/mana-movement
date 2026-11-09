@@ -1212,6 +1212,9 @@ video {
 .w-full {
   width: 100%;
 }
+.w-16 {
+  width: 4rem;
+}
 .min-w-\[640px\] {
   min-width: 640px;
 }
@@ -1985,6 +1988,9 @@ video {
 }
 
 @media (min-width: 1024px) {
+  .lg\:sticky {
+    position: sticky;
+  }
   .lg\:bottom-\[25rem\] {
     bottom: 25rem;
   }
@@ -1993,6 +1999,9 @@ video {
   }
   .lg\:top-\[6rem\] {
     top: 6rem;
+  }
+  .lg\:top-\[20vh\] {
+    top: 20vh;
   }
   .lg\:order-first {
     order: -9999;
@@ -2085,6 +2094,9 @@ video {
   }
   .lg\:gap-8 {
     gap: 2rem;
+  }
+  .lg\:self-start {
+    align-self: flex-start;
   }
   .lg\:bg-contain {
     background-size: contain;

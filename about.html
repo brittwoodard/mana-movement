@@ -1,12 +1,13 @@
 ---
 layout: default
 nav: 
-  color: dark
-  hover: accent
+  color: accent
+  hover: main
 title: About Mana Movement
 
 hero-banner: 
-  
+  title: About Mana Movement®
+  description: 
     
 about-mana: 
   heading: Meet the Founder of Mana Movement®
@@ -24,10 +25,38 @@ about-mana:
   image: 
     image_path: /uploads/images/manamovement-3.png
     image_focus: 
+
 banner: 
   image: 
     image_path: /uploads/images/manamovement-18.jpg
     image_focus: 50% 85%
+
+offerings: 
+  heading: Ways to work with Mana Mei
+  offering: 
+   - number: 1
+     description_html: |
+       <p>Become a student of HoMM Academy for regular opportunities to practice with Mana Mei in live sessions, as well as receiving unlimited access to all of Mana Mei’s pre-recorded courses and full Workshop Replay Library</p>
+       <p>Gain access to an incredible resource of support and practices from Mana Mei and Guest Facilitators through joining our “Gold Star” Tier of the Academy- the Apprenticeship/ Trunk Level</p>
+     button: 
+       text: Take me HōMM
+       url: /homm/
+   - number: 2
+     description_html: |
+       <p>Join Mana Mei’s keystone offering, the Liberation Through Movement Mentorship Program</p>
+       <p>A 3-month deep dive into the LTM & Mana Movement® Modality, featuring 1:1 mentoring calls with Mana Mei, weekly Live Calls, and intentionally crafted embodiment journey guiding you through the 3 pillars of connection through daily movement practice, theory, and writing.</p>
+       <p>Mana Mei runs the LTM Mentorship Program yearly. Join the waitlist to be the first to know about the upcoming cycle.</p>
+     button: 
+       text: Learn More
+       url: https://manamei.com/liberation-through-movement-mentorship
+   - number: 3
+     description_html: |
+       <p>In-person Retreats, Workshops, and Trainings! The most intimate opportunity to experience Mana Mei’s work and guidance first-hand, in the flesh</p>
+       <p>Join the waitlist to be the first to know when Mana Mei launches a new in-person experience! Come join her somewhere around the world- in the Americas, Europe, or Bali, for a once-in-a-lifetime experience of embodied nourishment and sisterhood.</p>
+     button: 
+       text: Join the Waitlist
+       url: #
+
 about-practice: 
   heading: A Closer look into the Mana Movement Practice
   description_html: |
@@ -57,12 +86,11 @@ seo:
   hide-from-google: false
 ---
 
-<section class="bg-image-style h-[100vh] flex items-center justify-center relative" style="background-image: url('/uploads/images/manamovement-24.JPG')">
+<section class="bg-image-style h-[81vh] flex items-center justify-center relative" style="background-image: url('/uploads/images/manamovement-24.JPG')">
     {% include site-header.html %}
     <div class="text-center">
         <h1 class="heading-lg text-light mb-2">{{ page.hero-banner.title }}</h1>
         <p class="text-light text-2xl">{{ page.hero-banner.description }}</p>
-        {% include button-cta.html %}
     </div>
 </section>
 
@@ -92,6 +120,31 @@ seo:
 
 <!-- Banner -->
 <section class="bg-image-style min-h-[70vh]" style="background-image: url('{{ page.banner.image.image_path }}'); background-position: {{ page.banner.image.image_focus }};"></section>
+
+
+<!-- Offerings -->
+<section class="section-padding">
+    <h2 class="heading-md text-feature text-center">
+        {{ page.offerings.heading }}
+    </h2>
+
+    <div class="lg:grid lg:grid-cols-3 lg:gap-8 text-center">
+      {% for item in page.offerings.offering %}
+      <div class="">
+        <div class="flex items-center justify-center w-16 h-16 rounded-full bg-feature text-light text-2xl font-bold mb-4">
+          {{ item.number }}
+        </div>
+        <div class="mb-4">
+          {{ item.description_html }}
+        </div>
+        <a href="{{ item.button.url }}" class="button">
+          {{ item.button.text }}
+        </a>
+      </div>
+      {% endfor %}
+    </div>
+
+</section>
 
 
 <!-- About Mana Movement Practice -->
