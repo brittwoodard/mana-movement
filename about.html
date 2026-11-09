@@ -35,6 +35,7 @@ offerings:
   heading: Ways to work with Mana Mei
   offering: 
    - number: 1
+     title: HōMM Academy
      description_html: |
        <p>Become a student of HoMM Academy for regular opportunities to practice with Mana Mei in live sessions, as well as receiving unlimited access to all of Mana Mei’s pre-recorded courses and full Workshop Replay Library</p>
        <p>Gain access to an incredible resource of support and practices from Mana Mei and Guest Facilitators through joining our “Gold Star” Tier of the Academy- the Apprenticeship/ Trunk Level</p>
@@ -42,6 +43,8 @@ offerings:
        text: Take me HōMM
        url: /homm/
    - number: 2
+     title: LTM Mentorship
+     featured: true
      description_html: |
        <p>Join Mana Mei’s keystone offering, the Liberation Through Movement Mentorship Program</p>
        <p>A 3-month deep dive into the LTM & Mana Movement® Modality, featuring 1:1 mentoring calls with Mana Mei, weekly Live Calls, and intentionally crafted embodiment journey guiding you through the 3 pillars of connection through daily movement practice, theory, and writing.</p>
@@ -50,12 +53,13 @@ offerings:
        text: Learn More
        url: https://manamei.com/liberation-through-movement-mentorship
    - number: 3
+     title: In-Person Experiences
      description_html: |
        <p>In-person Retreats, Workshops, and Trainings! The most intimate opportunity to experience Mana Mei’s work and guidance first-hand, in the flesh</p>
        <p>Join the waitlist to be the first to know when Mana Mei launches a new in-person experience! Come join her somewhere around the world- in the Americas, Europe, or Bali, for a once-in-a-lifetime experience of embodied nourishment and sisterhood.</p>
      button: 
        text: Join the Waitlist
-       url: #
+       popup: retreat-waitlist
 
 about-practice: 
   heading: A Closer look into the Mana Movement Practice
@@ -123,23 +127,45 @@ seo:
 
 
 <!-- Offerings -->
-<section class="section-padding">
-    <h2 class="heading-md text-feature text-center">
+<section class="pt-20 pb-28 px-8 lg:px-20 bg-light/40">
+    <div class="text-center mb-12 lg:mb-16">
+      <p class="subheading text-main mb-2">Begin your journey</p>
+      <h2 class="heading-md text-feature">
         {{ page.offerings.heading }}
-    </h2>
+      </h2>
+      <div class="w-16 border-t border-main mx-auto mt-6"></div>
+    </div>
 
-    <div class="lg:grid lg:grid-cols-3 lg:gap-8 text-center">
+    <div class="grid gap-8 lg:grid-cols-3 lg:items-stretch">
       {% for item in page.offerings.offering %}
-      <div class="">
-        <div class="flex items-center justify-center w-16 h-16 rounded-full bg-feature text-light text-2xl font-bold mb-4">
-          {{ item.number }}
+      <div class="relative flex flex-col border border-main p-8 lg:p-10 {% if item.featured %}bg-feature text-light lg:-my-4{% else %}bg-lighter{% endif %}">
+
+        {% if item.featured %}
+        <span class="absolute -top-3 left-1/2 -translate-x-1/2 bg-accent text-lighter text-xs uppercase tracking-widest px-3 py-1 whitespace-nowrap">Keystone Offering</span>
+        {% endif %}
+
+        <div class="flex items-baseline gap-4 mb-4">
+          <span class="font-serif text-5xl lg:text-6xl leading-none {% if item.featured %}text-light/70{% else %}text-main{% endif %}">0{{ item.number }}</span>
+          <h3 class="subheading {% if item.featured %}text-light{% else %}text-feature{% endif %}">{{ item.title }}</h3>
         </div>
-        <div class="mb-4">
+
+        <div class="w-12 border-t mb-6 {% if item.featured %}border-light/60{% else %}border-main{% endif %}"></div>
+
+        <div class="space-y-4 mb-6 flex-grow">
           {{ item.description_html }}
         </div>
-        <a href="{{ item.button.url }}" class="button">
-          {{ item.button.text }}
-        </a>
+
+        <div>
+          {% if item.button.popup %}
+          <button type="button" data-popup-open="{{ item.button.popup }}" class="{% if item.featured %}button-light{% else %}button{% endif %} cursor-pointer">
+            {{ item.button.text }}
+          </button>
+          {% else %}
+          <a href="{{ item.button.url }}" class="{% if item.featured %}button-light{% else %}button{% endif %}">
+            {{ item.button.text }}
+          </a>
+          {% endif %}
+        </div>
       </div>
       {% endfor %}
     </div>
@@ -178,3 +204,6 @@ seo:
     {% endfor %}
   </div>
 </section>
+
+
+{% include popup-form.html id="retreat-waitlist" src="/retreat-waitlist" title="Retreat Waitlist" %}
