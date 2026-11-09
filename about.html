@@ -83,6 +83,7 @@ about-practice:
      description_html: |
        <p>Connect to your unique authentic expression in the way you move and the way you dance your life force energy through you! Free your expression and find the true voice of your body. Activate your creativity and inspiration</p>
      section-width: 80%
+
 seo:
   title: About Mana Movement® | The Origin Story by Mana Mei
   description: Discover how Mana Mei created Mana Movement®, a somatic movement and embodied dance practice rooted in circles, spirals, and waves.
@@ -90,6 +91,7 @@ seo:
   hide-from-google: false
 ---
 
+<!-- Hero Banner -->
 <section class="bg-image-style h-[81vh] flex items-center justify-center relative" style="background-image: url('/uploads/images/manamovement-24.JPG')">
     {% include site-header.html %}
     <div class="text-center">
@@ -102,12 +104,9 @@ seo:
 <!-- About Mana Mei -->
 <section class="lg:grid lg:grid-cols-3 lg:gap-20 pb-20 md:py-10p px-8 lg:px-20">
 
-  <!-- Mobile Image -->
-  <div class="md:hidden bg-image-style min-h-[80vh] mb-12" style="background-image: url('{{ page.about-mana.image.image_path }}'); background-position: {{ page.about-mana.image_focus }};"></div>
-
   <!-- Left Column / Text -->
   <div class="col-span-2 flex items-center">
-    <div>
+    <div class="mt-20 md:mt-0">
       <h2 class="heading-md text-feature mb-4">
         {{ page.about-mana.heading }}
       </h2>
@@ -118,12 +117,12 @@ seo:
   </div>
 
   <!-- Right Column / Image -->
-  <div class="hidden lg:block bg-image-style min-h-[80vh] mt-20 lg:mt-0" style="background-image: url('{{ page.about-mana.image.image_path }}'); background-position: {{ page.about-mana.image_focus }};"></div>
+  <div class="bg-image-style min-h-[80vh] mt-8 lg:mt-0" style="background-image: url('{{ page.about-mana.image.image_path }}'); background-position: {{ page.about-mana.image_focus }};"></div>
 </section>
 
 
 <!-- Banner -->
-<section class="bg-image-style min-h-[70vh]" style="background-image: url('{{ page.banner.image.image_path }}'); background-position: {{ page.banner.image.image_focus }};"></section>
+<section class="hidden lg:block bg-image-style min-h-[70vh]" style="background-image: url('{{ page.banner.image.image_path }}'); background-position: {{ page.banner.image.image_focus }};"></section>
 
 
 <!-- Offerings -->
