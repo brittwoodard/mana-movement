@@ -2092,6 +2092,9 @@ video {
   .lg\:min-h-\[75vh\] {
     min-height: 75vh;
   }
+  .lg\:min-h-\[80vh\] {
+    min-height: 80vh;
+  }
   .lg\:w-\[40vw\] {
     width: 40vw;
   }
