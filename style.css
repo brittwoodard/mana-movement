@@ -98,7 +98,7 @@
     }
 
     .link {
-        @apply lowercase mb-2 border-b border-inherit hover:text-accent hover:border-accent hover:transition hover:duration-500
+        @apply uppercase font-semibold mb-2 border-b border-feature text-feature hover:text-accent hover:border-accent hover:transition hover:duration-500
     }
 
     /* Overlays */
