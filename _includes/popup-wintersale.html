@@ -7,7 +7,7 @@
 {% assign checkout = site.data.homm-investment.apprenticeship.url %}
 <!-- Popup -->
 <div id="popup" data-sale-ends="{{ sale.ends | date_to_xmlschema }}"
-    class=" fixed inset-0 flex items-center justify-center z-50 bg-black bg-opacity-80 p-4"
+    class="hidden fixed inset-0 flex items-center justify-center z-50 bg-black bg-opacity-80 p-4"
     role="dialog" aria-modal="true" aria-label="{{ sale.name }}">
 
     <div id="popupContent" class="relative flex flex-col lg:flex-row max-h-[92vh] max-w-[90vw] md:max-w-xl lg:max-w-4xl bg-black border border-accent overflow-y-auto">
