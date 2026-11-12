@@ -172,37 +172,4 @@ seo:
 </section>
 
 
-<!-- About Mana Movement Practice -->
-<section class="section-padding">
-  <div class="lg:w-[80%] mb-20">
-    <h2 class="heading-md text-feature mb-4">
-      {{ page.about-practice.heading }}
-    </h2>
-    <div>
-      {{ page.about-practice.description_html }}
-    </div>
-  </div>
-
-  <div>
-    <h3 class="subheading text-feature">
-      {{ page.about-practice.key-elements-heading }}
-    </h3>
-  </div>
-
-  <div class="bg-right bg-no-repeat bg-[url(/uploads/icons/logo-light.svg)] bg-contain md:bg-[length:250px_250px] lg:bg-contain" style="background-position: right;">
-
-    {% for item in page.about-practice.key-elements %}
-    <div class="mt-4">
-      <h3 class="uppercase">
-        {{ item.title }}
-      </h3>
-      <div class="md:w-[{{ item.section-width }}]">
-        {{ item.description_html }}
-      </div>
-    </div>
-    {% endfor %}
-  </div>
-</section>
-
-
 {% include popup-form.html id="retreat-waitlist" src="/retreat-waitlist" title="Retreat Waitlist" %}
