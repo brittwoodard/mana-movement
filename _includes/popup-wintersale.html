@@ -1,0 +1,94 @@
+{% comment %}
+  Winter Sale popup. All text, the code, the image and the end date live in
+  _data/homm-investment.yml under `sale:`. It is only included when sale.enabled is true,
+  and it never shows after sale.ends.
+{% endcomment %}
+{% assign sale = site.data.homm-investment.sale %}
+{% assign checkout = site.data.homm-investment.apprenticeship.url %}
+<!-- Popup -->
+<div id="popup" data-sale-ends="{{ sale.ends | date_to_xmlschema }}"
+    class=" fixed inset-0 flex items-center justify-center z-50 bg-black bg-opacity-80 p-4"
+    role="dialog" aria-modal="true" aria-label="{{ sale.name }}">
+
+    <div id="popupContent" class="relative flex flex-col lg:flex-row max-h-[92vh] max-w-[90vw] md:max-w-xl lg:max-w-4xl bg-black border border-accent overflow-y-auto">
+        <!-- Sale image -->
+        <img src="{{ sale.image }}" alt="{{ sale.image-alt }}"
+            class="block min-w-0 w-auto h-auto max-h-[45vh] md:max-h-[55vh] lg:max-h-[80vh] object-contain mx-auto" />
+
+        <!-- Offer details + code -->
+        <div class="flex flex-col justify-center text-center text-light p-6 md:p-8 lg:w-80 lg:shrink-0">
+            <p class="uppercase tracking-wider mb-2 text-accent">{{ sale.name }}</p>
+            <p class="text-lg mb-4">{{ sale.offer }}</p>
+            <p class="uppercase tracking-wider mb-2">Use code at checkout</p>
+            <button type="button" id="saleCodeCopy" data-code="{{ sale.code }}"
+                class="mx-auto mb-1 px-6 py-2 border-2 border-dashed border-accent text-accent text-2xl tracking-widest hover:bg-accent hover:text-dark hover:duration-500"
+                aria-label="Copy code {{ sale.code }}">
+                {{ sale.code }}
+            </button>
+            <span id="saleCodeCopied" class="block text-sm mb-6 min-h-[1.25rem]" aria-live="polite">Tap to copy</span>
+            <a href="https://www.manamovement.co/homm" class="button bg-accent text-dark border-accent mx-auto">Learn More</a>
+        </div>
+
+        <!-- Close Button (X) -->
+        <button id="popupClose" type="button" aria-label="Close"
+            class="absolute top-2 right-4 text-[1.5rem] font-100 text-light hover:text-accent hover:duration-500">
+            X
+        </button>
+    </div>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const popup = document.getElementById('popup');
+        const popupClose = document.getElementById('popupClose');
+        const popupContent = document.getElementById('popupContent');
+        const copyBtn = document.getElementById('saleCodeCopy');
+        const copied = document.getElementById('saleCodeCopied');
+
+        // Don't show once the sale has ended
+        const ends = new Date(popup.dataset.saleEnds);
+        if (!isNaN(ends) && new Date() > ends) return;
+
+        // Show once per browser session, after 5 seconds
+        let shown = false;
+        try { shown = sessionStorage.getItem('winterSalePopupShown'); } catch (e) {}
+        if (!shown) {
+            setTimeout(function () {
+                popup.classList.remove('hidden');
+            }, 5000);
+            try { sessionStorage.setItem('winterSalePopupShown', 'true'); } catch (e) {}
+        }
+
+        function closePopup() {
+            popup.classList.add('hidden');
+        }
+
+        popupClose.addEventListener('click', function (e) {
+            e.stopPropagation();
+            closePopup();
+        });
+
+        popup.addEventListener('click', function (e) {
+            if (!popupContent.contains(e.target)) {
+                closePopup();
+            }
+        });
+
+        document.addEventListener('keydown', function (e) {
+            if (e.key === 'Escape') closePopup();
+        });
+
+        // Copy the coupon code
+        copyBtn.addEventListener('click', function () {
+            const code = copyBtn.dataset.code;
+            const done = function () { copied.textContent = 'Copied! Paste it at checkout.'; };
+            if (navigator.clipboard && navigator.clipboard.writeText) {
+                navigator.clipboard.writeText(code).then(done, function () {
+                    copied.textContent = 'Code: ' + code;
+                });
+            } else {
+                copied.textContent = 'Code: ' + code;
+            }
+        });
+    });
+</script>

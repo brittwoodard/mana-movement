@@ -1,0 +1,41 @@
+# Shared content for the two-option Investment section (_includes/investment-options.html).
+# Used by: mana-movement-foundations, mana-movement, mana-movement-maternity,
+# confidance, day-well-done, wisdom-body.
+#
+# Each course page sets its own Single Purchase price + checkout link in its front matter
+# under `investment:`. Everything below is the same on every course page.
+
+heading: Investment
+includes-heading: What's included
+
+single:
+  heading: Single Purchase
+  button-text: Enroll Now
+  list:
+    - list-item: Lifetime access to this program
+    - list-item: Elementary Level access to the HoMM Academy (Community Forum only)
+
+apprenticeship:
+  heading: HoMM Apprenticeship Enrollment
+  price: $49/month
+  button-text: Join the Apprenticeship
+  url: https://manamovement.co/homm/
+  list:
+    - list-item: Unlimited access to ALL Mana Movement Programs & Workshop Library
+    - list-item: Access to weekly Live Sessions & Workshops
+    - list-item: Community Forum
+    - list-item: All other Apprenticeship Level benefits
+
+# Winter Sale — controls the popup, the top banner, and the note under the
+# Apprenticeship price on every course page.
+# Turn everything off at once with `enabled: false`.
+# The popup + banner also hide themselves automatically after `ends`.
+sale:
+  enabled: true
+  name: Winter Sale
+  code: wintersale
+  offer: First month of the HoMM Apprenticeship (Gold Star Level) for $10
+  price-note: $10 first month with code wintersale
+  ends: 2026-11-14T23:59:59+01:00
+  image: /uploads/images/winter-sale.jpeg
+  image-alt: "Winter Sale! Join HoMM Academy at Gold Star Level for 80% off"
