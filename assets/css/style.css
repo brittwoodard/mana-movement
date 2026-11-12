@@ -936,6 +936,9 @@ video {
 .top-1\/2 {
   top: 50%;
 }
+.top-2 {
+  top: 0.5rem;
+}
 .top-20 {
   top: 5rem;
 }
@@ -944,9 +947,6 @@ video {
 }
 .top-\[6rem\] {
   top: 6rem;
-}
-.top-2 {
-  top: 0.5rem;
 }
 .z-10 {
   z-index: 10;
@@ -1018,6 +1018,9 @@ video {
 .mb-0 {
   margin-bottom: 0px;
 }
+.mb-1 {
+  margin-bottom: 0.25rem;
+}
 .mb-12 {
   margin-bottom: 3rem;
 }
@@ -1083,9 +1086,6 @@ video {
 }
 .mt-auto {
   margin-top: auto;
-}
-.mb-1 {
-  margin-bottom: 0.25rem;
 }
 .block {
   display: block;
@@ -1159,17 +1159,20 @@ video {
 .h-screen {
   height: 100vh;
 }
+.max-h-\[45vh\] {
+  max-height: 45vh;
+}
 .max-h-\[80vh\] {
   max-height: 80vh;
+}
+.max-h-\[92vh\] {
+  max-height: 92vh;
 }
 .max-h-\[95vh\] {
   max-height: 95vh;
 }
-.max-h-\[45vh\] {
-  max-height: 45vh;
-}
-.max-h-\[92vh\] {
-  max-height: 92vh;
+.min-h-\[1\.25rem\] {
+  min-height: 1.25rem;
 }
 .min-h-\[100vh\] {
   min-height: 100vh;
@@ -1188,9 +1191,6 @@ video {
 }
 .min-h-\[90vh\] {
   min-height: 90vh;
-}
-.min-h-\[1\.25rem\] {
-  min-height: 1.25rem;
 }
 .w-1\/2 {
   width: 50%;
@@ -1225,11 +1225,11 @@ video {
 .w-full {
   width: 100%;
 }
-.min-w-\[640px\] {
-  min-width: 640px;
-}
 .min-w-0 {
   min-width: 0px;
+}
+.min-w-\[640px\] {
+  min-width: 640px;
 }
 .max-w-2xl {
   max-width: 42rem;
@@ -1503,11 +1503,11 @@ video {
 .p-5p {
   padding: 5%;
 }
-.p-8 {
-  padding: 2rem;
-}
 .p-6 {
   padding: 1.5rem;
+}
+.p-8 {
+  padding: 2rem;
 }
 .px-1 {
   padding-left: 0.25rem;
@@ -1668,11 +1668,11 @@ video {
 .tracking-wide {
   letter-spacing: 0.025em;
 }
-.tracking-widest {
-  letter-spacing: 0.1em;
-}
 .tracking-wider {
   letter-spacing: 0.05em;
+}
+.tracking-widest {
+  letter-spacing: 0.1em;
 }
 .text-accent {
   --tw-text-opacity: 1;
@@ -1776,11 +1776,6 @@ video {
 .hover\:border-main:hover {
   --tw-border-opacity: 1;
   border-color: rgb(213 170 170 / var(--tw-border-opacity));
-}
-
-.hover\:bg-feature:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(158 99 101 / var(--tw-bg-opacity));
 }
 
 .hover\:bg-accent:hover {
@@ -2151,6 +2146,9 @@ video {
   .lg\:min-h-\[80vh\] {
     min-height: 80vh;
   }
+  .lg\:w-80 {
+    width: 20rem;
+  }
   .lg\:w-\[40vw\] {
     width: 40vw;
   }
@@ -2171,9 +2169,6 @@ video {
   }
   .lg\:w-\[85\%\] {
     width: 85%;
-  }
-  .lg\:w-80 {
-    width: 20rem;
   }
   .lg\:max-w-4xl {
     max-width: 56rem;
