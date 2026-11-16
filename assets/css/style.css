@@ -1465,9 +1465,6 @@ video {
 .bg-opacity-80 {
   --tw-bg-opacity: 0.8;
 }
-.bg-\[url\(\/uploads\/icons\/logo-light\.svg\)\] {
-  background-image: url(/uploads/icons/logo-light.svg);
-}
 .bg-contain {
   background-size: contain;
 }
@@ -1476,9 +1473,6 @@ video {
 }
 .bg-center {
   background-position: center;
-}
-.bg-right {
-  background-position: right;
 }
 .bg-no-repeat {
   background-repeat: no-repeat;
@@ -1968,17 +1962,8 @@ video {
   .md\:w-\[640px\] {
     width: 640px;
   }
-  .md\:w-\[65\%\] {
-    width: 65%;
-  }
   .md\:w-\[700px\] {
     width: 700px;
-  }
-  .md\:w-\[75\%\] {
-    width: 75%;
-  }
-  .md\:w-\[80\%\] {
-    width: 80%;
   }
   .md\:max-w-xl {
     max-width: 36rem;
@@ -2026,9 +2011,6 @@ video {
   .md\:border-y {
     border-top-width: 1px;
     border-bottom-width: 1px;
-  }
-  .md\:bg-\[length\:250px_250px\] {
-    background-size: 250px 250px;
   }
   .md\:bg-fixed {
     background-attachment: fixed;
