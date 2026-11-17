@@ -3,12 +3,25 @@ layout: default
 nav:
   color: light
   hover: main
-button-cta: 
-  text: Join the Waitlist
-  url: https://manamei.com/ttc-waitlist
+button-cta:
+  text: Explore the Trainings
+  url: "#trainings"
 hero-banner:
   title: Mana Movement Teacher Training
-  description: 16-week Live Online Mana Movement Teacher Training
+  description: Two paths to becoming a certified Mana Movement Facilitator
+trainings:
+  online:
+    label: Live Online
+    title: 6-Month Teacher Training
+    dates: February 8th – June 27th, 2027
+    button_text: Join the Waitlist
+    button_url: https://manamei.com/ttc-waitlist
+  bali:
+    label: In-Person · Bali
+    title: 5-Day Teacher Training
+    dates: May 9th – 14th, 2027
+    button_text: Apply Now
+    button_url: /ttc-apply
 what:
   heading: What is Mana Movement?
   description_html: |
@@ -69,18 +82,27 @@ after:
       <p>Online is wonderful, but I would love to see MANA Movement classes happening in studios all over the world in many languages. AND YOU HAVE THE OPPORTUNITY TO HELP BRING THIS VISION TO LIFE! As well as to create opportunity and abundance for yourself and in your career.</p>
 investment:
   heading: Investment
-  subheading: 16-week live online Mana Movement Teacher Training
-  description_html: |
-    <p>Applications now Closed. <a href="https://manamei.com/ttc-waitlist.html" class="link">Join the waitlist</a> to be the first to know when enrollment opens for the next training, in 2027.</p>
-    <!-- <p>Applications are now Open for the August 24th to December 13th cohort.</p> -->
-  price: 
-    payment_plan: $1,000 USD
-    pay_in_full: $3,800 USD
-    alumni: $3,500 USD
+  online:
+    subheading: 6-Month Live Online Teacher Training
+    dates: February 8th – June 27th, 2027
+    description_html: |
+      <p>Join the waitlist to be the first to know when enrollment opens.</p>
+    price:
+      payment_plan: $1,000 USD
+      pay_in_full: $3,800 USD
+      alumni: $3,500 USD
+  bali:
+    subheading: In-Person Teacher Training in Bali
+    dates: May 9th – 14th, 2027
+    description_html: |
+      <p>Applications are now open.</p>
+    # TODO: add Bali pricing
+    price:
+      pay_in_full: $3,300 USD
   background_image: /uploads/backgrounds/mana-movement-2.png
 banner_2:
   <!-- text: Applications for the 2026 cohort are now open! -->
-  text: Applications now Closed. Join the waitlist to be the first to know when enrollment opens for the next training, in 2027.
+  text: Applications are open for the Bali training. Join the waitlist for the 2027 Live Online training.
   background_image: /uploads/images/manamovement-11.JPG
 testimonials:
   heading: MM Teacher Training Testimonials
@@ -106,7 +128,7 @@ testimonials:
         <p>"I love the combo of movement, breathwork and meditation. Just what I was looking for without knowing I needed it!"</p>
 cta: 
   <!-- heading: Applications are open for the August 2026 cohort! -->
-  heading: Applications are now Closed. Join the waitlist to be the first to know when enrollment opens for the 2027 cohort.
+  heading: Two ways to train in 2027. Apply for Bali, or join the waitlist for the Live Online training.
 seo:
   title: Mana Movement Teacher Training | Online Certification for Women
   description: Join a 16-week live online training to become a certified Mana Movement Facilitator. Embody feminine flow, lead movement classes, and awaken joy.
@@ -123,12 +145,30 @@ seo:
 ---
 
 <!-- Hero Banner -->
-<section class="bg-image-style h-[81vh] flex items-center justify-center relative" style="background-image: url('/uploads/images/manamovement-24.JPG')">
+<section class="bg-image-style min-h-[81vh] pt-32 pb-16 flex items-center justify-center relative" style="background-image: url('/uploads/images/manamovement-24.JPG')">
     {% include site-header.html %}
     <div class="text-center">
         <h1 class="heading-lg text-light mb-2">{{ page.hero-banner.title }}</h1>
-        <p class="text-light text-2xl">{{ page.hero-banner.description }}</p>
-        {% include button-cta.html %}
+        <p class="text-light text-2xl mb-8">{{ page.hero-banner.description }}</p>
+
+        <!-- Training Options -->
+        <div id="trainings" class="grid md:grid-cols-2 gap-4 md:gap-6 mx-auto px-4 scroll-mt-24">
+            {% assign online = page.trainings.online %}
+            <div class="border border-light bg-dark/40 backdrop-blur-sm p-6 text-light text-center">
+                <p class="uppercase tracking-widest text-sm text-main font-semibold">{{ online.label }}</p>
+                <h2 class="font-serif text-2xl mt-2">{{ online.title }}</h2>
+                <p class="mt-1">{{ online.dates }}</p>
+                <a href="{{ online.button_url }}" class="inline-block mt-4 py-2 px-4 border border-light hover:bg-light hover:text-dark transition duration-500">{{ online.button_text }}</a>
+            </div>
+
+            {% assign bali = page.trainings.bali %}
+            <div class="border border-light bg-dark/40 backdrop-blur-sm p-6 text-light text-center">
+                <p class="uppercase tracking-widest text-sm text-main">{{ bali.label }}</p>
+                <h2 class="font-serif text-2xl mt-2">{{ bali.title }}</h2>
+                <p class="mt-1">{{ bali.dates }}</p>
+                <a href="{{ bali.button_url }}" class="button">{{ bali.button_text }}</a>
+            </div>
+        </div>
     </div>
 </section>
 
@@ -165,7 +205,7 @@ seo:
 <!-- Who Mana Movement is For -->
 <section class="bg-image-style lg:grid lg:grid-cols-3 section-padding" style="background-image: url('/uploads/backgrounds/mana-movement-1.png'); background-position: left;">
     <div></div>
-    <div class="col-span-2 text-light">
+    <div class="col-span-2 text-dark">
         <h2 class="heading-md mb-4">{{ page.who.heading }}</h2>
         <div>{{ page.who.description_html }}</div>
         {% include button-cta-light.html %}
@@ -180,7 +220,7 @@ seo:
 
 
 <!-- Prerequisites -->
-<section class="grid lg:grid-cols-2 gap-8 lg:gap-20 section-padding bg-main text-light">
+<section class="grid lg:grid-cols-2 gap-8 lg:gap-20 section-padding bg-main text-dark">
 
     <!-- Left Column -->
     <div class="flex items-center justify-center order-last lg:order-first">
@@ -269,21 +309,44 @@ seo:
 
 <!-- Investment -->
 <section class="section-padding" style="background-image: url('{{ page.investment.background_image }}'); background-position: right;">
-    <div class="text-light font-bold">
-        <h2 class="heading-md mb-2">{{ page.investment.heading }}</h2>
-    <p class="uppercase">{{ page.investment.subheading }}</p>
-    <div class="mb-8">
-        {{ page.investment.description_html }}
-    </div>
+    <div class="font-bold">
+        <h2 class="heading-md mb-8">{{ page.investment.heading }}</h2>
 
-    <h3 class="uppercase">4-Month Payment Plan</h3>
-    <p>{{ page.investment.price.payment_plan }} per month</p>
+        <div class="grid md:grid-cols-2 gap-12 md:gap-20">
 
-    <h3 class="uppercase">Pay in Full</h3>
-    <p>{{ page.investment.price.pay_in_full }}</p>
+            <!-- Online -->
+            {% assign online = page.investment.online %}
+            <div>
+                <p class="uppercase text-lg">{{ online.subheading }}</p>
+                <p class="mb-2">{{ online.dates }}</p>
+                <div class="mb-6 font-normal">{{ online.description_html }}</div>
 
-    <h3 class="uppercase text-feature">LTM Facilitator / Mentorship Graduate</h3>
-    <p>{{ page.investment.price.alumni }}</p>
+                <h3 class="uppercase">4-Month Payment Plan</h3>
+                <p class="mb-2">{{ online.price.payment_plan }} per month</p>
+
+                <h3 class="uppercase">Pay in Full</h3>
+                <p class="mb-2">{{ online.price.pay_in_full }}</p>
+
+                <h3 class="uppercase text-feature">LTM Facilitator / Mentorship Graduate</h3>
+                <p>{{ online.price.alumni }}</p>
+
+                <a href="{{ page.trainings.online.button_url }}" class="button-light">{{ page.trainings.online.button_text }}</a>
+            </div>
+
+            <!-- Bali -->
+            {% assign bali = page.investment.bali %}
+            <div>
+                <p class="uppercase text-lg">{{ bali.subheading }}</p>
+                <p class="mb-2">{{ bali.dates }}</p>
+                <div class="mb-6 font-normal">{{ bali.description_html }}</div>
+
+                <h3 class="uppercase">Early Bird Pricing</h3>
+                <p>{{ bali.price.pay_in_full }}</p>
+                <p><em>Payment plans are available</em></p>
+
+                <a href="{{ page.trainings.bali.button_url }}" class="button-dark">{{ page.trainings.bali.button_text }}</a>
+            </div>
+        </div>
     </div>
 </section>
 
