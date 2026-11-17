@@ -155,18 +155,18 @@ seo:
         <div id="trainings" class="grid md:grid-cols-2 gap-4 md:gap-6 mx-auto px-4 scroll-mt-24">
             {% assign online = page.trainings.online %}
             <div class="border border-light bg-dark/40 backdrop-blur-sm p-6 text-light text-center">
-                <p class="uppercase tracking-widest text-sm text-main font-semibold">{{ online.label }}</p>
-                <h2 class="font-serif text-2xl mt-2">{{ online.title }}</h2>
-                <p class="mt-1">{{ online.dates }}</p>
-                <a href="{{ online.button_url }}" class="inline-block mt-4 py-2 px-4 border border-light hover:bg-light hover:text-dark transition duration-500">{{ online.button_text }}</a>
+                <p class="uppercase tracking-widest text-sm text-main font-bold">{{ online.label }}</p>
+                <h2 class="font-bold uppercase text-xl mt-2">{{ online.title }}</h2>
+                <p>{{ online.dates }}</p>
+                <a href="{{ online.button_url }}" class="inline-block mt-2 py-2 px-4 border border-light hover:bg-light hover:text-dark transition duration-500">{{ online.button_text }}</a>
             </div>
 
             {% assign bali = page.trainings.bali %}
             <div class="border border-light bg-dark/40 backdrop-blur-sm p-6 text-light text-center">
-                <p class="uppercase tracking-widest text-sm text-main">{{ bali.label }}</p>
-                <h2 class="font-serif text-2xl mt-2">{{ bali.title }}</h2>
-                <p class="mt-1">{{ bali.dates }}</p>
-                <a href="{{ bali.button_url }}" class="button">{{ bali.button_text }}</a>
+                <p class="uppercase tracking-widest text-sm text-main font-bold">{{ bali.label }}</p>
+                <h2 class="font-bold uppercase text-xl mt-2">{{ bali.title }}</h2>
+                <p>{{ bali.dates }}</p>
+                <a href="{{ bali.button_url }}" class="button mt-2">{{ bali.button_text }}</a>
             </div>
         </div>
     </div>
