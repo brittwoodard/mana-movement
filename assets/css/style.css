@@ -331,6 +331,7 @@ html {
   scroll-behavior: smooth;
 }
 body {
+  overflow-x: clip;
   --tw-bg-opacity: 1;
   background-color: rgb(249 248 246 / var(--tw-bg-opacity));
   font-family: josefin-sans, sans-serif;
@@ -1120,6 +1121,9 @@ video {
 .aspect-video {
   aspect-ratio: 16 / 9;
 }
+.aspect-\[9\/16\] {
+  aspect-ratio: 9/16;
+}
 .h-12 {
   height: 3rem;
 }
@@ -1158,6 +1162,9 @@ video {
 }
 .h-screen {
   height: 100vh;
+}
+.h-\[85vh\] {
+  height: 85vh;
 }
 .max-h-\[45vh\] {
   max-height: 45vh;
